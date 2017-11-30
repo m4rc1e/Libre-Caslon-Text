@@ -225,7 +225,7 @@ value = 970;
 );
 descender = -250;
 id = UUID0;
-italicAngle = 25;
+italicAngle = 20;
 xHeight = 530;
 }
 );
