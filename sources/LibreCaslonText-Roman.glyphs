@@ -66282,7 +66282,9 @@ interpolationWeight = 700;
 instanceInterpolations = {
 "1CCFBABC-759F-491A-B184-EA51E5B5BC4A" = 1;
 };
-name = Regular;
+isBold = 1;
+name = Bold;
+weightClass = Bold;
 }
 );
 kerning = {
