@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni01CB" format="1">
+  <advance width="1121"/>
+  <unicode hex="01CB"/>
+  <outline>
+    <component base="N"/>
+    <component base="j" xOffset="815"/>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.adobe.type.autohint</key>
+  <data>
+  <hintSetList>
+  </hintSetList>
+  </data>
+  </dict>
+  </lib>
+</glyph>

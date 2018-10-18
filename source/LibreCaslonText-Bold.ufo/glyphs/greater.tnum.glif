@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="greater.tnum" format="1">
+  <advance width="600"/>
+  <outline>
+    <contour>
+      <point x="506" y="315" type="line"/>
+      <point x="506" y="366" type="line"/>
+      <point x="97" y="561" type="line"/>
+      <point x="97" y="475" type="line"/>
+      <point x="414" y="341" type="line"/>
+      <point x="414" y="337" type="line"/>
+      <point x="97" y="201" type="line"/>
+      <point x="97" y="121" type="line"/>
+    </contour>
+  </outline>
+</glyph>

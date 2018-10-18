@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="bar.tnum" format="1">
+  <advance width="300"/>
+  <outline>
+    <contour>
+      <point x="185" y="-170" type="line"/>
+      <point x="185" y="819" type="line"/>
+      <point x="115" y="819" type="line"/>
+      <point x="115" y="-170" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+  <dict>
+  <key>com.typemytype.robofont.mark</key>
+  <array>
+    <real>1</real>
+    <real>0.6</real>
+    <real>0.6</real>
+    <real>1</real>
+  </array>
+  </dict>
+  </lib>
+</glyph>

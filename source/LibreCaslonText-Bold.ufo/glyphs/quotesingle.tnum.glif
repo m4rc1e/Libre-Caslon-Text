@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="quotesingle.tnum" format="1">
+  <advance width="300"/>
+  <outline>
+    <contour>
+      <point x="175" y="505" type="line"/>
+      <point x="179" y="621"/>
+      <point x="213" y="715"/>
+      <point x="213" y="764" type="curve" smooth="yes"/>
+      <point x="213" y="802"/>
+      <point x="190" y="830"/>
+      <point x="150" y="830" type="curve" smooth="yes"/>
+      <point x="111" y="830"/>
+      <point x="87" y="803"/>
+      <point x="87" y="760" type="curve" smooth="yes"/>
+      <point x="87" y="714"/>
+      <point x="122" y="620"/>
+      <point x="125" y="505" type="curve"/>
+    </contour>
+  </outline>
+</glyph>
