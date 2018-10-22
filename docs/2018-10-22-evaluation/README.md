@@ -70,18 +70,34 @@ Finally, Libre Caslon Italic is missing many of the warm details of the original
 
 ![Italics](assets/italics.png)
 
+### Odd font metrics
+
+When compared to other fonts, including Libre Caslon Display, Libre Caslon Text has a much larger overall body size. This would be helpful to normalize before publication as a web font, in order to make font loading smoother from system fonts, as well as to make this an easier and more-predictable font to design with.
+
+One positive thing shown when cap heights are matched: the stroke contrast of the Libre Caslon Text isn't quite as problematically high as I first thought. It's close to being the same as TNR and Georgia, and if the regular is interpolated to be just slightly bolder, the color of it might work decently well in text sizes.
+
+![relative-size-analysis.png](assets/relative-size-analysis.png)
+
+### Some glyphs incompatible
+
+![incompatible-glyphs](incompatible-glyphs.png)
+
 # Work needed
 
-To make it useful at a basic level:
+**To make it useful at a basic level:**
 
 - A Bold Italic will need to be added, with care taken to make the weight properly match the upright Bold.
 - Anchors will need to be added to the bold in order to properly compose diacritics.
-- The character set will need to be expanded somewhat, in order to meet Adobe Latin 3 or 4 (check with Dave on current expectation).
+- The character set will need to be expanded somewhat, in order to meet Adobe Latin 3 or 4 (need to find current gfonts expectation).
 - Letters will need to be given overlaps and made compatible for interpolation, where they aren’t yet (it’s unclear in how many letters this is the case).
+- Font metrics should be adjusted so that the text style is closer in body size to common fallback fonts
 
-To make it _good_, some of the letterforms will need to be corrected. A full check should happen to determine all the spots that should be corrected.
+**To make it _good_:**
 
-To make it _really good_, we might eventually do a few more things:
+- Some of the letterforms will need to be corrected.
+- A full check should happen to determine all the spots that should be corrected.
+
+**To make it _really good_, we might eventually do a few more things:**
 
 - The weight range could be expanded (Light to Bold, or even Thin to Heavy)
 - Libre Caslon Display could be built out with Bold, Italic, and Bold Italic, to create a 3-axis variable font
@@ -89,5 +105,5 @@ To make it _really good_, we might eventually do a few more things:
 - Greek, Hebrew, and Arabic letters from fonts by Caslon could be added
 
 ![Greek](assets/caslon-greek.png)
-![hebrew](assets/caslon-hebrew.png)
-![arabic](assets/caslon-arabic.png)
+![Hebrew](assets/caslon-hebrew.png)
+![Arabic](assets/caslon-arabic.png)
