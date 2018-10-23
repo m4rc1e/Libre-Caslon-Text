@@ -5,7 +5,7 @@ DisplayStrings = (
 "argument \012A x en\012\012nnonn\012nnenn",
 "g/Eogonek/oogonek/aogonek/uogonek g\012\012t",
 SO,
-g,
+gnDa,
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 );
 classes = (
@@ -56601,10 +56601,10 @@ name = "Display Regular";
 },
 {
 interpolationWeight = 400;
-interpolationWidth = 6;
+interpolationWidth = -50;
 instanceInterpolations = {
-"AB50CDD9-E897-4D94-B806-C2DEA2F4ECD5" = -0.17857;
-master01 = 1.17857;
+"AB50CDD9-E897-4D94-B806-C2DEA2F4ECD5" = -1.17857;
+master01 = 2.17857;
 };
 name = "Caption Regular";
 }

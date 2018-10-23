@@ -76,7 +76,7 @@ When compared to other fonts, including Libre Caslon Display, Libre Caslon Text 
 
 One positive thing shown when cap heights are matched: the stroke contrast of the Libre Caslon Text isn't quite as problematically high as I first thought. It's close to being the same as TNR and Georgia, and if the regular is interpolated to be just slightly bolder, the color of it might work decently well in text sizes.
 
-![relative-size-analysis.png](assets/relative-size-analysis.png)
+![relative-size-analysis.png](assets/libre-caslon-relative_sizing.png)
 
 ### Some glyphs incompatible
 
@@ -86,11 +86,12 @@ One positive thing shown when cap heights are matched: the stroke contrast of th
 
 **To make it useful at a basic level:**
 
-- A Bold Italic will need to be added, with care taken to make the weight properly match the upright Bold.
+- Font metrics should be adjusted so that the text style is closer in body size to common fallback fonts
+- The regular weight instance should have a little more weight, so that the text style is closer in body size to common fallback fonts
 - Anchors will need to be added to the bold in order to properly compose diacritics.
 - The character set will need to be expanded somewhat, in order to meet Adobe Latin 3 or 4 (need to find current gfonts expectation).
+- A Bold Italic will need to be added, with care taken to make the weight properly match the upright Bold.
 - Letters will need to be given overlaps and made compatible for interpolation, where they aren’t yet (it’s unclear in how many letters this is the case).
-- Font metrics should be adjusted so that the text style is closer in body size to common fallback fonts
 
 **To make it _good_:**
 
