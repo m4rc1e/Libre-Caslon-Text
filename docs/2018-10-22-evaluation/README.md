@@ -20,6 +20,12 @@ Most of the serifs are "wedge-style" serifs, with sharp angles connecting serifs
 
 ![inconsistent serif brackets](assets/brackets.png)
 
+![Letters with smooth vs sharp brackets](assets/smooth_and_sharp2.png)
+
+The design could also be thought of as a collection of smooth and sharp connections with more details taken in mind, such as the ball terminals of letters. If the scope is broadened like this, the design is slightly more balanced, though still, I would argue, could benefit from a more consistent approach to details. However, the consistency of serif brackets is an obvious detail to be harmonized, whereas terminals are separate enough visually, they can probably be safe to leave as-is.
+
+![Letters with smooth vs sharp details](assets/smooth_and_sharp.png)
+
 There's no rule saying a typeface _can't_ have different forms of serif brackets, but the inconsistency seems arbitrary. If a typeface is going to be a modern spin on a classic style by sharpening brackets, it makes more sense to be consistent, as [Spectral](https://fonts.google.com/specimen/Spectral) is to the original model of Plantin type.
 
 ![libre caslon vs spectral](assets/libre_caslon-spectral.png)
@@ -86,7 +92,7 @@ This image compares the current Libre Caslon Regular against default "serif" fon
 
 # Work needed
 
-**To make it useful at a basic level:**
+**To make it good and useful:**
 
 - Font metrics should be adjusted so that the text style is closer in body size to common fallback fonts
 - The regular weight instance should have a little more weight, so that the text style is closer in body size to common fallback fonts
@@ -95,10 +101,11 @@ This image compares the current Libre Caslon Regular against default "serif" fon
 - A Bold Italic will need to be added, with care taken to make the weight properly match the upright Bold.
 - Letters will need to be given overlaps and made compatible for interpolation, where they aren’t yet (it’s unclear in how many letters this is the case).
 
-**To make it _good_:**
+**To make it _even better_:**
 
 - Some of the letterforms will need to be corrected.
 - A full check should happen to determine all the spots that should be corrected.
+- We could experiment with how the font might look with sharper details in the ball terminals.
 
 **To make it _really good_, we might eventually do a few more things:**
 
