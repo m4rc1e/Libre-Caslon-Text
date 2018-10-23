@@ -74,7 +74,9 @@ Finally, Libre Caslon Italic is missing many of the warm details of the original
 
 When compared to other fonts, including Libre Caslon Display, Libre Caslon Text has a much larger overall body size. This would be helpful to normalize before publication as a web font, in order to make font loading smoother from system fonts, as well as to make this an easier and more-predictable font to design with.
 
-One positive thing shown when cap heights are matched: the stroke contrast of the Libre Caslon Text isn't quite as problematically high as I first thought. It's close to being the same as TNR and Georgia, and if the regular is interpolated to be just slightly bolder, the color of it might work decently well in text sizes.
+One positive thing shown when cap heights are matched: the stroke contrast of the Libre Caslon Text isn't quite as problematically high as I first thought. It's close to being the same as TNR and Times, and if the regular is interpolated to be just slightly bolder, the color of it might work decently well in text sizes.
+
+This image compares the current Libre Caslon Regular against default "serif" fonts across several OSes and browsers, as they are according to [this resource](https://www.granneman.com/webdev/coding/css/fonts-and-formatting/web-browser-font-defaults). It also compares LC Display for a look at the relative metrics. It shows things at the same point size to show how LC is abnormal, then at a "normalized" size, to better compare actual font sizing for x-height and overall weight.
 
 ![relative-size-analysis.png](assets/libre-caslon-relative_sizing.png)
 
