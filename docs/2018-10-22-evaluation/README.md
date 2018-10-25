@@ -4,7 +4,7 @@ As of Oct 2018, Libre Caslon Text has relatively-complete character sets in Regu
 
 I am now proofing them to judge roughly how much effort it would be to complete the family and publish them.
 
-It’s an inviting basis for a typeface. It’s crisp and looks relatively modern, and it some three styles already drawn: Regular to Bold basis in the romans, and has an italic with a very heavy slant and cursive forms. However, it has some issues.
+It’s an inviting basis for a typeface. It’s crisp and looks relatively modern, and it some three styles already drawn: Regular to Bold basis in the romans, and has an italic with a very heavy slant and cursive forms. However, like any work, it has some issues that could be improved. I'll go through the ones I notice first, as a basis for potential improvment work.
 
 Without knowing exactly the sources Pablo Impallari used for the work so far, I am basing some of my critique on this Caslon specimen: [Archive.org: A specimen of printing types by Caslon, William, 1754-1833](https://archive.org/details/specimenofprinti00caslrich/page/n5)
 
@@ -32,14 +32,16 @@ There's no rule saying a typeface _can't_ have different forms of serif brackets
 
 ### Some drawings need revision
 
-The `A` has an odd top notch which doesn't meet up.
+The `A` has an odd top notch which doesn't meet up. Additionally, this is much more accentuated than Caslon `A` notches that I have seen in historical references.
 
 ![](assets/axen.png)
 
 ![The thin legs are lined up in the wrong way – they should be offset in the opposite direction](assets/x.png)
+
 _The thin legs are lined up in the wrong way – they should be offset in the opposite direction]_
 
 ![Why doesn’t the top of the A align? This could be decomposed to work better.](assets/A.png)
+
 _Why doesn’t the top of the A align? This could be two contours in order to work better._
 
 ![These ogoneks should be less “stuck on”](assets/ogonek.png)
@@ -48,7 +50,7 @@ The `X` and `x` have misaligned thin legs.
 
 ### Uneven slopes in Italic
 
-The `*f*` is too sloped.
+The `*f*` is too visually sloped overall, because at its minimum slope, it matches the slope of straight stems in letters like `*l*`, whereas in historical sources, the midpoint is at a more gradual slope so that the overall shape matches the flow of surrounding letters.
 
 ![These fs are overly slanted](assets/falafel.png)
 
@@ -95,24 +97,25 @@ This image compares the current Libre Caslon Regular against default "serif" fon
 **To make it good and useful:**
 
 - Font metrics should be adjusted so that the text style is closer in body size to common fallback fonts
-- The regular weight instance should have a little more weight, so that the text style is closer in body size to common fallback fonts
-- Anchors will need to be added to the bold in order to properly compose diacritics.
-- The character set will need to be expanded somewhat, in order to meet Adobe Latin 3 or 4 (need to find current gfonts expectation).
+- The regular weight instance should have a little more weight so that the text style is closer in body size to common fallback fonts
+- The character set will probably need to be expanded somewhat in order to meet Adobe Latin 3 or 4 (need to find current gfonts expectation).
 - A Bold Italic will need to be added, with care taken to make the weight properly match the upright Bold.
-- Letters will need to be given overlaps and made compatible for interpolation, where they aren’t yet (it’s unclear in how many letters this is the case).
+- Letters will need to be given overlaps and made compatible for interpolation where they aren’t yet.
+- Anchors will need to be added to the bold in order to properly compose diacritics and allow interpolation.
 
 **To make it _even better_:**
 
-- Some of the letterforms will need to be corrected.
-- A full check should happen to determine all the spots that should be corrected.
-- We could experiment with how the font might look with sharper details in the ball terminals.
+- Ideally, I would be able to see the historical resources used by Pablo Impallari in the existing design.
+- Some of the letterforms will need to be optically corrected (e.g. `x`, italic `f`).
+  - A full check should happen to determine all the spots that should be corrected.
+- We could experiment with how the font might look with sharper details in the ball terminals, and whether serif brackets should be all sharp or all smooth.
 
 **To make it _really good_, we might eventually do a few more things:**
 
 - The weight range could be expanded (Light to Bold, or even Thin to Heavy)
 - Libre Caslon Display could be built out with Bold, Italic, and Bold Italic, to create a 3-axis variable font
 - Swash italics could be added
-- Greek, Hebrew, and Arabic letters from fonts by Caslon could be added
+- Greek, Hebrew, and Arabic letters from fonts by Caslon could eventually be added
 
 ![Greek](assets/caslon-greek.png)
 ![Hebrew](assets/caslon-hebrew.png)
