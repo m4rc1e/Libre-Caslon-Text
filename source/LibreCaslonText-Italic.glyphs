@@ -746,7 +746,7 @@ date = "2012-06-20 15:47:59 +0000";
 designer = "Pablo Impallari, Rodrigo Fuenzalida";
 designerURL = www.impallari.com;
 disablesNiceNames = 1;
-familyName = "Libre Caslon Text";
+familyName = "Libre Caslon Text Scaled";
 features = (
 {
 code = "	sub f f i by f_f_i;\012	sub f f l by f_f_l;\012	sub f f b by f_f_b;\012	sub f f h by f_f_h;\012	sub f f j by f_f_j;\012	sub f f k by f_f_k;\012	sub f f t by f_f_t;		\012	sub f f by f_f;\012	sub f i by f_i;\012	sub f l by f_l;\012	sub f b by f_b;\012	sub f h by f_h;\012	sub f j by f_j;\012	sub f k by f_k;\012	sub f t by f_t;";
@@ -42891,20 +42891,10 @@ rightKerningGroup = g;
 );
 instances = (
 {
-customParameters = (
-{
-name = postscriptFontName;
-value = "LibreCaslonText-Italic";
-},
-{
-name = postscriptFullName;
-value = "Libre Caslon Text Italic";
-},
-{
-name = styleMapFamilyName;
-value = "Libre Caslon Text";
-}
-);
+interpolationWeight = 400;
+instanceInterpolations = {
+master01 = 1;
+};
 isItalic = 1;
 name = Italic;
 }

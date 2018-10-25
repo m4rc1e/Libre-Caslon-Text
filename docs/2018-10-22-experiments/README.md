@@ -77,7 +77,7 @@ I'll do this with [Georg's recommended technique](https://forum.glyphsapp.com/t/
 
 > Scale it to a smaller UPM in Font Info > Font (the the arrow button next to the UPM value). Then set the UPM back to 1000 by typing in the text field.
 
-With a quick export and check of this scaled version, it is clear that this sizing approach works better than the prior version alongside other fonts:
+With a quick export and check of this scaled version, it is clear that this sizing approach works better than the prior version alongside other fonts:**
 
 ![checking scaled version](assets/libre_caslon_scaled-size_check.png)
 

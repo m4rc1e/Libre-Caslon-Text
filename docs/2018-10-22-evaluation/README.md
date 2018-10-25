@@ -88,7 +88,7 @@ This image compares the current Libre Caslon Regular against default "serif" fon
 
 ### Some glyphs incompatible
 
-![incompatible-glyphs](incompatible-glyphs.png)
+![incompatible-glyphs](assets/incompatible-glyphs.png)
 
 # Work needed
 
@@ -117,3 +117,54 @@ This image compares the current Libre Caslon Regular against default "serif" fon
 ![Greek](assets/caslon-greek.png)
 ![Hebrew](assets/caslon-hebrew.png)
 ![Arabic](assets/caslon-arabic.png)
+
+
+
+# Similar fonts in the Gfonts library
+
+The Google Fonts library has a number of similar fonts, if we take into account a few criteria:
+
+- Serif, primarily Latin script
+- Sharp details (e.g. brackets and angles)
+- Multiple font styles
+
+In my opinion, this includes:
+
+- [Merriweather](https://fonts.google.com/specimen/Merriweather)
+- [PT Serif](https://fonts.google.com/specimen/PT+Serif)
+- [Tinos](https://fonts.google.com/specimen/Tinos)
+- [IBM Plex Serif](https://fonts.google.com/specimen/IBM+Plex+Serif)
+- [Faustina](https://fonts.google.com/specimen/Faustina)
+- [Manuale](https://fonts.google.com/specimen/Manuale)
+
+If we include typefaces with only romans (no italics), it also includes:
+
+- [Source Serif](https://fonts.google.com/specimen/Source+Serif+Pro)
+- [Martel](https://fonts.google.com/specimen/Martel)
+- [Yrsa](https://fonts.google.com/specimen/Yrsa)
+- [Rasa](https://fonts.google.com/specimen/Rasa)
+- [Kadwa](https://fonts.google.com/specimen/Kadwa)
+
+Is the "Caslon" name so well-known that Libre Caslon would be a valuable addition to the library, or would it be more valuable to explore other opportunities?
+
+
+
+![image-20181024115927961](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024115927961.png)
+
+![image-20181024120105426](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120105426.png)
+
+![image-20181024120127066](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120127066.png)![image-20181024120132305](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120132305.png)
+
+![image-20181024120142203](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120142203.png)
+
+![image-20181024120148910](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120148910.png)
+
+![image-20181024120154224](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120154224.png)
+
+![image-20181024120159880](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120159880.png)
+
+![image-20181024120205129](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120205129.png)
+
+![image-20181024120210174](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120210174.png)
+
+![image-20181024120215528](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120215528.png)
