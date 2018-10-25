@@ -93,7 +93,9 @@ This image compares the current Libre Caslon Regular against default "serif" fon
 
 ### Some glyphs incompatible
 
-![incompatible-glyphs](incompatible-glyphs.png)
+Some glyphs are incompatible and currently preventing a variable font export. However, in most glyphs this seems to be only due to the bold master lacking anchors for diacritics, which will be relatively quick to solve.
+
+![incompatible-glyphs](assets/incompatible-glyphs.png)
 
 # Work needed
 
