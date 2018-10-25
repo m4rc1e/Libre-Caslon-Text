@@ -1,20 +1,6 @@
 # Experiments / Early work
 
-## Italic
 
-It appears that some of the italic may have been created by half-rotating, half-slanting the romans.
-
-![](assets/g-skews.png)
-
-Above, from left to right:
-
-- the existing italic `g`
-- a `g` rotated 15° and skewed 5°
-- a `g` rotated 10° and skewed 10° (this one looks pretty close to the current real version)
-- a `g` rotated 5° and skewed 15°
-- a `g` skewed 20°
-
-This approach could be a quick starting point for the Bold Italic. On the other hand, it might mean that we should throw out much of what currently exists for the regular Italic, in order to do it better…
 
 ## Normalizing Metrics
 
@@ -71,8 +57,6 @@ capDiff = LCcap/TNRcap # 0.8598823051948051
 
 This tells me I should scale all letters and all metrics in Libre Caslon on the (0,0) point by 85.8598823051948051%.
 
-
-
 I'll do this with [Georg's recommended technique](https://forum.glyphsapp.com/t/how-to-scale-an-entire-font/2477), scaling to 860, then changing back to 1000:
 
 > Scale it to a smaller UPM in Font Info > Font (the the arrow button next to the UPM value). Then set the UPM back to 1000 by typing in the text field.
@@ -81,6 +65,35 @@ With a quick export and check of this scaled version, it is clear that this sizi
 
 ![checking scaled version](assets/libre_caslon_scaled-size_check.png)
 
+### Alternative scaling approach
 
+As a secondary approach to give points a better chance to avoid rounding problems, I have also tried scaling *up* to about 85.859% of 2048. 2048 is also a valid UPM setting, and scaling up will mean that points are jostled less by rounding to integer coordinates (because there will essentially be a higher resolution for outlines). For simplicity, I scaled the UPM to 1760, then changed the UPM to 2048. 
 
+![checking scaled version](assets/libre-caslon-scaled.png)
+
+### How might I test to check that point structures haven't been distorted by scaling?
+
+When glyphs are scaled, points usually move from integer coordinates (e.g. x: 128, y: 540) to floating-point numbers (e.g. x: 109.89952, y: 463.6386). These must then be rounded to the nearest integer coordinates in order to export at a reasonable file size, resulting in slight shifts to points. 
+
+To check that that things haven't been distorted too badly, I could make a script to scale without rounding, then check differences with the version which was scaled and rounded. *However,* I believe that work would be mostly pointless, because:
+- Rounding, by its nature, will only move a point by less tha 1 unit `x` & `y`, unless GlyphsApp is doing some very unexpected math.
+- The main concerns of rounding after transformation is that things will no longer line up as needed. This is most impactful if 
+    - Points are suddenly missing a key alignment zone such as the baseline, x-height, cap height, ascender height, or hinting blue zone. This is not the case.
+    - If a very thin stroke on a diagonal letter such as `K` is suddenly misaligned on either side of an intersection. A spot check shows that this is not the case in the scaled versions. I will have to be more cautious when working in the Libre Caslon Display masters, where thin strokes are thinner, and thus have a smaller margin of acceptable error.
+
+## Italic
+
+It appears that some of the italic may have been created by half-rotating, half-slanting the romans.
+
+![](assets/g-skews.png)
+
+Above, from left to right:
+
+- the existing italic `g`
+- a `g` rotated 15° and skewed 5°
+- a `g` rotated 10° and skewed 10° (this one looks pretty close to the current real version)
+- a `g` rotated 5° and skewed 15°
+- a `g` skewed 20°
+
+This approach could be a quick starting point for the Bold Italic. On the other hand, it might mean that we should throw out much of what currently exists for the regular Italic, in order to do it better…
 
