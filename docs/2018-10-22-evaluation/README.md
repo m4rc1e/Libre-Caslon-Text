@@ -64,7 +64,10 @@ There is also a regular weight of Libre Caslon Display, so it may be possible to
 
 However, there is no Libre Caslon Display Italic, so this font would have to be corrected entirely by hand if we wish to adjust the contrast.
 
-I was curious about the narrow `n`s and the sharp contrast of Libre Caslon Text, and wondered how it might compare against something like Times New Roman.
+I was curious about the narrow `n`s and the sharp contrast of Libre Caslon Text, and wondered how it might compare against something like Times New Roman. A comparison shows:
+- The "regular" of Libre Caslon is a bit lighter
+- Overall, the letter shapes are noticeably more condensed.
+- The contrast in Libre Caslon is higher – thin strokes and serifs are more thin/delicate.
 
 ![Libre Caslon vs Times New Roman](assets/libre_caslon-times_new_roman.png)
 
