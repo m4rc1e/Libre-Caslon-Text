@@ -61,13 +61,11 @@ I'll do this with [Georg's recommended technique](https://forum.glyphsapp.com/t/
 
 > Scale it to a smaller UPM in Font Info > Font (the the arrow button next to the UPM value). Then set the UPM back to 1000 by typing in the text field.
 
-With a quick export and check of this scaled version, it is clear that this sizing approach works better than the prior version alongside other fonts:**
-
-![checking scaled version](assets/libre_caslon_scaled-size_check.png)
+With a quick export and check of this scaled version, it is clear that this sizing approach works better than the prior version alongside other fonts.
 
 ### Alternative scaling approach
 
-As a secondary approach to give points a better chance to avoid rounding problems, I have also tried scaling *up* to about 85.859% of 2048. 2048 is also a valid UPM setting, and scaling up will mean that points are jostled less by rounding to integer coordinates (because there will essentially be a higher resolution for outlines). For simplicity, I scaled the UPM to 1760, then changed the UPM to 2048. 
+As a secondary approach to give points a better chance to avoid rounding problems, I have also tried scaling *up* to about 85.859% of 2048. 2048 is also a valid UPM setting, and scaling up will mean that points are jostled less by rounding to integer coordinates (because there will essentially be a higher resolution for outlines). For simplicity, I scaled the UPM to 1760, then changed the UPM to 2048. I repeated this process for the Text Italic to match vertical metrics there, as well.
 
 ![checking scaled version](assets/libre-caslon-scaled.png)
 
