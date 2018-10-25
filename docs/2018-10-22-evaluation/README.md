@@ -154,22 +154,4 @@ If we include typefaces with only romans (no italics), it also includes:
 
 Is the "Caslon" name so well-known that Libre Caslon would be a valuable addition to the library, or would it be more valuable to explore other opportunities?
 
-![image-20181024115927961](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024115927961.png)
-
-![image-20181024120105426](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120105426.png)
-
-![image-20181024120127066](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120127066.png)![image-20181024120132305](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120132305.png)
-
-![image-20181024120142203](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120142203.png)
-
-![image-20181024120148910](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120148910.png)
-
-![image-20181024120154224](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120154224.png)
-
-![image-20181024120159880](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120159880.png)
-
-![image-20181024120205129](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120205129.png)
-
-![image-20181024120210174](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120210174.png)
-
-![image-20181024120215528](/Users/stephennixon/Library/Application Support/typora-user-images/image-20181024120215528.png)
+- After talking with Dave Crossland, I have come to the conclusion that, yes, it is a priority to have classic type styles in the library, so it will be worthwhile pushing this project further ahead. Cool!
