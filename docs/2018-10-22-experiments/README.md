@@ -147,7 +147,7 @@ I suspected that the baseline wouldn't change in InDesign if the fonts were expo
 
 Unfortunately, InDesign is computing the text box sizing based on the height of the lowercase /d in each font style ... so the baseline *does* shift when the style is changed.
 
-![](assets/libre-caslon-opsz-scaling-instance-test.gif
+![](assets/libre-caslon-opsz-scaling-instance-test.gif)
 
 Additionally, putting LC Display into the GlyphsApp source file prevents successful FontMake exports, even though I have only set up Text instances.
 
