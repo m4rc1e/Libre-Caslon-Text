@@ -8,6 +8,18 @@ It’s an inviting basis for a typeface. It’s crisp and looks relatively moder
 
 Without knowing exactly the sources Pablo Impallari used for the work so far, I am basing some of my critique on this Caslon specimen: [Archive.org: A specimen of printing types by Caslon, William, 1754-1833](https://archive.org/details/specimenofprinti00caslrich/page/n5)
 
+---
+
+UPDATE, Oct 29: I should have read the original README. :| As it says:
+
+> When we were faced with the challenge of making a new Caslon, we asked ourselves: How can we make them different, to bring something new to the table? We realized that most Caslon revivals were based on 18 Century's specimens, and that there was a whole genre of Caslons that has been so far ignored: The alluring hand-lettered American Caslons of 1960's.
+
+> This was a captivating subject to investigate. Caslon was the very first alphabet that lettering artists learned to draw, so they all were very familiar with it. Our wonder led us to find countless examples of beautifully crafted and elegant vintage ads and hand lettering books. Among those many books, there were two that outshine the rest: One is "Lettering for Advertising" by Mortimer Leach, and the other one is "How to Render Roman Letter Forms" by Tommy Thompson. Both of these books are excelent, highly recommended for all those who want to learn lettering.
+
+So ... I will search for copies of these books (they aren't easily found online), and reserve most of my design judgements or visual changes for when I am able to better understand the source material.
+
+---
+
 ## Technical Issues
 
 ### Uneven widths

@@ -143,7 +143,7 @@ Libre Caslon Text's x-height is now `933` after previous scaling. Before scaling
 
 ### Importing the Display into the Libre Caslon Text GlyphsApp source
 
-I suspected that the baseline wouldn't change in InDesign if the fonts were exported from the same GlyphsApp source. So, I imported LC Display into the LC Text sourcefile, then exported these.
+I suspected that the baseline wouldn't change in InDesign if the fonts were exported from the same GlyphsApp source. So, I imported LC Display into the LC Text source file, then exported these.
 
 Unfortunately, InDesign is computing the text box sizing based on the height of the lowercase /d in each font style ... so the baseline *does* shift when the style is changed.
 
