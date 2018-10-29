@@ -16,7 +16,7 @@ UPDATE, Oct 29: I should have read the original README. :| As it says:
 
 > This was a captivating subject to investigate. Caslon was the very first alphabet that lettering artists learned to draw, so they all were very familiar with it. Our wonder led us to find countless examples of beautifully crafted and elegant vintage ads and hand lettering books. Among those many books, there were two that outshine the rest: One is "Lettering for Advertising" by Mortimer Leach, and the other one is "How to Render Roman Letter Forms" by Tommy Thompson. Both of these books are excellent, highly recommended for all those who want to learn lettering.
 
-So ... I will search for copies of these books (they aren't easily found online), and reserve most of my design judgements or visual changes for when I am able to better understand the source material.
+So ... I will search for copies of these books (they aren't easily found online), and reserve most of my design judgments or visual changes for when I am able to better understand the source material.
 
 ---
 
