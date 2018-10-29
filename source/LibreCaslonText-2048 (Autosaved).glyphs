@@ -8589,6 +8589,7 @@ width = 2133;
 leftKerningGroup = W;
 rightKerningGroup = W;
 unicode = 0057;
+changeCount = 2;
 },
 {
 glyphname = Wacute;
