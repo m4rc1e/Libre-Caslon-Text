@@ -133,7 +133,27 @@ Two possible exceptions come to mind:
 
 With the decision to match x-height between Text and Display sizes, I simply have to compute the scaling factor to match the Display x-height to Text.
 
-Libre Caslon Text's x-height is now `933` after previous scaling. Before scaling, LC Display's x-height is `424`. `933 / 424 = 2.200471698`. So, I'll scale LC Display to 2200 UPM, then change it to 2048 UPM. 
+Libre Caslon Text's x-height is now `933` after previous scaling. Before scaling, LC Display's x-height is `424`. `933 / 424 = 2.200471698`. So, I'll scale LC Display to 2200 UPM, then change it to 2048 UPM. It seems to work well to match the x-Height:
+
+![](assets/scaled-lc-display.png)
+
+...and a quick InDesign test of both fonts exported, then at the same font size, shows that things are matching up pretty well:
+
+![](assets/libre-caslon-opsz-scaled-test.png)
+
+### Importing the Display into the Libre Caslon Text GlyphsApp source
+
+I suspected that the baseline wouldn't change in InDesign if the fonts were exported from the same GlyphsApp source. So, I imported LC Display into the LC Text sourcefile, then exported these.
+
+Unfortunately, InDesign is computing the text box sizing based on the height of the lowercase /d in each font style ... so the baseline *does* shift when the style is changed.
+
+![](assets/libre-caslon-opsz-scaling-instance-test.gif
+
+Additionally, putting LC Display into the GlyphsApp source file prevents successful FontMake exports, even though I have only set up Text instances.
+
+As a side-effect, the imported Display seems to lose its former kerning between /v and /e. 
+
+However, for now, my objective is simply to make the text styles publishable. So, I'll keep the Display out of the Text GlyhpsApp source, then fix these issues in the future.
 
 ## Italic
 
