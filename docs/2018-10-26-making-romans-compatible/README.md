@@ -65,3 +65,85 @@ This copied all anchors that were missing in the Bold. These will require nudgin
 
 They require nudging because they are now like this:
 ![](assets/W-anchors.png)
+
+Many of the anchors need to be centered optically, but many must be centered exactly horizontally, such as in the letter /H. I have quite a few anchors to center. To make this faster and more accurate, I'll use this script:
+
+```
+layer = Glyphs.font.selectedLayers[0] # current layer
+
+for anchor in layer.anchors:
+    if anchor.selected == True:
+        centerXpos = layer.width/2
+        anchor.x = centerXpos
+        print(anchor.name, " moved to ", str(centerXpos))
+```
+
+### Fixing Ligatures
+
+There are several ligatures which are incompatible. Their issue is very small, however:
+
+![](assets/fix-ligatures.gif)
+
+### Fixing numerals
+
+There are several incompatible numerals. However, these are relatively simple fixes.
+
+Regular `/fiveinferior`, with a smooth bracket which is illogical in this typeface (where most brackets are sharp, especially coming from non-diagonal stems).
+
+![](assets/broken-5.gif)
+
+The Bold `/fiveinferior` is more logical.
+
+![](assets/logical-5.gif)
+
+With the off-point (curve) handles deleted in the Regular, the `/fiveinferior` is compatible.
+
+![](assets/fixed-5.gif)
+
+This is similar in the `/seveninferior` and `seven.oldstyle`, so I will provide a similar solution.
+
+The `/threeeights` fraction was simply in an inconsistent order, which was easily fixed by cutting and pasting the `/eightinerior`.
+
+### Et voila! No incompatible glyphs.
+
+![](assets/no-incompatible-masters.png)
+
+This _should_ mean that a variable font can be generated. Let's see...
+
+## Generating the variable font, v. 1
+
+In a terminal, in my python virtual environment which is setup with [FontMake](https://github.com/googlei18n/fontmake), I run:
+
+```
+fontmake -o variable -g source/LibreCaslonText-2048.glyphs
+```
+
+And see what happens. It's close! But it needs some metadata cleanup.
+
+![](assets/vf-generate-fail.gif)
+
+Oops, looks like the master weight values are out of sorts. In the generated `.designspace` file, I can see this:
+
+```
+<axis default="400" maximum="400" minimum="400" name="Weight" tag="wght">
+        <map input="400" output="700" />
+</axis>
+```
+
+This shows that a range of values is not yet coming in from my Glyphs source. Let's fix that...
+
+Looking in Font Info, I see that my masters have weight values of `400` and `700`, which I want.
+
+However the "Bold" instance has a "Regular" weight value selected. This may be the problem:
+
+![](assets/fontinfo-problem.png)
+
+Let's try it again:
+
+![](assets/vf-generate-success.gif)
+
+It works!
+
+![](assets/vf-fontview.gif)
+
+Now, I can put this through FontBakery to find and fix any remaining metadata issues.
