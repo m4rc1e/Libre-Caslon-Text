@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="quotedblleft" format="2">
+  <advance width="769.0"/>
+  <unicode hex="201C"/>
+  <outline>
+    <contour>
+      <point x="278.0" y="1461.0" type="line"/>
+      <point x="157.0" y="1373.0"/>
+      <point x="93.0" y="1262.0"/>
+      <point x="93.0" y="1119.0" type="curve" smooth="yes"/>
+      <point x="93.0" y="1038.0"/>
+      <point x="143.0" y="970.0"/>
+      <point x="218.0" y="970.0" type="curve" smooth="yes"/>
+      <point x="285.0" y="970.0"/>
+      <point x="336.0" y="1021.0"/>
+      <point x="336.0" y="1088.0" type="curve" smooth="yes"/>
+      <point x="336.0" y="1195.0"/>
+      <point x="204.0" y="1176.0"/>
+      <point x="204.0" y="1258.0" type="curve" smooth="yes"/>
+      <point x="204.0" y="1299.0"/>
+      <point x="248.0" y="1360.0"/>
+      <point x="313.0" y="1410.0" type="curve"/>
+    </contour>
+    <contour>
+      <point x="616.0" y="1461.0" type="line"/>
+      <point x="495.0" y="1373.0"/>
+      <point x="431.0" y="1262.0"/>
+      <point x="431.0" y="1119.0" type="curve" smooth="yes"/>
+      <point x="431.0" y="1038.0"/>
+      <point x="480.0" y="970.0"/>
+      <point x="556.0" y="970.0" type="curve" smooth="yes"/>
+      <point x="623.0" y="970.0"/>
+      <point x="674.0" y="1021.0"/>
+      <point x="674.0" y="1088.0" type="curve" smooth="yes"/>
+      <point x="674.0" y="1195.0"/>
+      <point x="542.0" y="1176.0"/>
+      <point x="542.0" y="1258.0" type="curve" smooth="yes"/>
+      <point x="542.0" y="1299.0"/>
+      <point x="586.0" y="1360.0"/>
+      <point x="651.0" y="1410.0" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>

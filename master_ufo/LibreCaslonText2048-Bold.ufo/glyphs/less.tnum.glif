@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="less.tnum" format="2">
+  <advance width="1056.0"/>
+  <outline>
+    <contour>
+      <point x="885.0" y="204.0" type="line"/>
+      <point x="885.0" y="354.0" type="line"/>
+      <point x="327.0" y="593.0" type="line"/>
+      <point x="327.0" y="600.0" type="line"/>
+      <point x="885.0" y="836.0" type="line"/>
+      <point x="885.0" y="979.0" type="line"/>
+      <point x="165.0" y="635.0" type="line"/>
+      <point x="165.0" y="546.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/24 14:44:36</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="oneinferior" format="2">
+  <advance width="420.0"/>
+  <unicode hex="2081"/>
+  <outline>
+    <contour>
+      <point x="165.0" y="319.0" type="line"/>
+      <point x="64.0" y="319.0" type="line"/>
+      <point x="64.0" y="330.0" type="line"/>
+      <point x="169.0" y="341.0"/>
+      <point x="218.0" y="370.0"/>
+      <point x="268.0" y="433.0" type="curve"/>
+      <point x="279.0" y="431.0" type="line"/>
+      <point x="279.0" y="-249.0" type="line"/>
+      <point x="370.0" y="-257.0" type="line"/>
+      <point x="370.0" y="-275.0" type="line"/>
+      <point x="64.0" y="-275.0" type="line"/>
+      <point x="64.0" y="-257.0" type="line"/>
+      <point x="165.0" y="-249.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>

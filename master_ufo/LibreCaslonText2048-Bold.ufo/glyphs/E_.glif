@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="E" format="2">
+  <advance width="1287.0"/>
+  <unicode hex="0045"/>
+  <anchor x="680.0" y="0.0" name="bottom"/>
+  <anchor x="669.0" y="1461.0" name="topcap"/>
+  <outline>
+    <contour>
+      <point x="498.0" y="669.0" type="line"/>
+      <point x="748.0" y="669.0" type="line"/>
+      <point x="785.0" y="604.0"/>
+      <point x="810.0" y="535.0"/>
+      <point x="824.0" y="470.0" type="curve"/>
+      <point x="898.0" y="470.0" type="line"/>
+      <point x="898.0" y="963.0" type="line"/>
+      <point x="824.0" y="963.0" type="line"/>
+      <point x="810.0" y="898.0"/>
+      <point x="787.0" y="829.0"/>
+      <point x="748.0" y="764.0" type="curve"/>
+      <point x="498.0" y="764.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="975.0" y="1255.0" type="line"/>
+      <point x="1035.0" y="1163.0"/>
+      <point x="1079.0" y="1060.0"/>
+      <point x="1111.0" y="968.0" type="curve"/>
+      <point x="1184.0" y="968.0" type="line"/>
+      <point x="1151.0" y="1355.0" type="line"/>
+      <point x="74.0" y="1355.0" type="line"/>
+      <point x="74.0" y="1290.0" type="line"/>
+      <point x="224.0" y="1257.0" type="line"/>
+      <point x="224.0" y="99.0" type="line"/>
+      <point x="74.0" y="65.0" type="line"/>
+      <point x="74.0" y="0.0" type="line"/>
+      <point x="1142.0" y="0.0" type="line"/>
+      <point x="1216.0" y="412.0" type="line"/>
+      <point x="1125.0" y="412.0" type="line"/>
+      <point x="1082.0" y="308.0"/>
+      <point x="1040.0" y="204.0"/>
+      <point x="964.0" y="100.0" type="curve"/>
+      <point x="526.0" y="100.0" type="line"/>
+      <point x="526.0" y="1255.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>

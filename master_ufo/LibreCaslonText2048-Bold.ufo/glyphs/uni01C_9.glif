@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni01C9" format="2">
+  <advance width="1208.0"/>
+  <unicode hex="01C9"/>
+  <anchor x="319.0" y="0.0" name="bottom"/>
+  <anchor x="314.0" y="1508.0" name="topcap"/>
+  <outline>
+    <component base="l"/>
+    <component base="j" xOffset="627.0"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="equal.tnum" format="2">
+  <advance width="1056.0"/>
+  <outline>
+    <contour>
+      <point x="889.0" y="690.0" type="line"/>
+      <point x="889.0" y="801.0" type="line"/>
+      <point x="167.0" y="801.0" type="line"/>
+      <point x="167.0" y="690.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="889.0" y="407.0" type="line"/>
+      <point x="889.0" y="517.0" type="line"/>
+      <point x="167.0" y="517.0" type="line"/>
+      <point x="167.0" y="407.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/24 14:44:36</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.3</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

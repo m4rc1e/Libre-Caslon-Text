@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="logicalnot" format="2">
+  <advance width="1007.0"/>
+  <unicode hex="00AC"/>
+  <outline>
+    <contour>
+      <point x="869.0" y="465.0" type="line"/>
+      <point x="869.0" y="542.0" type="line"/>
+      <point x="148.0" y="542.0" type="line"/>
+      <point x="148.0" y="465.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="780.0" y="259.0" type="line"/>
+      <point x="869.0" y="259.0" type="line"/>
+      <point x="869.0" y="514.0" type="line"/>
+      <point x="780.0" y="514.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.3</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="z" format="2">
+  <advance width="903.0"/>
+  <unicode hex="007A"/>
+  <anchor x="452.0" y="0.0" name="bottom"/>
+  <anchor x="459.0" y="1146.0" name="top"/>
+  <outline>
+    <contour>
+      <point x="125.0" y="933.0" type="line"/>
+      <point x="104.0" y="584.0" type="line"/>
+      <point x="141.0" y="583.0" type="line"/>
+      <point x="151.0" y="639.0"/>
+      <point x="172.0" y="716.0"/>
+      <point x="229.0" y="876.0" type="curve"/>
+      <point x="618.0" y="876.0" type="line"/>
+      <point x="69.0" y="49.0" type="line"/>
+      <point x="69.0" y="0.0" type="line"/>
+      <point x="792.0" y="0.0" type="line"/>
+      <point x="804.0" y="336.0" type="line"/>
+      <point x="767.0" y="341.0" type="line"/>
+      <point x="753.0" y="271.0"/>
+      <point x="722.0" y="158.0"/>
+      <point x="681.0" y="56.0" type="curve"/>
+      <point x="273.0" y="56.0" type="line"/>
+      <point x="829.0" y="885.0" type="line"/>
+      <point x="829.0" y="933.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>

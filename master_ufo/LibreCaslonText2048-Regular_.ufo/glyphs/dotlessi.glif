@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dotlessi" format="2">
+  <advance width="504.0"/>
+  <unicode hex="0131"/>
+  <anchor x="257.0" y="0.0" name="bottom"/>
+  <anchor x="257.0" y="1166.0" name="top"/>
+  <outline>
+    <contour>
+      <point x="466.0" y="18.0" type="line"/>
+      <point x="466.0" y="0.0" type="line"/>
+      <point x="55.0" y="0.0" type="line"/>
+      <point x="55.0" y="18.0" type="line"/>
+      <point x="189.0" y="35.0" type="line"/>
+      <point x="189.0" y="805.0" type="line"/>
+      <point x="59.0" y="854.0" type="line"/>
+      <point x="59.0" y="869.0" type="line"/>
+      <point x="315.0" y="955.0" type="line"/>
+      <point x="332.0" y="955.0" type="line"/>
+      <point x="332.0" y="35.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.10</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

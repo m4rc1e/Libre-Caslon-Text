@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="foursuperior" format="2">
+  <advance width="810.0"/>
+  <unicode hex="2074"/>
+  <outline>
+    <contour>
+      <point x="394.0" y="811.0" type="line"/>
+      <point x="231.0" y="783.0" type="line"/>
+      <point x="231.0" y="737.0" type="line"/>
+      <point x="757.0" y="737.0" type="line"/>
+      <point x="757.0" y="783.0" type="line"/>
+      <point x="635.0" y="811.0" type="line"/>
+      <point x="635.0" y="954.0" type="line"/>
+      <point x="762.0" y="954.0" type="line"/>
+      <point x="762.0" y="1070.0" type="line"/>
+      <point x="635.0" y="1070.0" type="line"/>
+      <point x="635.0" y="1623.0" type="line"/>
+      <point x="498.0" y="1633.0" type="line"/>
+      <point x="2.0" y="1030.0" type="line"/>
+      <point x="32.0" y="954.0" type="line"/>
+      <point x="394.0" y="954.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="394.0" y="1070.0" type="line"/>
+      <point x="157.0" y="1070.0" type="line"/>
+      <point x="155.0" y="1077.0" type="line"/>
+      <point x="387.0" y="1360.0" type="line"/>
+      <point x="394.0" y="1360.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>

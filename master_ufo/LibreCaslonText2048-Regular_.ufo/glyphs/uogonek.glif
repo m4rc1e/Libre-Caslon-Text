@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uogonek" format="2">
+  <advance width="977.0"/>
+  <unicode hex="0173"/>
+  <anchor x="464.0" y="0.0" name="bottom"/>
+  <anchor x="486.0" y="1166.0" name="top"/>
+  <outline>
+    <component base="u" xOffset="2.0"/>
+    <component base="ogonek" xOffset="330.0"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

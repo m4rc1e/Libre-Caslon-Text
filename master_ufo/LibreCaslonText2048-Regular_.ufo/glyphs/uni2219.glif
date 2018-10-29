@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni2219" format="2">
+  <advance width="513.0"/>
+  <unicode hex="2219"/>
+  <outline>
+    <contour>
+      <point x="143.0" y="524.0" type="curve" smooth="yes"/>
+      <point x="143.0" y="460.0"/>
+      <point x="189.0" y="409.0"/>
+      <point x="257.0" y="409.0" type="curve" smooth="yes"/>
+      <point x="326.0" y="409.0"/>
+      <point x="370.0" y="460.0"/>
+      <point x="370.0" y="524.0" type="curve" smooth="yes"/>
+      <point x="370.0" y="587.0"/>
+      <point x="326.0" y="636.0"/>
+      <point x="257.0" y="636.0" type="curve" smooth="yes"/>
+      <point x="189.0" y="636.0"/>
+      <point x="143.0" y="587.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="one.tnum" format="2">
+  <advance width="1056.0"/>
+  <outline>
+    <contour>
+      <point x="620.0" y="1373.0" type="line"/>
+      <point x="495.0" y="1255.0"/>
+      <point x="368.0" y="1183.0"/>
+      <point x="246.0" y="1144.0" type="curve"/>
+      <point x="246.0" y="1107.0" type="line"/>
+      <point x="472.0" y="1107.0" type="line"/>
+      <point x="472.0" y="74.0" type="line"/>
+      <point x="239.0" y="39.0" type="line"/>
+      <point x="239.0" y="0.0" type="line"/>
+      <point x="884.0" y="0.0" type="line"/>
+      <point x="884.0" y="39.0" type="line"/>
+      <point x="656.0" y="74.0" type="line"/>
+      <point x="656.0" y="1359.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/24 14:44:36</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.12</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

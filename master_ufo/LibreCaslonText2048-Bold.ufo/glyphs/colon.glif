@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="colon" format="2">
+  <advance width="528.0"/>
+  <unicode hex="003A"/>
+  <outline>
+    <contour>
+      <point x="111.0" y="683.0" type="curve" smooth="yes"/>
+      <point x="111.0" y="611.0"/>
+      <point x="162.0" y="539.0"/>
+      <point x="260.0" y="539.0" type="curve" smooth="yes"/>
+      <point x="364.0" y="539.0"/>
+      <point x="417.0" y="611.0"/>
+      <point x="417.0" y="683.0" type="curve" smooth="yes"/>
+      <point x="417.0" y="760.0"/>
+      <point x="357.0" y="829.0"/>
+      <point x="260.0" y="829.0" type="curve" smooth="yes"/>
+      <point x="165.0" y="829.0"/>
+      <point x="111.0" y="760.0"/>
+    </contour>
+    <contour>
+      <point x="111.0" y="127.0" type="curve" smooth="yes"/>
+      <point x="111.0" y="55.0"/>
+      <point x="162.0" y="-18.0"/>
+      <point x="260.0" y="-18.0" type="curve" smooth="yes"/>
+      <point x="364.0" y="-18.0"/>
+      <point x="417.0" y="55.0"/>
+      <point x="417.0" y="127.0" type="curve" smooth="yes"/>
+      <point x="417.0" y="204.0"/>
+      <point x="357.0" y="273.0"/>
+      <point x="260.0" y="273.0" type="curve" smooth="yes"/>
+      <point x="165.0" y="273.0"/>
+      <point x="111.0" y="204.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>

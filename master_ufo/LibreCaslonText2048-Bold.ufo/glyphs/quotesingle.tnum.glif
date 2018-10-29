@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="quotesingle.tnum" format="2">
+  <advance width="528.0"/>
+  <outline>
+    <contour>
+      <point x="308.0" y="889.0" type="line"/>
+      <point x="315.0" y="1093.0"/>
+      <point x="375.0" y="1258.0"/>
+      <point x="375.0" y="1345.0" type="curve" smooth="yes"/>
+      <point x="375.0" y="1412.0"/>
+      <point x="334.0" y="1461.0"/>
+      <point x="264.0" y="1461.0" type="curve" smooth="yes"/>
+      <point x="195.0" y="1461.0"/>
+      <point x="153.0" y="1413.0"/>
+      <point x="153.0" y="1338.0" type="curve" smooth="yes"/>
+      <point x="153.0" y="1257.0"/>
+      <point x="215.0" y="1091.0"/>
+      <point x="220.0" y="889.0" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/24 14:44:36</string>
+    </dict>
+  </lib>
+</glyph>

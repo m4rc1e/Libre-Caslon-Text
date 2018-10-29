@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="gcommaaccent" format="2">
+  <advance width="887.0"/>
+  <unicode hex="0123"/>
+  <anchor x="449.0" y="1166.0" name="top"/>
+  <outline>
+    <contour>
+      <point x="526.0" y="1547.0" type="line"/>
+      <point x="433.0" y="1481.0"/>
+      <point x="383.0" y="1393.0"/>
+      <point x="383.0" y="1300.0" type="curve" smooth="yes"/>
+      <point x="383.0" y="1221.0"/>
+      <point x="420.0" y="1168.0"/>
+      <point x="475.0" y="1168.0" type="curve" smooth="yes"/>
+      <point x="517.0" y="1168.0"/>
+      <point x="546.0" y="1199.0"/>
+      <point x="546.0" y="1243.0" type="curve" smooth="yes"/>
+      <point x="546.0" y="1318.0"/>
+      <point x="462.0" y="1318.0"/>
+      <point x="462.0" y="1399.0" type="curve" smooth="yes"/>
+      <point x="462.0" y="1445.0"/>
+      <point x="491.0" y="1503.0"/>
+      <point x="535.0" y="1536.0" type="curve"/>
+    </contour>
+    <component base="g"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/10/29 20:09:01</string>
+    </dict>
+  </lib>
+</glyph>
