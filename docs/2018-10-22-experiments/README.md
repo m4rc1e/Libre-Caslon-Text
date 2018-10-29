@@ -79,6 +79,62 @@ To check that that things haven't been distorted too badly, I could make a scrip
     - Points are suddenly missing a key alignment zone such as the baseline, x-height, cap height, ascender height, or hinting blue zone. This is not the case.
     - If a very thin stroke on a diagonal letter such as `K` is suddenly misaligned on either side of an intersection. A spot check shows that this is not the case in the scaled versions. I will have to be more cautious when working in the Libre Caslon Display masters, where thin strokes are thinner, and thus have a smaller margin of acceptable error.
 
+### Scaling Libre Caslon Display
+
+I've tried the same approach to scaling the Display, scaling it to 1760 UPM, then changing the UPM to 2048. However, due to its original major difference in Cap Height and x-Height from LC Text, it is again way too small:
+
+![](assets/libre-caslon-display-scaled.png)
+
+So, LC Display should have its own scaling approach. But should it again try to match the cap height of Times New Roman, or should it be based off of the sizing of LC Text? Because it should work best with its own family members, it seems obvious that it needs to be scaled based off of the LC Text. 
+
+But how, exactly, should the metrics of a display font related to the metrics of a text font, if they are set at the same point size? Should the cap height be matched, allowing the x-height to change? Or should the x-height be matched, allowing the Cap height to change? I lean towards the latter, because caps appear less frequently in most text, and I therefor consider them to be less of a foundation of a font's size than the x-height. However, is there an industry standard for how font metrics should relate between text and display versions?
+
+**Seeking a standard of `opsz`**
+
+I took my question to [v-fonts.com](https://v-fonts.com) to see what other type designers are doing for `opsz` font metrics. I updated the text areas to hold the following HTML, to prevent reflow of lines while scaling `opsz`, and also to get a good sense of the relative heights between capital and lowercase letters.
+
+```
+<p>AaBbCcDdEeFfGgHh</p>
+<p>IiJjKkLlMmNnOoPp</p>
+<p>QqRrSsTtUuVvWwXx</p>
+<p>YyZz 0123456789</p>
+```
+
+![](assets/blazeface-opsz.gif)
+
+*OHno Blazeface keeps the x-height consistent and scales capitals*
+
+![](assets/bradley-djr-opsz.gif)
+
+*DJR Bradley is a bit hard to see, but seems to keep x-height consistent while moving capitals*
+
+![](assets/minion-opsz.gif)
+
+*Adobe Minion scales x-height while maintaining cap height*
+
+![](assets/zeitung-opsz.gif)
+
+*Underware Zeitung is very subtle, mostly changing spacing, but also keeps cap-height consistent while scaling the x-height*
+
+Clearly, there is no single definition of what *Optical Size* is or should be. Though most typefaces do use it to define the amount of thick/thin contrast in letterforms as well as overall letter spacing, it doesn't have a consistent, obvious meaning in terms of how vertical metrics are related. This probably means it's an open question that requires some design thought.
+
+Here's a quick, rough comparison of LC Text & Display, matched either by cap height or x-height:
+
+![](assets/libre-caslon-opsz-scaling.png)
+
+It seems clear that the first example changes overall visual size, including line-length, dramatically. Meanwhile, the second example (matching x-height) feels more like the same size of typeface – just with a few changed proportions, and doesn't change line length quite so dramatically. 
+
+Two possible exceptions come to mind:
+- What about when the type is set with more caps than lowercase?
+    - While text is occasionally set in all-caps, observation of typography across websites and publications shows that text is set in mostly-lowercase letters, most of the time. Therefore, matching lowercase sizing will disrupt most text less than matching uppercase.
+- What if this shifts the baseline of text, relative to the top of the body? Could that cause problems with a shifting baseline if people are setting or testing this as a variable font?
+    - In Adobe software, the top of a textbox is dictated by the top point of a lowercase /d.I don't know offhand what dictates text positioning on the web... 
+    - *However,* these styles will eventually be put into a single source file, which should match their baseline, even while other proportions change. Therefor, I don't think I have to worry about some arbitrary item changing baseline alignment between these styles.
+
+With the decision to match x-height between Text and Display sizes, I simply have to compute the scaling factor to match the Display x-height to Text.
+
+Libre Caslon Text's x-height is now `933` after previous scaling. Before scaling, LC Display's x-height is `424`. `933 / 424 = 2.200471698`. So, I'll scale LC Display to 2200 UPM, then change it to 2048 UPM. 
+
 ## Italic
 
 It appears that some of the italic may have been created by half-rotating, half-slanting the romans.
@@ -94,4 +150,3 @@ Above, from left to right:
 - a `g` skewed 20°
 
 This approach could be a quick starting point for the Bold Italic. On the other hand, it might mean that we should throw out much of what currently exists for the regular Italic, in order to do it better…
-
