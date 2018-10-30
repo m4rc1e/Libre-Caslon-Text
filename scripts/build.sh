@@ -5,10 +5,10 @@
 ############################################
 ################# set vars #################
 
-glyphsSource="sources/Encode-Sans.glyphs"
+glyphsSource="source/LibreCaslonText.glyphs"
 
 ## Set this. It's probably your font name without spaces, then "-VF"
-VFname="EncodeSans-VF"
+VFname="LibreCaslonText-VF"
 
 ## if the Glyphs source has a non-rectangular master/instance arrangement, this fixes it (WIP)
 fixGlyphsDesignspace=true
