@@ -104,4 +104,37 @@ Because of this, I will try two things:
 
 ## To fix
 
-`WARNING:fontTools.varLib:glyph agrave has incompatible masters; skipping`
+- [x] For starters, I get this error when I build the VF: `WARNING:fontTools.varLib:glyph agrave has incompatible masters; skipping`
+
+Plus, I have lots of FontBakery issues to resolve. I'm keeping a full log of these in [Issue #2](https://github.com/thundernixon/Libre-Caslon-Text/issues/2), but here are the others high-weight issues:
+
+<br>
+</details>
+<details>
+<summary><b>[109] LibreCaslonText-VF.ttf</b></summary>
+<details>
+<summary>:fire: <b>FAIL:</b> Checking file is named canonically.</summary>
+
+* [com.google.fonts/check/001](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/001)
+* :fire: **FAIL** Style name used in "dist/LibreCaslonText-VF-2018-10-31-15_29/LibreCaslonText-VF.ttf" is not canonical. You should rebuild the font using any of the following style names: "Thin", "ExtraLight", "Light", "Regular", "Medium", "SemiBold", "Bold", "ExtraBold", "Black", "Thin Italic", "ExtraLight Italic", "Light Italic", "Italic", "Medium Italic", "SemiBold Italic", "Bold Italic", "ExtraBold Italic", "Black Italic".
+
+</details>
+<details>
+<summary>:fire: <b>FAIL:</b> Checking with Microsoft Font Validator.</summary>
+
+* [com.google.fonts/check/037](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/037)
+* :information_source: **INFO** Microsoft Font Validator returned an error code. Output follows :
+```
+Removing these for now because there are a ton of false flags.
+```
+</details>
+<details>
+<summary>:fire: <b>FAIL:</b> Checking OS/2 Metrics match hhea Metrics.</summary>
+
+* [com.google.fonts/check/042](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/042)
+* :fire: **FAIL** OS/2 sTypoAscender and hhea ascent must be equal. [code: ascender]
+
+</details>
+<details>
+<summary>:fire: <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent.</summary>
+

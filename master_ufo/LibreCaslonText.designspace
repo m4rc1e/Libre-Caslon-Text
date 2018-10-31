@@ -27,6 +27,20 @@
             <kerning />
             <info />
         </instance>
+        <instance familyname="Libre Caslon Text" filename="../instance_ufo/LibreCaslonText-Medium.ufo" name="Libre Caslon Text Medium" stylemapfamilyname="Libre Caslon Text Medium" stylemapstylename="regular" stylename="Medium">
+            <location>
+                <dimension name="Weight" xvalue="500" />
+            </location>
+            <kerning />
+            <info />
+        </instance>
+        <instance familyname="Libre Caslon Text" filename="../instance_ufo/LibreCaslonText-SemiBold.ufo" name="Libre Caslon Text SemiBold" stylemapfamilyname="Libre Caslon Text SemiBold" stylemapstylename="regular" stylename="SemiBold">
+            <location>
+                <dimension name="Weight" xvalue="600" />
+            </location>
+            <kerning />
+            <info />
+        </instance>
         <instance familyname="Libre Caslon Text" filename="../instance_ufo/LibreCaslonText-Bold.ufo" name="Libre Caslon Text Bold" stylemapfamilyname="Libre Caslon Text Bold" stylemapstylename="regular" stylename="Bold">
             <location>
                 <dimension name="Weight" xvalue="700" />

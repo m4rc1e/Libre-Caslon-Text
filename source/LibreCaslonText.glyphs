@@ -1,5 +1,5 @@
 {
-.appVersion = "1174";
+.appVersion = "1176";
 DisplayStrings = (
 "Á/Abreve ÂÀ/Amacron/Aogonek ÅÃ/Cacute/Ccaron Ç/Cdotaccent/Dcaron/Ddotbelow É/Ecaron Ê/Edotaccent/Eogonek/Etilde/Gdotaccent Í/Ibreve ÎÏÌ/Kcommaaccent/Lacute/Lcaron/Ncaron/Ncommaaccent/Ndotaccent ÑÓÔÖÒ/Ohungarumlaut/Omacron/Oogonek Õ/Racute/Rcaron/Rcommaaccent/Rdotbelow/Sacute/Scaron/Sdotbelow/Tcaron ÚÙ/Uhungarumlaut/Uogonek/Utilde/Wacute/Wcircumflex/Wdieresis/Wgrave Ý/Ycircumflex/Ydieresis/Ygrave/Ytilde/Zacute/Zcaron á/abreve â/amacron/aogonek å/aringacute/cacute/ccaron ç/ccircumflex/cdotaccent/ddotbelow é/ebreve/ecaron ê/edotaccent/edotbelow è/emacron/eogonek/etilde/fiveeighths/gbreve/gcircumflex/gdotaccent/hcircumflex íì/lcommaaccent/nacute/napostrophe/ncaron/ndotaccent ñóô/oe ò/ohungarumlaut/omacron/oneeighth ½¼/onethird õ/racute/rcaron/sacute/scaron/scircumflex/seveneighths/threeeighths ¾/twothirds ú/ubreve ûüù/uhungarumlaut/umacron/uni015E/uni0162/uni0163/uni01C4/uni01C5/uni01C6/uni0219/uogonek/utilde/wacute/wcircumflex/wdieresis/wgrave ý/ygrave/zacute/zcaron/zdotaccent",
 "argument \012A x en\012\012nnonn\012nnenn",
@@ -7,7 +7,6 @@ DisplayStrings = (
 SO,
 g,
 "AÁ",
-"ACDEGHIJKLNORSTUWYZàcd/dotlessi/dotlessj/f_f_b  /f_f_h  /f_f_j/f_f_k/fiveinferior/fivesuperior hiklos/seven.denominator/seven.numerator/seven.oldstyle/seveninferior/sevensuperior/threeeighths wyz\012\012W",
 "/Aogonek/Eogonek/Iogonek/Oogonek/Uogonek/aogonek/eogonek/iogonek/oogonek/uogonek"
 );
 classes = (
@@ -10166,7 +10165,7 @@ unicode = 01FD;
 },
 {
 glyphname = agrave;
-lastChange = "2018-10-29 20:09:01 +0000";
+lastChange = "2018-10-31 20:16:13 +0000";
 layers = (
 {
 components = (
@@ -10184,11 +10183,11 @@ width = 924;
 {
 components = (
 {
-name = grave;
-transform = "{1, 0, 0, 1, 380, 0}";
+name = a;
 },
 {
-name = a;
+name = grave;
+transform = "{1, 0, 0, 1, 306, 0}";
 }
 );
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
@@ -40869,7 +40868,6 @@ master01 = 1;
 name = Regular;
 },
 {
-exports = 0;
 interpolationWeight = 500;
 interpolationWidth = 16;
 instanceInterpolations = {
@@ -40877,6 +40875,16 @@ instanceInterpolations = {
 master01 = 0.66667;
 };
 name = Medium;
+weightClass = Medium;
+},
+{
+interpolationWeight = 600;
+instanceInterpolations = {
+"FA6D65B5-4623-4FAC-A199-3F662257AC29" = 0.66667;
+master01 = 0.33333;
+};
+name = SemiBold;
+weightClass = SemiBold;
 },
 {
 interpolationWeight = 700;
