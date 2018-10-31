@@ -8,7 +8,7 @@
 glyphsSource="source/LibreCaslonText.glyphs"
 
 ## move VF into new folder of dist/ with timestamp and fontbake
-timestampAndFontbakeInDist=false
+timestampAndFontbakeInDist=true
 
 ## keep designspace file if you want to check values later
 keepDesignspace=true
@@ -52,17 +52,26 @@ rm -rf ${VFname}-backup-fonttools-prep-gasp.ttf
 
 cd ..
 
-
+# cd variable_ttf
 # open VF in default program; hopefully you have FontView
-open ${VFname}.ttf
+open variable_ttf/${VFname}.ttf
 
 ## if you set timestampAndFontbakeInDist variable to true, this creates a new folder in 'dist' to put it into and run fontbake on
 if [ $timestampAndFontbakeInDist == true ]
 then
     ## move font into folder of dist/, with timestamp, then fontbake the font
-    python3 scripts/distdate-and-fontbake.py ${VFname}.ttf
-    rm -rf variable_ttf
+    # python3 ../scripts/distdate-and-fontbake.py ${VFname}.ttf
+
+    newFontLocation=`python3 scripts/distdate.py variable_ttf/${VFname}.ttf`
+
+    echo ${newFontLocation}
+
+    cd ${newFontLocation}
+
+    python3 ../../scripts/fontbake.py ${VFname}.ttf
+
+    rm -rf ../../variable_ttf
 else
-    ttx variable_ttf/${VFname}.ttf
+    ttx ${VFname}.ttf
     echo "font and ttx in variable_ttf folder"
 fi

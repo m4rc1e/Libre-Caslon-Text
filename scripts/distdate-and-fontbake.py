@@ -9,9 +9,9 @@ fontName = fontFile.split(".")[0]
 
 # make timestamped folder in dist, like `SampleFont_2015-10-21-017_03`
 currentDatetime = datetime.now().strftime('%Y-%m-%d-%H_%M')
-# outputFolder = 'dist/' + GLYPHS_PATH.replace('sources/', '').replace('.glyphs', '-VF-') + currentDatetime + '/'
 
-outputFolder = f'dist/{fontName}-{currentDatetime}'
+# outputFolder = f'dist/{fontName}-{currentDatetime}'
+outputFolder = f'dist/{currentDatetime}'
 
 
 if not os.path.exists(outputFolder):

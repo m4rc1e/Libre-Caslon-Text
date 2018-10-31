@@ -752,7 +752,7 @@ date = "2013-03-13 12:27:00 +0000";
 designer = "Pablo Impallari, Rodrigo Fuenzalida";
 designerURL = www.impallari.com;
 disablesNiceNames = 1;
-familyName = "Libre Caslon Text";
+familyName = "Libre Caslon";
 features = (
 {
 code = "	sub f f i by f_f_i;\012	sub f f l by f_f_l;\012	sub f f b by f_f_b;\012	sub f f h by f_f_h;\012	sub f f j by f_f_j;\012	sub f f k by f_f_k;\012	sub f f t by f_f_t;		\012	sub f f by f_f;\012	sub f i by f_i;\012	sub f l by f_l;\012	sub f b by f_b;\012	sub f h by f_h;\012	sub f j by f_j;\012	sub f k by f_k;\012	sub f t by f_t;";

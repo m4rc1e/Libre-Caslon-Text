@@ -106,6 +106,18 @@ Because of this, I will try two things:
 
 - [x] For starters, I get this error when I build the VF: `WARNING:fontTools.varLib:glyph agrave has incompatible masters; skipping`
 
+(This was easily fixed by reordering contours in `/agrave`).
+
+- [x] Once I deleted the "patch" files, there was trouble using ttx on the `build.sh` outputs. 
+
+(This was fixed by simplifying the build script, and making sure my path names were all correct).
+
+- [x]  :fire: FAIL:</b> Checking file is named canonically.
+
+(Made "Regular" instance `400` weight, added " and "SemiBold" weights at `500` and `600` weights). This didn't do the trick.
+
+...after some digging, I eventually found that I was using an old version of FontBakery. I *think* this is because I used pip2 to update FontBakery earlier in the day, but this seems to have pulled a year-old version of FB into my py2 environment. In any case, this shows that I should probably just be using py3, aside from maybe with glyphsLib, which I think might be py2-only.
+
 Plus, I have lots of FontBakery issues to resolve. I'm keeping a full log of these in [Issue #2](https://github.com/thundernixon/Libre-Caslon-Text/issues/2), but here are the others high-weight issues:
 
 <br>
