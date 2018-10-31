@@ -1,5 +1,5 @@
 {
-.appVersion = "1172";
+.appVersion = "1174";
 DisplayStrings = (
 "Á/Abreve ÂÀ/Amacron/Aogonek ÅÃ/Cacute/Ccaron Ç/Cdotaccent/Dcaron/Ddotbelow É/Ecaron Ê/Edotaccent/Eogonek/Etilde/Gdotaccent Í/Ibreve ÎÏÌ/Kcommaaccent/Lacute/Lcaron/Ncaron/Ncommaaccent/Ndotaccent ÑÓÔÖÒ/Ohungarumlaut/Omacron/Oogonek Õ/Racute/Rcaron/Rcommaaccent/Rdotbelow/Sacute/Scaron/Sdotbelow/Tcaron ÚÙ/Uhungarumlaut/Uogonek/Utilde/Wacute/Wcircumflex/Wdieresis/Wgrave Ý/Ycircumflex/Ydieresis/Ygrave/Ytilde/Zacute/Zcaron á/abreve â/amacron/aogonek å/aringacute/cacute/ccaron ç/ccircumflex/cdotaccent/ddotbelow é/ebreve/ecaron ê/edotaccent/edotbelow è/emacron/eogonek/etilde/fiveeighths/gbreve/gcircumflex/gdotaccent/hcircumflex íì/lcommaaccent/nacute/napostrophe/ncaron/ndotaccent ñóô/oe ò/ohungarumlaut/omacron/oneeighth ½¼/onethird õ/racute/rcaron/sacute/scaron/scircumflex/seveneighths/threeeighths ¾/twothirds ú/ubreve ûüù/uhungarumlaut/umacron/uni015E/uni0162/uni0163/uni01C4/uni01C5/uni01C6/uni0219/uogonek/utilde/wacute/wcircumflex/wdieresis/wgrave ý/ygrave/zacute/zcaron/zdotaccent",
 "argument \012A x en\012\012nnonn\012nnenn",
@@ -738,13 +738,22 @@ value = "Libre Caslon is a trademark of Pablo Impallari";
 {
 name = year;
 value = 2012;
+},
+{
+name = Axes;
+value = (
+{
+Name = Weight;
+Tag = wght;
+}
+);
 }
 );
 date = "2013-03-13 12:27:00 +0000";
 designer = "Pablo Impallari, Rodrigo Fuenzalida";
 designerURL = www.impallari.com;
 disablesNiceNames = 1;
-familyName = "Libre Caslon Text 2048";
+familyName = "Libre Caslon Text";
 features = (
 {
 code = "	sub f f i by f_f_i;\012	sub f f l by f_f_l;\012	sub f f b by f_f_b;\012	sub f f h by f_f_h;\012	sub f f j by f_f_j;\012	sub f f k by f_f_k;\012	sub f f t by f_f_t;		\012	sub f f by f_f;\012	sub f i by f_i;\012	sub f l by f_l;\012	sub f b by f_b;\012	sub f h by f_h;\012	sub f j by f_j;\012	sub f k by f_k;\012	sub f t by f_t;";

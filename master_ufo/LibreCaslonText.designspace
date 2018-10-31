@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<designspace format="4.0">
+    <axes>
+        <axis default="400" maximum="700" minimum="400" name="Weight" tag="wght" />
+    </axes>
+    <sources>
+        <source familyname="Libre Caslon Text" filename="LibreCaslonText-Regular.ufo" name="Libre Caslon Text Regular" stylename="Regular">
+            <lib copy="1" />
+            <groups copy="1" />
+            <features copy="1" />
+            <info copy="1" />
+            <location>
+                <dimension name="Weight" xvalue="400" />
+            </location>
+        </source>
+        <source familyname="Libre Caslon Text" filename="LibreCaslonText-Bold.ufo" name="Libre Caslon Text Bold" stylename="Bold">
+            <location>
+                <dimension name="Weight" xvalue="700" />
+            </location>
+        </source>
+    </sources>
+    <instances>
+        <instance familyname="Libre Caslon Text" filename="../instance_ufo/LibreCaslonText-Regular.ufo" name="Libre Caslon Text Regular" stylemapfamilyname="Libre Caslon Text" stylemapstylename="regular" stylename="Regular">
+            <location>
+                <dimension name="Weight" xvalue="400" />
+            </location>
+            <kerning />
+            <info />
+        </instance>
+        <instance familyname="Libre Caslon Text" filename="../instance_ufo/LibreCaslonText-Bold.ufo" name="Libre Caslon Text Bold" stylemapfamilyname="Libre Caslon Text Bold" stylemapstylename="regular" stylename="Bold">
+            <location>
+                <dimension name="Weight" xvalue="700" />
+            </location>
+            <kerning />
+            <info />
+        </instance>
+    </instances>
+    <lib>
+        <dict>
+            <key>UFO.lib</key>
+            <dict>
+                <key>com.typemytype.robofont.guides</key>
+                <array>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>name</key>
+                        <string>Limit Top</string>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>970</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>687</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>-10</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>-158</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>830</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>-260</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>757</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>780</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>22</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>230</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>857</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>651</integer>
+                    </dict>
+                    <dict>
+                        <key>angle</key>
+                        <integer>0</integer>
+                        <key>isGlobal</key>
+                        <integer>1</integer>
+                        <key>magnetic</key>
+                        <integer>5</integer>
+                        <key>x</key>
+                        <integer>0</integer>
+                        <key>y</key>
+                        <integer>540</integer>
+                    </dict>
+                </array>
+            </dict>
+            <key>UFOFormat</key>
+            <integer>2</integer>
+        </dict>
+    </lib>
+</designspace>
