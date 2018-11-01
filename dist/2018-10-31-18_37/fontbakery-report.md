@@ -1,21 +1,12 @@
 ## Fontbakery report
 
-Fontbakery version: 0.0.0+unknown
-
 <details>
-<summary><b>[23] Family checks</b></summary>
-<details>
-<summary>:broken_heart: <b>ERROR:</b> Do we have the latest version of FontBakery installed?</summary>
-
-* [com.google.fonts/check/fontbakery_version](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/fontbakery_version)
-* :broken_heart: **ERROR** Failed with AttributeError: 'NoneType' object has no attribute 'split'
-
-</details>
+<summary><b>[22] Family checks</b></summary>
 <details>
 <summary>:fire: <b>FAIL:</b> Check font has a license.</summary>
 
 * [com.google.fonts/check/028](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/028)
-* :fire: **FAIL** No license file was found. Please add an OFL.txt or a LICENSE.txt file. If you are running fontbakery on a Google Fonts upstream repo, which is fine, just make sure there is a temporary license file in the same folder. [code: no-license]
+* :fire: **FAIL** No license file was found. Please add an OFL.txt or a LICENSE.txt file. If you are running fontbakery on a Google Fonts upstream repo, which is fine, just make sure there is a temporary license file in the same folder. [code: none]
 
 </details>
 <details>
@@ -168,12 +159,27 @@ Fontbakery version: 0.0.0+unknown
 <br>
 </details>
 <details>
-<summary><b>[113] LibreCaslon-VF.ttf</b></summary>
+<summary><b>[111] LibreCaslon-VF.ttf</b></summary>
 <details>
-<summary>:broken_heart: <b>ERROR:</b> Checking with ots-sanitize.</summary>
+<summary>:broken_heart: <b>ERROR:</b> Checking with Microsoft Font Validator.</summary>
 
-* [com.google.fonts/check/036](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/036)
-* :broken_heart: **ERROR** Failed with ModuleNotFoundError: No module named 'ots'
+* [com.google.fonts/check/037](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/037)
+* :broken_heart: **ERROR** Mono runtime and/or Microsoft Font Validator are not available!
+* :broken_heart: **ERROR** Failed with FileNotFoundError: [Errno 2] No such file or directory: 'FontValidator.exe': 'FontValidator.exe'
+
+</details>
+<details>
+<summary>:broken_heart: <b>ERROR:</b> FontForge validation outputs error messages?</summary>
+
+* [com.google.fonts/check/038](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/038)
+* :broken_heart: **ERROR** Failed with TypeError: a bytes-like object is required, not 'str'
+
+</details>
+<details>
+<summary>:fire: <b>FAIL:</b> Font has ttfautohint params? </summary>
+
+* [com.google.fonts/check/has_ttfautohint_params](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/has_ttfautohint_params)
+* :fire: **FAIL** Font is lacking ttfautohint params on its version strings on the name table.
 
 </details>
 <details>
@@ -225,7 +231,133 @@ Fontbakery version: 0.0.0+unknown
 * :warning: **WARN** Font em size (2048) is not equal to 1000.
 
 </details>
+<details>
+<summary>:warning: <b>WARN:</b> Check if each glyph has the recommended amount of contours.</summary>
 
+* [com.google.fonts/check/153](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/153)
+* :warning: **WARN** This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.
+
+The following glyphs do not have the recommended number of contours:
+
+Glyph name: dollar	Contours detected: 2	Expected: 1 or 3
+Glyph name: numbersign	Contours detected: 4	Expected: 2
+Glyph name: plus	Contours detected: 2	Expected: 1
+Glyph name: E	Contours detected: 2	Expected: 1
+Glyph name: F	Contours detected: 2	Expected: 1
+Glyph name: H	Contours detected: 3	Expected: 1
+Glyph name: e	Contours detected: 1	Expected: 2
+Glyph name: f	Contours detected: 2	Expected: 1
+Glyph name: h	Contours detected: 2	Expected: 1
+Glyph name: k	Contours detected: 3	Expected: 1 or 2
+Glyph name: m	Contours detected: 3	Expected: 1
+Glyph name: n	Contours detected: 2	Expected: 1
+Glyph name: r	Contours detected: 2	Expected: 1
+Glyph name: w	Contours detected: 2	Expected: 1
+Glyph name: Euro	Contours detected: 3	Expected: 1 or 2
+Glyph name: logicalnot	Contours detected: 2	Expected: 1
+Glyph name: plusminus	Contours detected: 3	Expected: 1 or 2
+Glyph name: Egrave	Contours detected: 3	Expected: 2
+Glyph name: Eacute	Contours detected: 3	Expected: 2
+Glyph name: Ecircumflex	Contours detected: 3	Expected: 2
+Glyph name: Edieresis	Contours detected: 4	Expected: 3
+Glyph name: multiply	Contours detected: 2	Expected: 1
+Glyph name: germandbls	Contours detected: 2	Expected: 1
+Glyph name: egrave	Contours detected: 2	Expected: 3
+Glyph name: eacute	Contours detected: 2	Expected: 3
+Glyph name: ecircumflex	Contours detected: 2	Expected: 3
+Glyph name: edieresis	Contours detected: 3	Expected: 4
+Glyph name: eth	Contours detected: 3	Expected: 2
+Glyph name: ntilde	Contours detected: 3	Expected: 2
+Glyph name: ugrave	Contours detected: 3	Expected: 2
+Glyph name: uacute	Contours detected: 3	Expected: 2
+Glyph name: ucircumflex	Contours detected: 3	Expected: 2
+Glyph name: udieresis	Contours detected: 4	Expected: 3
+Glyph name: aogonek	Contours detected: 3	Expected: 2
+Glyph name: dcroat	Contours detected: 3	Expected: 2
+Glyph name: Emacron	Contours detected: 3	Expected: 2
+Glyph name: emacron	Contours detected: 2	Expected: 3
+Glyph name: Ebreve	Contours detected: 3	Expected: 2
+Glyph name: ebreve	Contours detected: 2	Expected: 3
+Glyph name: Edotaccent	Contours detected: 3	Expected: 2
+Glyph name: edotaccent	Contours detected: 2	Expected: 3
+Glyph name: Eogonek	Contours detected: 3	Expected: 1 or 2
+Glyph name: Ecaron	Contours detected: 3	Expected: 2
+Glyph name: ecaron	Contours detected: 2	Expected: 3
+Glyph name: Hcircumflex	Contours detected: 4	Expected: 2
+Glyph name: hcircumflex	Contours detected: 3	Expected: 2
+Glyph name: hbar	Contours detected: 3	Expected: 1
+Glyph name: uni0137	Contours detected: 4	Expected: 2 or 3
+Glyph name: kgreenlandic	Contours detected: 3	Expected: 1 or 2
+Glyph name: Lslash	Contours detected: 2	Expected: 1
+Glyph name: lslash	Contours detected: 2	Expected: 1
+Glyph name: nacute	Contours detected: 3	Expected: 2
+Glyph name: uni0146	Contours detected: 3	Expected: 2
+Glyph name: ncaron	Contours detected: 3	Expected: 2
+Glyph name: napostrophe	Contours detected: 3	Expected: 2
+Glyph name: Eng	Contours detected: 4	Expected: 1
+Glyph name: eng	Contours detected: 3	Expected: 1
+Glyph name: OE	Contours detected: 3	Expected: 2
+Glyph name: racute	Contours detected: 3	Expected: 2
+Glyph name: rcaron	Contours detected: 3	Expected: 2
+Glyph name: uni0157	Contours detected: 3	Expected: 2
+Glyph name: Tbar	Contours detected: 2	Expected: 1
+Glyph name: tbar	Contours detected: 2	Expected: 1
+Glyph name: umacron	Contours detected: 3	Expected: 2
+Glyph name: ubreve	Contours detected: 3	Expected: 2
+Glyph name: uring	Contours detected: 4	Expected: 3
+Glyph name: uhungarumlaut	Contours detected: 4	Expected: 3
+Glyph name: Uogonek	Contours detected: 2	Expected: 1
+Glyph name: uogonek	Contours detected: 3	Expected: 1
+Glyph name: wcircumflex	Contours detected: 3	Expected: 2
+Glyph name: uni018F	Contours detected: 1	Expected: 2
+Glyph name: uni01CC	Contours detected: 4	Expected: 3
+Glyph name: uni01EA	Contours detected: 3	Expected: 2
+Glyph name: uni01EB	Contours detected: 3	Expected: 2
+Glyph name: u	Contours detected: 2	Expected: 1
+Glyph name: uni0259	Contours detected: 1	Expected: 2
+Glyph name: x	Contours detected: 3	Expected: 1
+Glyph name: yen	Contours detected: 4	Expected: 1 or 2
+Glyph name: uni1E24	Contours detected: 4	Expected: 2
+Glyph name: uni1E25	Contours detected: 3	Expected: 2
+Glyph name: uni1E45	Contours detected: 3	Expected: 2
+Glyph name: uni1E5B	Contours detected: 3	Expected: 2
+Glyph name: wgrave	Contours detected: 3	Expected: 2
+Glyph name: wacute	Contours detected: 3	Expected: 2
+Glyph name: wdieresis	Contours detected: 4	Expected: 3
+Glyph name: uni1EB8	Contours detected: 3	Expected: 2
+Glyph name: uni1EB9	Contours detected: 2	Expected: 3
+Glyph name: uni1EBC	Contours detected: 3	Expected: 2
+Glyph name: uni1EBD	Contours detected: 2	Expected: 3
+Glyph name: uni1EE5	Contours detected: 3	Expected: 2
+Glyph name: utilde	Contours detected: 3	Expected: 2
+
+</details>
+<details>
+<summary>:warning: <b>WARN:</b> FontForge checks.</summary>
+
+* [com.google.fonts/check/039](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/039)
+* :bread: **PASS** fontforge-check: Contours are closed.
+* :bread: **PASS** fontforge-check: References in the glyph haven't been flipped.
+* :bread: **PASS** fontforge-check: Glyphs have points at extremas.
+* :bread: **PASS** fontforge-check: Glyph names referred to from glyphs present in the font.
+* :bread: **PASS** fontforge-check: Points (or control points) are not too far apart.
+* :bread: **PASS** fontforge-check: Not more than 1,500 points in any glyph (a PostScript limit).
+* :bread: **PASS** fontforge-check: Font respects PostScript limit of 96 hints per glyph
+* :bread: **PASS** fontforge-check: Font doesn't have invalid glyph names.
+* :bread: **PASS** fontforge-check: Glyphs have allowed numbers of points defined in maxp.
+* :bread: **PASS** fontforge-check: Glyphs have allowed numbers of paths defined in maxp.
+* :bread: **PASS** fontforge-check: Composite glyphs have allowed numbers of points defined in maxp.
+* :bread: **PASS** fontforge-check: Composite glyphs have allowed numbers of paths defined in maxp.
+* :bread: **PASS** fontforge-check: Glyphs instructions have valid lengths.
+* :bread: **PASS** fontforge-check: Points in glyphs are integer aligned.
+* :bread: **PASS** fontforge-check: Glyphs have all required anchors.
+* :bread: **PASS** fontforge-check: Glyph names are unique.
+* :bread: **PASS** fontforge-check: Unicode code points are unique.
+* :bread: **PASS** fontforge-check: Hints do not overlap.
+* :warning: **WARN** fontforge-check: There are countour intersections!
+* :warning: **WARN** fontforge-check: Contours have incorrect directions!
+
+</details>
 <details>
 <summary>:warning: <b>WARN:</b> Is there kerning info for non-ligated sequences?</summary>
 
@@ -274,13 +406,6 @@ Fontbakery version: 0.0.0+unknown
 
 * [com.google.fonts/check/029](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/029)
 * :zzz: **SKIP** Unfulfilled Conditions: license
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> Font has ttfautohint params? </summary>
-
-* [com.google.fonts/check/has_ttfautohint_params](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/has_ttfautohint_params)
-* :zzz: **SKIP** Font appears to our heuristic as not hinted using ttfautohint.
 
 </details>
 <details>
@@ -518,14 +643,14 @@ Fontbakery version: 0.0.0+unknown
 <summary>:zzz: <b>SKIP:</b> Check name table: FONT_SUBFAMILY_NAME entries. </summary>
 
 * [com.google.fonts/check/158](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/158)
-* :zzz: **SKIP** Unfulfilled Conditions: style_with_spaces
+* :zzz: **SKIP** Unfulfilled Conditions: style
 
 </details>
 <details>
 <summary>:zzz: <b>SKIP:</b> Check name table: FULL_FONT_NAME entries. </summary>
 
 * [com.google.fonts/check/159](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/159)
-* :zzz: **SKIP** Unfulfilled Conditions: style_with_spaces
+* :zzz: **SKIP** Unfulfilled Conditions: style
 
 </details>
 <details>
@@ -546,21 +671,7 @@ Fontbakery version: 0.0.0+unknown
 <summary>:zzz: <b>SKIP:</b> Check name table: TYPOGRAPHIC_SUBFAMILY_NAME entries. </summary>
 
 * [com.google.fonts/check/162](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/162)
-* :zzz: **SKIP** Unfulfilled Conditions: style_with_spaces
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> FontForge validation outputs error messages?</summary>
-
-* [com.google.fonts/check/038](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/038)
-* :zzz: **SKIP** Unfulfilled Conditions: fontforge_check_results
-
-</details>
-<details>
-<summary>:zzz: <b>SKIP:</b> FontForge checks.</summary>
-
-* [com.google.fonts/check/039](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/039)
-* :zzz: **SKIP** Unfulfilled Conditions: fontforge_check_results
+* :zzz: **SKIP** Unfulfilled Conditions: style
 
 </details>
 <details>
@@ -604,7 +715,7 @@ Fontbakery version: 0.0.0+unknown
 * [com.google.fonts/check/054](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/054)
 * :information_source: **INFO** Hinting filesize impact:
 
-|  | LibreCaslon-VF.ttf |
+|  | dist/2018-10-31-18_37/LibreCaslon-VF.ttf |
 |:--- | ---:|
 | Dehinted Size | 124.8kb |
 | Hinted Size | 124.4kb |
@@ -648,7 +759,7 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 <summary>:bread: <b>PASS:</b> Checking file is named canonically.</summary>
 
 * [com.google.fonts/check/001](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/001)
-* :bread: **PASS** LibreCaslon-VF.ttf is named canonically.
+* :bread: **PASS** dist/2018-10-31-18_37/LibreCaslon-VF.ttf is named canonically.
 
 </details>
 <details>
@@ -743,24 +854,17 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 </details>
 <details>
-<summary>:bread: <b>PASS:</b> Check that variable fonts have an HVAR table. </summary>
-
-* [com.google.fonts/check/varfont/has_HVAR](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/varfont/has_HVAR)
-* :bread: **PASS** This variable font contains an HVAR table.
-
-</details>
-<details>
-<summary>:bread: <b>PASS:</b> There must not be VTT Talk sources in the font.</summary>
-
-* [com.google.fonts/check/vttclean](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/vttclean)
-* :bread: **PASS** There are no tables with VTT Talk sources embedded in the font.
-
-</details>
-<details>
 <summary>:bread: <b>PASS:</b> Checking with ftxvalidator.</summary>
 
 * [com.google.fonts/check/035](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/035)
 * :bread: **PASS** ftxvalidator passed this file
+
+</details>
+<details>
+<summary>:bread: <b>PASS:</b> Checking with ots-sanitize.</summary>
+
+* [com.google.fonts/check/036](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/036)
+* :bread: **PASS** ots-sanitize passed this file
 
 </details>
 <details>
@@ -987,5 +1091,5 @@ The version string must ideally include a git commit hash and either a 'dev' or 
 
 | :broken_heart: ERROR | :fire: FAIL | :warning: WARN | :zzz: SKIP | :information_source: INFO | :bread: PASS |
 |:-----:|:----:|:----:|:----:|:----:|:----:|
-| 2 | 6 | 6 | 63 | 5 | 54 |
-| 1% | 4% | 4% | 46% | 4% | 40% |
+| 2 | 7 | 6 | 60 | 5 | 53 |
+| 2% | 5% | 5% | 45% | 4% | 40% |
