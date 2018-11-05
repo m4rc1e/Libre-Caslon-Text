@@ -127,12 +127,12 @@ I found that "opentype sanitizer" was just updated to be a Python module and [up
 I had to install it with `pip install opentype-sanitizer`. ([More info here](https://pypi.org/project/opentype-sanitizer/)).
 
 
-- [ ] FAIL: Checking OS/2 usWinAscent & usWinDescent. – FAIL OS/2.usWinAscent value should be equal or greater than 1708, but got 1707 instead [code: ascent].
+- [x] FAIL: Checking OS/2 usWinAscent & usWinDescent. – FAIL OS/2.usWinAscent value should be equal or greater than 1708, but got 1707 instead [code: ascent].
 - [ ] FAIL: Checking OS/2 Metrics match hhea Metrics. – FAIL OS/2 sTypoAscender and hhea ascent must be equal. [code: ascender]
 
 These errors seem related, and may be coming from my earlier re-adjustment of the overall scaling of this font. I wanted to check where these numbers are coming from, so I opened the `ttx` version of the VF.
 
-The `<head>` table contains `<yMax value="1708"/>` and the  `<hhea>` table contains `<ascent value="1707"/>`. What is further strange is that the Glyphs source actually puts the ascender height of both masters at `1443`.
+The `<head>` table contains `<yMax value="1708"/>`, the  `<hhea>` table contains `<ascent value="1707"/>`, and the `<OS_2>` table contains `<usWinAscent value="1707"/>`. What is at first also strange is that the Glyphs source actually puts the ascender height of both masters at `1443`.
 
 The MS Typography OpenType [spec on hhea](https://docs.microsoft.com/en-us/typography/opentype/spec/hhea) defines `acent` as "Distance from baseline of highest ascender." Meanwhile, the [`head` table spec](https://docs.microsoft.com/en-us/typography/opentype/spec/head) defines `ymax` as "For all glyph bounding boxes." This leads me to believe that it might include not just ascenders in the typical sense, but also accent marks.
 
@@ -148,8 +148,8 @@ font = Glyphs.font
 for glyph in font.glyphs:
 	for layer in glyph.layers:
 		ascent = layer.bounds.size.height + layer.bounds.origin.y		
-		if ascent >= 1700:
-			print(glyph.name, ascent)
+		if ascent >= 1705:
+			print(glyph.name, layer.name, ascent)
 ```
 
 It showed me that caps with a `caron.cap` accent all had an ascent of `1708`. This was surprising, as the `caron.cap` itself only had and ascent of `1690`. However, I realized by decomposing the `Rcaron` that the anchor was positioning the `caron.cap` higher in caps than it was drawn.
@@ -158,4 +158,72 @@ It showed me that caps with a `caron.cap` accent all had an ascent of `1708`. Th
 
 It seems probable that the `head` must be getting derived from the highest point in the font, including in composed glyphs, while the `hhea` table is derived from the highest-drawn point in the font, not counting composed glyphs. And now to resolve that mismatch... 
 
-I'll try moving the `caron.cap` to it's "natural" position, so that its height matches the composed height.
+I'll try moving the `caron.cap` to it's "natural" position, against the `_topcap` anchor, so that its height matches the composed height. I'm doing this in both Regular and Bold masters, and making sure to go through all the cap caron diacritics to delete and re-add the `caron.cap` to ensure that it's at the right height.
+
+![](assets/2018-11-05-12-48-01.png)
+![](assets/2018-11-05-12-48-09.png)
+
+Finally, after adjusting those details, I've discovered what is probably the real problem: the GlyphsApp source masters have custom parameters of `hheaAscender = 1707` and `winAscent = 1707`.
+
+![](assets/2018-11-05-14-01-30.png)
+
+When I remove these custom parameters altogether, I get the following FB error:
+
+> **FAIL** OS/2.usWinAscent value should be equal or greater than 1708, but got 1443 instead [code: ascent]
+
+So *now*, it's confusing the font metric ascender and the highest point in the font. I believe I could pass this error by simply placing `1708` as a custom property, but this seems like a bit of a hack. Where is the `1708` coming from?
+
+The FontBakery check details are pretty informative about this:
+
+> A font's winAscent and winDescent values should be greater than the
+  head table's yMax, abs(yMin) values. If they are less than these
+  values, clipping can occur on Windows platforms,
+  https://github.com/RedHatBrand/Overpass/issues/33
+
+Further, a look at Roboto shows that it uses [a script to force the `yMin` and `yMax` valutes](https://github.com/google/roboto/blob/master/scripts/force_yminmax.py), and a look at Montserrat's GlyphsApp source shows that the winAscent and winDescent values are set as custom parameters. So, while setting these feels a bit manual / hacky, it's not unprecedented. However, to stay flexible and to know that I'm setting these correctly, I'll write a GlyphsApp script.
+
+```Python
+__doc__="""
+	Assumes the masters keep the same vertical metrics. I am not sure whether winAscent and winDescent should be different between masters, otherwise, but you should check if that's the case before using this script on a font where min/max heights are different between styles. 
+"""
+
+font = Glyphs.font
+
+# starter values
+maxDescent = 0
+maxAscent = 0
+
+# find highest and lowest point in font
+for glyph in font.glyphs:
+	for layer in glyph.layers:
+		
+		# get descender of current layer
+		descent = layer.bounds.origin.y
+		
+		# get ascender of current layer
+		ascent = layer.bounds.size.height + descent	
+
+		# if descent/ascent of current layer is greater than previous max descents/ascents, update the max descent/ascent
+		if descent <= maxDescent:
+			maxDescent = descent
+			
+		if ascent >= maxAscent:
+			maxAscent = ascent
+			
+
+# check values for sanity
+print(maxDescent, maxAscent)
+
+# use highest/lowest points to set custom parameters for winAscent and winDescent
+for master in font.masters:
+	master.customParameters["winDescent"] = maxDescent
+	master.customParameters["winAscent"] = maxAscent
+
+			
+```
+
+And this fixes one of the metrics issues!
+
+> **PASS** OS/2 usWinAscent & usWinDescent values look good!
+
+The other issue may require further work in the same direction.

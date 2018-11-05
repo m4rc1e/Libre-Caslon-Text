@@ -11,7 +11,8 @@ g,
 "/Aringacute",
 "/circumflex.cap/Ycircumflex",
 "/ring.cap Å",
-"/caron.cap R/Rcaron  /caron.cap Z/uni01C4/uni01F1"
+"/caron.cap R/Rcaron  /Aringacute/caron.cap Z/uni01C4/uni01F1",
+"/caron.cap/Ccaron/Dcaron/Ecaron/Lcaron/Ncaron/Rcaron/Scaron/Tcaron/Zcaron/uni01C4"
 );
 classes = (
 {
@@ -829,10 +830,6 @@ name = typoLineGap;
 value = 0;
 },
 {
-name = hheaAscender;
-value = 1707;
-},
-{
 name = hheaDescender;
 value = -458;
 },
@@ -841,12 +838,8 @@ name = hheaLineGap;
 value = 0;
 },
 {
-name = winAscent;
-value = 1707;
-},
-{
 name = winDescent;
-value = 458;
+value = -462;
 },
 {
 name = underlineThickness;
@@ -855,9 +848,21 @@ value = 88;
 {
 name = underlinePosition;
 value = -132;
+},
+{
+name = winAscent;
+value = 1708;
 }
 );
 descender = -440;
+guideLines = (
+{
+position = "{676, 1461}";
+},
+{
+position = "{845, 1708}";
+}
+);
 id = master01;
 weightValue = 400;
 widthValue = 16;
@@ -887,10 +892,6 @@ name = typoLineGap;
 value = 0;
 },
 {
-name = hheaAscender;
-value = 1707;
-},
-{
 name = hheaDescender;
 value = -458;
 },
@@ -899,12 +900,8 @@ name = hheaLineGap;
 value = 0;
 },
 {
-name = winAscent;
-value = 1707;
-},
-{
 name = winDescent;
-value = 458;
+value = -462;
 },
 {
 name = underlineThickness;
@@ -913,12 +910,19 @@ value = 88;
 {
 name = underlinePosition;
 value = -132;
+},
+{
+name = winAscent;
+value = 1708;
 }
 );
 descender = -440;
 guideLines = (
 {
 position = "{645, 1461}";
+},
+{
+position = "{728, 1707}";
 }
 );
 id = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
@@ -2103,7 +2107,7 @@ unicode = 0106;
 },
 {
 glyphname = Ccaron;
-lastChange = "2018-11-05 17:10:37 +0000";
+lastChange = "2018-11-05 17:46:48 +0000";
 layers = (
 {
 components = (
@@ -2112,9 +2116,8 @@ alignment = -1;
 name = C;
 },
 {
-alignment = -1;
 name = caron.cap;
-transform = "{1, 0, 0, 1, 500, 18}";
+transform = "{1, 0, 0, 1, 486, 0}";
 }
 );
 layerId = master01;
@@ -5113,7 +5116,7 @@ unicode = 0136;
 },
 {
 glyphname = L;
-lastChange = "2018-10-29 20:09:01 +0000";
+lastChange = "2018-11-05 17:45:14 +0000";
 layers = (
 {
 anchors = (
@@ -5123,7 +5126,7 @@ position = "{607, 0}";
 },
 {
 name = topcap;
-position = "{326, 1461}";
+position = "{335, 1461}";
 }
 );
 layerId = master01;
@@ -5160,7 +5163,7 @@ position = "{655, 0}";
 },
 {
 name = topcap;
-position = "{376, 1461}";
+position = "{392, 1461}";
 }
 );
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
@@ -5196,7 +5199,7 @@ unicode = 004C;
 },
 {
 glyphname = Lacute;
-lastChange = "2018-10-29 20:09:01 +0000";
+lastChange = "2018-11-05 17:45:16 +0000";
 layers = (
 {
 components = (
@@ -5220,7 +5223,7 @@ name = L;
 },
 {
 name = acute.cap;
-transform = "{1, 0, 0, 1, 200, 0}";
+transform = "{1, 0, 0, 1, 216, 0}";
 }
 );
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
@@ -5233,7 +5236,7 @@ unicode = 0139;
 },
 {
 glyphname = Lcaron;
-lastChange = "2018-11-05 17:10:37 +0000";
+lastChange = "2018-11-05 17:47:14 +0000";
 layers = (
 {
 components = (
@@ -5242,9 +5245,8 @@ alignment = -1;
 name = L;
 },
 {
-alignment = -1;
 name = caron.cap;
-transform = "{1, 0, 0, 1, 53, 18}";
+transform = "{1, 0, 0, 1, 59, 0}";
 }
 );
 layerId = master01;
@@ -5257,7 +5259,7 @@ name = L;
 },
 {
 name = caron.cap;
-transform = "{1, 0, 0, 1, 52, 0}";
+transform = "{1, 0, 0, 1, 68, 0}";
 }
 );
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
@@ -5477,7 +5479,7 @@ unicode = 004D;
 },
 {
 glyphname = N;
-lastChange = "2018-10-29 20:09:01 +0000";
+lastChange = "2018-11-05 17:44:20 +0000";
 layers = (
 {
 anchors = (
@@ -5487,7 +5489,7 @@ position = "{713, 0}";
 },
 {
 name = topcap;
-position = "{797, 1461}";
+position = "{737, 1461}";
 }
 );
 layerId = master01;
@@ -5583,7 +5585,7 @@ unicode = 0000;
 },
 {
 glyphname = Nacute;
-lastChange = "2018-10-29 20:09:01 +0000";
+lastChange = "2018-11-05 17:44:24 +0000";
 layers = (
 {
 components = (
@@ -5592,7 +5594,7 @@ name = N;
 },
 {
 name = acute.cap;
-transform = "{1, 0, 0, 1, 621, 0}";
+transform = "{1, 0, 0, 1, 561, 0}";
 }
 );
 layerId = master01;
@@ -5618,7 +5620,7 @@ unicode = 0143;
 },
 {
 glyphname = Ncaron;
-lastChange = "2018-11-05 17:10:37 +0000";
+lastChange = "2018-11-05 17:44:20 +0000";
 layers = (
 {
 components = (
@@ -5627,9 +5629,8 @@ alignment = -1;
 name = N;
 },
 {
-alignment = -1;
 name = caron.cap;
-transform = "{1, 0, 0, 1, 473, 18}";
+transform = "{1, 0, 0, 1, 461, 0}";
 }
 );
 layerId = master01;
@@ -6879,7 +6880,7 @@ unicode = 0051;
 },
 {
 glyphname = R;
-lastChange = "2018-11-05 17:09:55 +0000";
+lastChange = "2018-11-05 17:40:45 +0000";
 layers = (
 {
 anchors = (
@@ -7051,7 +7052,7 @@ unicode = 0154;
 },
 {
 glyphname = Rcaron;
-lastChange = "2018-11-05 17:10:20 +0000";
+lastChange = "2018-11-05 17:42:50 +0000";
 layers = (
 {
 components = (
@@ -7060,9 +7061,13 @@ alignment = -1;
 name = R;
 },
 {
-alignment = -1;
 name = caron.cap;
-transform = "{1, 0, 0, 1, 299, 18}";
+transform = "{1, 0, 0, 1, 372, 0}";
+}
+);
+guideLines = (
+{
+position = "{598, 1461}";
 }
 );
 layerId = master01;
@@ -7328,7 +7333,7 @@ unicode = 015A;
 },
 {
 glyphname = Scaron;
-lastChange = "2018-11-05 17:10:37 +0000";
+lastChange = "2018-11-05 17:44:33 +0000";
 layers = (
 {
 components = (
@@ -7337,9 +7342,8 @@ alignment = -1;
 name = S;
 },
 {
-alignment = -1;
 name = caron.cap;
-transform = "{1, 0, 0, 1, 280, 18}";
+transform = "{1, 0, 0, 1, 266, 0}";
 }
 );
 layerId = master01;
@@ -9201,7 +9205,7 @@ unicode = 1EF8;
 },
 {
 glyphname = Z;
-lastChange = "2018-10-29 20:09:01 +0000";
+lastChange = "2018-11-05 17:44:49 +0000";
 layers = (
 {
 anchors = (
@@ -9211,7 +9215,7 @@ position = "{560, 0}";
 },
 {
 name = topcap;
-position = "{648, 1461}";
+position = "{628, 1461}";
 }
 );
 layerId = master01;
@@ -9329,7 +9333,7 @@ unicode = 0179;
 },
 {
 glyphname = Zcaron;
-lastChange = "2018-11-05 17:10:37 +0000";
+lastChange = "2018-11-05 17:44:49 +0000";
 layers = (
 {
 components = (
@@ -9338,9 +9342,8 @@ alignment = -1;
 name = Z;
 },
 {
-alignment = -1;
 name = caron.cap;
-transform = "{1, 0, 0, 1, 359, 18}";
+transform = "{1, 0, 0, 1, 352, 0}";
 }
 );
 layerId = master01;
@@ -9366,7 +9369,7 @@ unicode = 017D;
 },
 {
 glyphname = Zdotaccent;
-lastChange = "2018-10-29 20:09:01 +0000";
+lastChange = "2018-11-05 17:44:50 +0000";
 layers = (
 {
 components = (
@@ -9375,7 +9378,7 @@ name = Z;
 },
 {
 name = dotaccent.cap;
-transform = "{1, 0, 0, 1, 518, 0}";
+transform = "{1, 0, 0, 1, 498, 0}";
 }
 );
 layerId = master01;
@@ -12417,13 +12420,13 @@ width = 231;
 },
 {
 glyphname = caron.cap;
-lastChange = "2018-11-05 17:11:00 +0000";
+lastChange = "2018-11-05 17:42:06 +0000";
 layers = (
 {
 anchors = (
 {
 name = _topcap;
-position = "{276, 1443}";
+position = "{276, 1461}";
 }
 );
 layerId = master01;
@@ -12431,18 +12434,18 @@ paths = (
 {
 closed = 1;
 nodes = (
-"317 1443 OFFCURVE",
-"340 1457 OFFCURVE",
-"373 1491 CURVE SMOOTH",
-"537 1660 LINE",
-"503 1690 LINE",
-"276 1588 LINE",
-"53 1690 LINE",
-"18 1660 LINE",
-"183 1491 LINE SMOOTH",
-"213 1461 OFFCURVE",
-"232 1443 OFFCURVE",
-"276 1443 CURVE SMOOTH"
+"317 1461 OFFCURVE",
+"340 1475 OFFCURVE",
+"373 1509 CURVE SMOOTH",
+"537 1678 LINE",
+"503 1708 LINE",
+"276 1606 LINE",
+"53 1708 LINE",
+"18 1678 LINE",
+"183 1509 LINE SMOOTH",
+"213 1479 OFFCURVE",
+"232 1461 OFFCURVE",
+"276 1461 CURVE SMOOTH"
 );
 }
 );
@@ -12460,18 +12463,18 @@ paths = (
 {
 closed = 1;
 nodes = (
-"363 1463 OFFCURVE",
-"396 1482 OFFCURVE",
-"444 1521 CURVE SMOOTH",
-"627 1669 LINE",
-"598 1708 LINE",
-"322 1635 LINE",
-"46 1708 LINE",
-"18 1669 LINE",
-"197 1521 LINE SMOOTH",
-"245 1482 OFFCURVE",
-"278 1463 OFFCURVE",
-"324 1463 CURVE SMOOTH"
+"363 1462 OFFCURVE",
+"396 1481 OFFCURVE",
+"444 1520 CURVE SMOOTH",
+"627 1668 LINE",
+"598 1707 LINE",
+"322 1634 LINE",
+"46 1707 LINE",
+"18 1668 LINE",
+"197 1520 LINE SMOOTH",
+"245 1481 OFFCURVE",
+"278 1462 OFFCURVE",
+"324 1462 CURVE SMOOTH"
 );
 }
 );
@@ -37936,11 +37939,24 @@ unicode = 0163;
 },
 {
 glyphname = uni01C4;
-lastChange = "2018-11-05 17:28:20 +0000";
+lastChange = "2018-11-05 17:44:50 +0000";
 layers = (
 {
+components = (
+{
+name = D;
+},
+{
+name = Z;
+transform = "{1, 0, 0, 1, 1415, 0}";
+},
+{
+name = caron.cap;
+transform = "{1, 0, 0, 1, 1767, 0}";
+}
+);
 layerId = master01;
-width = 600;
+width = 2605;
 },
 {
 components = (
@@ -38256,9 +38272,15 @@ unicode = 01CC;
 },
 {
 glyphname = uni01F1;
-lastChange = "2018-11-05 17:11:44 +0000";
+lastChange = "2018-11-05 17:43:20 +0000";
 layers = (
 {
+anchors = (
+{
+name = topcap;
+position = "{2022, 1461}";
+}
+);
 components = (
 {
 name = D;
