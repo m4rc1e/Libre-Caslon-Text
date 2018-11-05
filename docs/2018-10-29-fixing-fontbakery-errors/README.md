@@ -227,3 +227,69 @@ And this fixes one of the metrics issues!
 > **PASS** OS/2 usWinAscent & usWinDescent values look good!
 
 The other issue may require further work in the same direction.
+
+Now, however, the values don't match between `OS_2` table's `<sTypoDescender value="-440"/>` and`hhea` table's `<descent value="-458"/>`. 
+
+This error is about making vertical metrics match on different platforms. From the FB check:
+
+>   OS/2 and hhea vertical metric values should match. This will produce
+  the same linespacing on Mac, GNU/Linux and Windows.
+
+This will simply require more vertical metric custom parameter setting.
+
+The [MS OpenType spec recommendation on vertical metrics](https://docs.microsoft.com/en-us/typography/opentype/spec/recom#tad) says that:
+
+> The sTypoLineGap value will often be set such that the default baseline-to-baseline distance is approximately 120% of the em.
+
+I've added some code to my metrics script so that the line gap can be automatically set to the correct size to achieve a 120% line height.
+
+```
+__doc__="""
+	Assumes the masters keep the same vertical metrics. I am not sure whether winAscent and winDescent should be different between masters, otherwise, but you should check if that's the case before using this script on a font where min/max heights are different between styles. 
+"""
+
+font = Glyphs.font
+
+# starter values
+maxDescent = 0
+maxAscent = 0
+
+# find highest and lowest point in font
+for glyph in font.glyphs:
+	for layer in glyph.layers:
+		
+		# get descender of current layer
+		descent = layer.bounds.origin.y
+		
+		# get ascender of current layer
+		ascent = layer.bounds.size.height + descent	
+
+		# if descent/ascent of current layer is greater than previous max descents/ascents, update the max descent/ascent
+		if descent <= maxDescent:
+			maxDescent = descent
+			
+		if ascent >= maxAscent:
+			maxAscent = ascent
+			
+
+# check values for sanity
+print(maxDescent, maxAscent)
+
+# make lineGap so that the total of `ascent + descent + lineGap` equals 120% of UPM size
+
+UPM = font.upm
+
+totalSize = maxAscent + abs(maxDescent)
+
+lineGap = int((UPM * 1.2)) - totalSize
+
+print(UPM, UPM * 1.2, totalSize, lineGap)
+
+# use highest/lowest points to set custom parameters for winAscent and winDescent
+for master in font.masters:
+	master.customParameters["winDescent"] = maxDescent
+	master.customParameters["typoDescender"] = maxDescent
+	master.customParameters["winDescent"] = maxDescent
+	master.customParameters["typoAscender"] = maxAscent
+	master.customParameters["typoLineGap"] = lineGap
+```
