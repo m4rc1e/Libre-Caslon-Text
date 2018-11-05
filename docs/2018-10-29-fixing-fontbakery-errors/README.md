@@ -120,10 +120,42 @@ Because of this, I will try two things:
 
 Plus, I have lots of FontBakery issues to resolve. I'm keeping a full log of these in [Issue #2](https://github.com/thundernixon/Libre-Caslon-Text/issues/2), but here are the others high-weight issues:
 
-- [x]  Checking with ots-sanitize. * ERROR: Failed with ModuleNotFoundError: No module named 'ots'
+- [x] Checking with ots-sanitize. * ERROR: Failed with ModuleNotFoundError: No module named 'ots'
 
 I found that "opentype sanitizer" was just updated to be a Python module and [updated in the FB checks](https://github.com/googlefonts/fontbakery/pull/2092).
 
 I had to install it with `pip install opentype-sanitizer`. ([More info here](https://pypi.org/project/opentype-sanitizer/)).
 
 
+- [ ] FAIL: Checking OS/2 usWinAscent & usWinDescent. – FAIL OS/2.usWinAscent value should be equal or greater than 1708, but got 1707 instead [code: ascent].
+- [ ] FAIL: Checking OS/2 Metrics match hhea Metrics. – FAIL OS/2 sTypoAscender and hhea ascent must be equal. [code: ascender]
+
+These errors seem related, and may be coming from my earlier re-adjustment of the overall scaling of this font. I wanted to check where these numbers are coming from, so I opened the `ttx` version of the VF.
+
+The `<head>` table contains `<yMax value="1708"/>` and the  `<hhea>` table contains `<ascent value="1707"/>`. What is further strange is that the Glyphs source actually puts the ascender height of both masters at `1443`.
+
+The MS Typography OpenType [spec on hhea](https://docs.microsoft.com/en-us/typography/opentype/spec/hhea) defines `acent` as "Distance from baseline of highest ascender." Meanwhile, the [`head` table spec](https://docs.microsoft.com/en-us/typography/opentype/spec/head) defines `ymax` as "For all glyph bounding boxes." This leads me to believe that it might include not just ascenders in the typical sense, but also accent marks.
+
+And sure enough! The `ring` accent has a point at `1707`. 
+
+![](assets/2018-11-05-11-47-06.png)
+
+I didn't know if there was any other glyph taller than the `ring`, so I used a script to print a list of glyphs with an ascent of more than `1700`:
+
+```Python
+font = Glyphs.font
+
+for glyph in font.glyphs:
+	for layer in glyph.layers:
+		ascent = layer.bounds.size.height + layer.bounds.origin.y		
+		if ascent >= 1700:
+			print(glyph.name, ascent)
+```
+
+It showed me that caps with a `caron.cap` accent all had an ascent of `1708`. This was surprising, as the `caron.cap` itself only had and ascent of `1690`. However, I realized by decomposing the `Rcaron` that the anchor was positioning the `caron.cap` higher in caps than it was drawn.
+
+![](assets/2018-11-05-12-06-01.png)
+
+It seems probable that the `head` must be getting derived from the highest point in the font, including in composed glyphs, while the `hhea` table is derived from the highest-drawn point in the font, not counting composed glyphs. And now to resolve that mismatch... 
+
+I'll try moving the `caron.cap` to it's "natural" position, so that its height matches the composed height.

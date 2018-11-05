@@ -20,7 +20,7 @@ keepDesignspace=true
 tempGlyphsSource=${glyphsSource/".glyphs"/"-Build.glyphs"}
 
 # get font name from glyphs source
-VFname=`python2 scripts/helpers/get-font-name.py ${glyphsSource}`
+VFname=`python scripts/helpers/get-font-name.py ${glyphsSource}`
 # checking that the name has been pulled out of the source file
 echo "VF Name: ${VFname}"
 
@@ -64,7 +64,7 @@ then
 
     newFontLocation=`python3 scripts/distdate.py variable_ttf/${VFname}.ttf`
 
-    echo ${newFontLocation}
+    echo "new VF location is " ${newFontLocation}
 
     cd ${newFontLocation}
 
