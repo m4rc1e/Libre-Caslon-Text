@@ -243,53 +243,14 @@ The [MS OpenType spec recommendation on vertical metrics](https://docs.microsoft
 
 I've added some code to my metrics script so that the line gap can be automatically set to the correct size to achieve a 120% line height.
 
-```
-__doc__="""
-	Assumes the masters keep the same vertical metrics. I am not sure whether winAscent and winDescent should be different between masters, otherwise, but you should check if that's the case before using this script on a font where min/max heights are different between styles. 
-"""
+~~See the script here (and check for newer versions, too!):
+https://github.com/thundernixon/glyphs_scripts/blob/2da061ae3dd1c568955acfbf2c3b76968ab3a110/setVerticalMetricParams.py ~~
 
-font = Glyphs.font
+Nevermind – I should have simply been using the [Google Fonts fixfonts.py script](https://github.com/googlefonts/gf-glyphs-scripts/blob/master/Google%20Fonts/fixfonts.py)
 
-# starter values
-maxDescent = 0
-maxAscent = 0
+I'm still having errors, which led me to finally find the GF-docs documentation on [Vertical Metrics](https://github.com/googlefonts/gf-docs/tree/master/VerticalMetrics).
 
-# find highest and lowest point in font
-for glyph in font.glyphs:
-	for layer in glyph.layers:
-		
-		# get descender of current layer
-		descent = layer.bounds.origin.y
-		
-		# get ascender of current layer
-		ascent = layer.bounds.size.height + descent	
+I've updated the script to the metrics specification there. It was still showing issues from FontVal, which led me to file an issue at https://github.com/googlefonts/fontbakery/issues/2148.
 
-		# if descent/ascent of current layer is greater than previous max descents/ascents, update the max descent/ascent
-		if descent <= maxDescent:
-			maxDescent = descent
-			
-		if ascent >= maxAscent:
-			maxAscent = ascent
-			
+This is inconclusive so far on the FontVal front, but pointed out to me that I had missed the very good advice to set the custom parameter "Use Typo Metrics" to `True`. This, in turn, pointed out that I should use the gfonts Glyphs script "QA," to solve this and other issues. 
 
-# check values for sanity
-print(maxDescent, maxAscent)
-
-# make lineGap so that the total of `ascent + descent + lineGap` equals 120% of UPM size
-
-UPM = font.upm
-
-totalSize = maxAscent + abs(maxDescent)
-
-lineGap = int((UPM * 1.2)) - totalSize
-
-print(UPM, UPM * 1.2, totalSize, lineGap)
-
-# use highest/lowest points to set custom parameters for winAscent and winDescent
-for master in font.masters:
-	master.customParameters["winDescent"] = maxDescent
-	master.customParameters["typoDescender"] = maxDescent
-	master.customParameters["winDescent"] = maxDescent
-	master.customParameters["typoAscender"] = maxAscent
-	master.customParameters["typoLineGap"] = lineGap
-```

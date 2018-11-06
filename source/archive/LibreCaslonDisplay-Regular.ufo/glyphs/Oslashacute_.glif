@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Oslashacute" format="1">
+  <advance width="734"/>
+  <unicode hex="01FE"/>
+  <outline>
+    <contour>
+      <point x="562" y="750" type="line"/>
+      <point x="142" y="-75" type="line"/>
+      <point x="165" y="-75" type="line"/>
+      <point x="585" y="750" type="line"/>
+    </contour>
+    <component base="acute" xOffset="310" yOffset="270"/>
+    <component base="O" xOffset="1"/>
+  </outline>
+</glyph>

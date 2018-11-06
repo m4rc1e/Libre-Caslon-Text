@@ -24,7 +24,7 @@ code = "Euro.tnum bar.tnum cent.tnum colon.tnum comma.tnum degree.tnum divide.tn
 name = tnum2;
 }
 );
-copyright = "Copyright (c) 2012, Impallari Type (www.impallari.com)";
+copyright = "Copyright © 2018 by Pablo Impallari, Rodrigo Fuenzalida. (https://github.com/thundernixon/Libre-Caslon)";
 customParameters = (
 {
 name = glyphOrder;
@@ -751,9 +751,13 @@ Name = Weight;
 Tag = wght;
 }
 );
+},
+{
+name = "Use Typo Metrics";
+value = 1;
 }
 );
-date = "2013-03-13 12:27:00 +0000";
+date = "2018-11-06 22:32:43 +0000";
 designer = "Pablo Impallari, Rodrigo Fuenzalida";
 designerURL = www.impallari.com;
 disablesNiceNames = 1;
@@ -839,7 +843,7 @@ value = 512;
 },
 {
 name = winDescent;
-value = -462;
+value = 462;
 },
 {
 name = underlineThickness;
@@ -905,7 +909,7 @@ value = 512;
 },
 {
 name = winDescent;
-value = -462;
+value = 462;
 },
 {
 name = underlineThickness;
@@ -40877,10 +40881,11 @@ unicode = 2070;
 instances = (
 {
 exports = 0;
+interpolationWeight = 250;
 interpolationWidth = 16;
 instanceInterpolations = {
-"FA6D65B5-4623-4FAC-A199-3F662257AC29" = -1;
-master01 = 2;
+"FA6D65B5-4623-4FAC-A199-3F662257AC29" = -0.5;
+master01 = 1.5;
 };
 name = Thin;
 },
@@ -40917,6 +40922,8 @@ interpolationWidth = 16;
 instanceInterpolations = {
 "FA6D65B5-4623-4FAC-A199-3F662257AC29" = 1;
 };
+isBold = 1;
+linkStyle = Regular;
 name = Bold;
 weightClass = Bold;
 },
