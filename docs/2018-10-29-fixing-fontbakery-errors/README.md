@@ -288,7 +288,7 @@ This probably isn't the best option for most Python libraries, as it probably ha
 - [ ] ⚠️ WARN: Is there kerning info for non-ligated sequences?
   - I need to look at this
   - Yes, this should be added. It won't take long to make a few of these better.
-- [ ] ⚠️ WARN: Are there caret positions declared for every ligature?
+- [x] ⚠️ WARN: Are there caret positions declared for every ligature?
   - I need to look at this
 
 **Ask Dave**
@@ -300,12 +300,22 @@ This probably isn't the best option for most Python libraries, as it probably ha
 - [ ] Set weight of Regular to better match other fonts
   - [ ] *but also* check that the Italic isn't too light when you do this.
 - [ ] Make sure there is style linking between upright Regular and Regular Italic
+- [ ] repeat QA steps for Italic
+- [ ] match charset between Regular and Italic
+
+## Microsoft Font Validator checks
+
+### Not sure what `Glyph index 1 Test: ValidateSimpContMisor ` means
+
+Adding issue at Microsoft/Font-Validator/issues.
 
 ## Setting caret position for ligatures
 
 Process described on page 27 of the [GlyphsApp handbook](https://glyphsapp.com/downloads/handbook/Glyphs-Handbook-2.3.pdf). It suggests using *Set Anchors*, but this adds a bunch of anchors to every ligature, and I don't want to add anchors that aren't necessary. I'll add these myself and arrange them. 
 
 I wrote a [simple script](https://github.com/thundernixon/glyphs_scripts/blob/09969e81ffb9da333897c8179f646c89c49f227a/add-caret-anchors.py) to help me add caret anchors, then manually repositioned the added anchors to be in-between the letters of each ligature. I also used another simple script, made earlier, to copy anchors from the regular to bold master, then repeated the process. 
+
+Pass!
 
 ## Kerning for non-ligated sequences
 
@@ -317,3 +327,7 @@ Most are fairly fine, as the `f` overlaps its right boundary. A couple do have k
 Overall, `k` is probably too-open on the right side.
 
 ![](assets/2018-11-07-14-38-15.png)
+
+## Style linking
+
+Information on process at https://github.com/googlefonts/gf-glyphs-scripts/issues/37#issuecomment-436176114.
