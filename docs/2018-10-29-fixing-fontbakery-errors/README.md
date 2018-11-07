@@ -262,10 +262,9 @@ It's weirdly hard to keep Python modules predictably up-to-date. Pip install see
 pip install "git+https://github.com/googlefonts/fontbakery"
 ```
 
+This probably isn't the best option for most Python libraries, as it probably has a higher potential of pulling in WIP code than installing released versions. Still, it's a useful technique for now.
+
 # Final FontBakery issues
-
-
-
 
 **Waiting on VF hinting**
 - [ ] 🔥 FAIL: Is 'gasp' table set to optimize rendering?
@@ -277,20 +276,44 @@ pip install "git+https://github.com/googlefonts/fontbakery"
 - [x] ⚠️ WARN: Check if each glyph has the recommended amount of contours.
   - Nope, it's a variable font.
 
-**Probably irrelavant? Double-check**
+**Probably irrelevant? Double-check**
 - [x] ⚠️ WARN: Is font em size (ideally) equal to 1000?
-  - Nope, it's 2048.
+  - Nope, it's 2048. 2048 is fine, as it's so common in TTF fonts.
 - [x] ⚠️ WARN: Checking Vertical Metric Linegaps.
-  - This warns "WARN hhea lineGap is not equal to 0. [code: hhea]." In GF-docs, the line gap is specified to be `Typo LineGap = 0.25 * UPM`, `Hhea LineGap = Typo LineGap`. Asking in a FontBakery Issue.
+  - This warns "WARN hhea lineGap is not equal to 0. [code: hhea]." In GF-docs, the line gap is specified to be `Typo LineGap = 0.25 * UPM`, `Hhea LineGap = Typo LineGap`. Asking in a FontBakery Issue. Result: 
 
 **To be completed**
 - [ ] ⚠️ WARN: Checking with Microsoft Font Validator.
   - Have to go through this step-by-step.
 - [ ] ⚠️ WARN: Is there kerning info for non-ligated sequences?
   - I need to look at this
+  - Yes, this should be added. It won't take long to make a few of these better.
 - [ ] ⚠️ WARN: Are there caret positions declared for every ligature?
   - I need to look at this
 
 **Ask Dave**
-- [ ] ⚠️ WARN: Checking OS/2 achVendID.
+- [x] ⚠️ WARN: Checking OS/2 achVendID.
   - Pablo never signed up, and we can't reach him through email. Should I sign him up? Should I use `GOOG`? https://docs.microsoft.com/en-us/typography/vendors/#g
+  - "Goog is fine."
+
+**Extra items to close out**
+- [ ] Set weight of Regular to better match other fonts
+  - [ ] *but also* check that the Italic isn't too light when you do this.
+- [ ] Make sure there is style linking between upright Regular and Regular Italic
+
+## Setting caret position for ligatures
+
+Process described on page 27 of the [GlyphsApp handbook](https://glyphsapp.com/downloads/handbook/Glyphs-Handbook-2.3.pdf). It suggests using *Set Anchors*, but this adds a bunch of anchors to every ligature, and I don't want to add anchors that aren't necessary. I'll add these myself and arrange them. 
+
+I wrote a [simple script](https://github.com/thundernixon/glyphs_scripts/blob/09969e81ffb9da333897c8179f646c89c49f227a/add-caret-anchors.py) to help me add caret anchors, then manually repositioned the added anchors to be in-between the letters of each ligature. I also used another simple script, made earlier, to copy anchors from the regular to bold master, then repeated the process. 
+
+## Kerning for non-ligated sequences
+
+Most are fairly fine, as the `f` overlaps its right boundary. A couple do have kerning, such as the positive kerning for `/f/i` and `/f/j` to avoid a crash. Things I will fix:
+- `/f/t`
+- `/k/f`
+- `/k/l`
+
+Overall, `k` is probably too-open on the right side.
+
+![](assets/2018-11-07-14-38-15.png)

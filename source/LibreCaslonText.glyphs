@@ -1,18 +1,9 @@
 {
 .appVersion = "1176";
 DisplayStrings = (
-"Á/Abreve ÂÀ/Amacron/Aogonek ÅÃ/Cacute/Ccaron Ç/Cdotaccent/Dcaron/Ddotbelow É/Ecaron Ê/Edotaccent/Eogonek/Etilde/Gdotaccent Í/Ibreve ÎÏÌ/Kcommaaccent/Lacute/Lcaron/Ncaron/Ncommaaccent/Ndotaccent ÑÓÔÖÒ/Ohungarumlaut/Omacron/Oogonek Õ/Racute/Rcaron/Rcommaaccent/Rdotbelow/Sacute/Scaron/Sdotbelow/Tcaron ÚÙ/Uhungarumlaut/Uogonek/Utilde/Wacute/Wcircumflex/Wdieresis/Wgrave Ý/Ycircumflex/Ydieresis/Ygrave/Ytilde/Zacute/Zcaron á/abreve â/amacron/aogonek å/aringacute/cacute/ccaron ç/ccircumflex/cdotaccent/ddotbelow é/ebreve/ecaron ê/edotaccent/edotbelow è/emacron/eogonek/etilde/fiveeighths/gbreve/gcircumflex/gdotaccent/hcircumflex íì/lcommaaccent/nacute/napostrophe/ncaron/ndotaccent ñóô/oe ò/ohungarumlaut/omacron/oneeighth ½¼/onethird õ/racute/rcaron/sacute/scaron/scircumflex/seveneighths/threeeighths ¾/twothirds ú/ubreve ûüù/uhungarumlaut/umacron/uni015E/uni0162/uni0163/uni01C5/uni01C6/uni0219/uogonek/utilde/wacute/wcircumflex/wdieresis/wgrave ý/ygrave/zacute/zcaron/zdotaccent",
-"argument \012A x en\012\012nnonn\012nnenn",
-"g/Eogonek l/oogonek/aogonek/uogonek g\012\012t",
-SO,
-g,
-"AÁ",
-"/Aogonek/Eogonek/Iogonek/Oogonek/Uogonek/aogonek/eogonek/iogonek/oogonek/uogonek",
-"/Aringacute",
-"/circumflex.cap/Ycircumflex",
-"/ring.cap Å",
-"/caron.cap R/Rcaron  /Aringacute/caron.cap Z/uni01C4/uni01F1",
-"/caron.cap/Ccaron/Dcaron/Ecaron/Lcaron/Ncaron/Rcaron/Scaron/Tcaron/Zcaron/uni01C4"
+"ff fb bf fh hf fi if fj jf fk kf fl lf ft tb hi ij jk kl lt\012\012fffbbffhhffiiffjjffkkffllffttbhiijjkkllt\012\012nnffnnfbnnbfnnfhnnhfnnfinnifnnfjnnjfnnfknnkfnnflnnlfnnftnntbnnhinnijnnjknnklnnlt\012\012ooffoofboobfoofhoohfoofiooifoofjoojfoofkookfoofloolfooftootboohiooijoojkookloolt\012\012|ff|fb|bf|fh|hf|fi|if|fj|jf|fk|kf|fl|lf|ft|tb|hi|ij|jk|kl|lt\012",
+"nnffnnooffoo\012nnfbnnoofboo\012nnbfnnoobfoo\012nnfhnnoofhoo\012nnhfnnoohfoo\012nnfinnoofioo\012nnifnnooifoo\012nnfjnnoofjoo\012nnjfnnoojfoo\012nnfknnoofkoo\012nnkfnnookfoo\012nnflnnoofloo\012nnlfnnoolfoo\012nnftnnooftoo\012nntbnnootboo\012nnhinnoohioo\012nnijnnooijoo\012nnjknnoojkoo\012nnklnnookloo\012nnltnnooltoo\012\012akbkckdkekfkg\012gkhkikjkklkmknkokpkqkrksktkukvkwkxkykzk\012nnknnookoo",
+"/c_t/f_b/f_f/f_f_b/f_f_h/f_f_i/f_f_j/f_f_k/f_f_l/f_f_t/f_h/f_i/f_j/f_k/f_l/f_t/s_t"
 );
 classes = (
 {
@@ -271,31 +262,11 @@ code = "	sub zero by zerosuperior;
 name = sups;
 },
 {
-code = " 
-	sub zero by zero.denominator;
-	sub one by one.denominator;
-	sub two by two.denominator;
-	sub three by three.denominator;
-	sub four by four.denominator;
-	sub five by five.denominator;
-	sub six by six.denominator;
-	sub seven by seven.denominator;
-	sub eight by eight.denominator;
-	sub nine by nine.denominator;";
+code = "";
 name = dnom;
 },
 {
-code = " 
-	sub zero by zero.numerator;
-	sub one by one.numerator;
-	sub two by two.numerator;
-	sub three by three.numerator;
-	sub four by four.numerator;
-	sub five by five.numerator;
-	sub six by six.numerator;
-	sub seven by seven.numerator;
-	sub eight by eight.numerator;
-	sub nine by nine.numerator;";
+code = "";
 name = numr;
 },
 {
@@ -11828,8 +11799,8 @@ nodes = (
 "25 1375 LINE",
 "25 1352 LINE",
 "153 1304 LINE",
-"153 4 LINE",
-"181 4 LINE",
+"153 0 LINE",
+"181 0 LINE",
 "262 63 LINE",
 "271 63 LINE",
 "341 11 OFFCURVE",
@@ -19948,6 +19919,12 @@ unicode = 1E93;
 glyphname = c_t;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{947, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -20040,6 +20017,12 @@ nodes = (
 width = 1575;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{977, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -20139,6 +20122,12 @@ rightKerningGroup = t;
 glyphname = f_b;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{679, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -20161,8 +20150,8 @@ nodes = (
 "679 1401 OFFCURVE",
 "753 1336 OFFCURVE",
 "753 1248 CURVE SMOOTH",
-"753 4 LINE",
-"781 4 LINE",
+"753 0 LINE",
+"781 0 LINE",
 "855 63 LINE",
 "864 63 LINE",
 "935 11 OFFCURVE",
@@ -20217,6 +20206,12 @@ nodes = (
 width = 1653;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{810, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -20302,6 +20297,12 @@ rightKerningGroup = b;
 glyphname = f_f;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{597, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -20383,6 +20384,12 @@ nodes = (
 width = 1193;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{690, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -20472,6 +20479,16 @@ unicode = FB00;
 glyphname = f_f_b;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{593, 0}";
+},
+{
+name = caret_2;
+position = "{1222, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -20587,6 +20604,16 @@ nodes = (
 width = 2228;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{688, 0}";
+},
+{
+name = caret_2;
+position = "{1432, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -20709,6 +20736,16 @@ rightKerningGroup = b;
 glyphname = f_f_h;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{592, 0}";
+},
+{
+name = caret_2;
+position = "{1159, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -20817,6 +20854,16 @@ nodes = (
 width = 2240;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{692, 0}";
+},
+{
+name = caret_2;
+position = "{1367, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -20932,6 +20979,16 @@ rightKerningGroup = n;
 glyphname = f_f_i;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{595, 0}";
+},
+{
+name = caret_2;
+position = "{1161, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -21022,6 +21079,16 @@ nodes = (
 width = 1668;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{690, 0}";
+},
+{
+name = caret_2;
+position = "{1361, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -21120,6 +21187,16 @@ unicode = FB03;
 glyphname = f_f_j;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{595, 0}";
+},
+{
+name = caret_2;
+position = "{1176, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -21226,6 +21303,16 @@ nodes = (
 width = 1647;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{692, 0}";
+},
+{
+name = caret_2;
+position = "{1376, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -21339,6 +21426,16 @@ rightKerningGroup = j;
 glyphname = f_f_k;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{595, 0}";
+},
+{
+name = caret_2;
+position = "{1158, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -21442,6 +21539,16 @@ nodes = (
 width = 2195;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{689, 0}";
+},
+{
+name = caret_2;
+position = "{1361, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -21552,6 +21659,16 @@ rightKerningGroup = k;
 glyphname = f_f_l;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{595, 0}";
+},
+{
+name = caret_2;
+position = "{1165, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -21639,6 +21756,16 @@ nodes = (
 width = 1663;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{689, 0}";
+},
+{
+name = caret_2;
+position = "{1361, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -21734,6 +21861,16 @@ unicode = FB04;
 glyphname = f_f_t;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{594, 0}";
+},
+{
+name = caret_2;
+position = "{1176, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -21841,6 +21978,16 @@ nodes = (
 width = 1776;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{690, 0}";
+},
+{
+name = caret_2;
+position = "{1406, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -21955,6 +22102,12 @@ rightKerningGroup = t;
 glyphname = f_h;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{584, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -22031,6 +22184,12 @@ nodes = (
 width = 1663;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{697, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -22114,6 +22273,12 @@ rightKerningGroup = n;
 glyphname = f_i;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{584, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -22172,6 +22337,12 @@ nodes = (
 width = 1093;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{691, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -22238,6 +22409,12 @@ unicode = FB01;
 glyphname = f_j;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{588, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -22312,6 +22489,12 @@ nodes = (
 width = 1072;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{708, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -22393,6 +22576,12 @@ rightKerningGroup = j;
 glyphname = f_k;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{584, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -22464,6 +22653,12 @@ nodes = (
 width = 1619;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{689, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -22542,6 +22737,12 @@ rightKerningGroup = k;
 glyphname = f_l;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{588, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -22597,6 +22798,12 @@ nodes = (
 width = 1088;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{689, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -22660,6 +22867,12 @@ unicode = FB02;
 glyphname = f_t;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{600, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -22735,6 +22948,12 @@ nodes = (
 width = 1200;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{750, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -22817,6 +23036,12 @@ rightKerningGroup = t;
 glyphname = s_t;
 layers = (
 {
+anchors = (
+{
+name = caret_1;
+position = "{750, 0}";
+}
+);
 layerId = master01;
 paths = (
 {
@@ -22918,6 +23143,12 @@ nodes = (
 width = 1348;
 },
 {
+anchors = (
+{
+name = caret_1;
+position = "{815, 0}";
+}
+);
 layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
 paths = (
 {
@@ -41944,6 +42175,19 @@ nodes = (
 }
 );
 width = 343;
+}
+);
+},
+{
+glyphname = newGlyph;
+layers = (
+{
+layerId = master01;
+width = 600;
+},
+{
+layerId = "FA6D65B5-4623-4FAC-A199-3F662257AC29";
+width = 600;
 }
 );
 }
