@@ -41,7 +41,7 @@
             <kerning />
             <info />
         </instance>
-        <instance familyname="Libre Caslon" filename="../instance_ufo/LibreCaslon-Bold.ufo" name="Libre Caslon Bold" stylemapfamilyname="Libre Caslon Bold" stylemapstylename="regular" stylename="Bold">
+        <instance familyname="Libre Caslon" filename="../instance_ufo/LibreCaslon-Bold.ufo" name="Libre Caslon Bold" stylemapfamilyname="Libre Caslon" stylemapstylename="bold" stylename="Bold">
             <location>
                 <dimension name="Weight" xvalue="700" />
             </location>

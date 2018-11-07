@@ -10,5 +10,5 @@
 # Name <email address>
 
 Pablo Impallari <impallari@gmail.com >
-Rodrigo Fuenzalida
+Rodrigo Fuenzalida <hello@rfuenzalida.com>
 Stephen Nixon <stephen@thundernixon.com>

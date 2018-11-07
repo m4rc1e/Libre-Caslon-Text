@@ -128,7 +128,7 @@ I had to install it with `pip install opentype-sanitizer`. ([More info here](htt
 
 
 - [x] FAIL: Checking OS/2 usWinAscent & usWinDescent. – FAIL OS/2.usWinAscent value should be equal or greater than 1708, but got 1707 instead [code: ascent].
-- [ ] FAIL: Checking OS/2 Metrics match hhea Metrics. – FAIL OS/2 sTypoAscender and hhea ascent must be equal. [code: ascender]
+- [x] FAIL: Checking OS/2 Metrics match hhea Metrics. – FAIL OS/2 sTypoAscender and hhea ascent must be equal. [code: ascender]
 
 These errors seem related, and may be coming from my earlier re-adjustment of the overall scaling of this font. I wanted to check where these numbers are coming from, so I opened the `ttx` version of the VF.
 
@@ -252,5 +252,45 @@ I'm still having errors, which led me to finally find the GF-docs documentation 
 
 I've updated the script to the metrics specification there. It was still showing issues from FontVal, which led me to file an issue at https://github.com/googlefonts/fontbakery/issues/2148.
 
-This is inconclusive so far on the FontVal front, but pointed out to me that I had missed the very good advice to set the custom parameter "Use Typo Metrics" to `True`. This, in turn, pointed out that I should use the gfonts Glyphs script "QA," to solve this and other issues. 
+This is inconclusive so far on the FontVal front, but pointed out to me that I had missed the very good advice to set the custom parameter "Use Typo Metrics" to `True`. This, in turn, pointed out that I should use the gfonts Glyphs script "QA," to solve this and other issues. ...and this in turn pointed out that most (if not all?) of these metrics issues can be fixed with the [Google Fonts fixfonts.py script](https://github.com/googlefonts/gf-glyphs-scripts/blob/master/Google%20Fonts/fixfonts.py). Nice!
 
+# Keeping Python modules up-to-date
+
+It's weirdly hard to keep Python modules predictably up-to-date. Pip install seems to fail half the time, and seems to maybe be stuck on old versions. I've realized that I can `pip install` directly from the latest code on a GitHub repo, however, with this format:
+
+```
+pip install "git+https://github.com/googlefonts/fontbakery"
+```
+
+# Final FontBakery issues
+
+
+
+
+**Waiting on VF hinting**
+- [ ] 🔥 FAIL: Is 'gasp' table set to optimize rendering?
+  - Autohinting is not quite stable for VFs yet. Will need to try WIP version from Marc.
+- [ ] 🔥 FAIL: Font enables smart dropout control in "prep" table instructions?
+  - Autohinting is not quite stable for VFs yet. Will need to try WIP version from Marc.
+
+**Irrelevant**
+- [x] ⚠️ WARN: Check if each glyph has the recommended amount of contours.
+  - Nope, it's a variable font.
+
+**Probably irrelavant? Double-check**
+- [x] ⚠️ WARN: Is font em size (ideally) equal to 1000?
+  - Nope, it's 2048.
+- [x] ⚠️ WARN: Checking Vertical Metric Linegaps.
+  - This warns "WARN hhea lineGap is not equal to 0. [code: hhea]." In GF-docs, the line gap is specified to be `Typo LineGap = 0.25 * UPM`, `Hhea LineGap = Typo LineGap`. Asking in a FontBakery Issue.
+
+**To be completed**
+- [ ] ⚠️ WARN: Checking with Microsoft Font Validator.
+  - Have to go through this step-by-step.
+- [ ] ⚠️ WARN: Is there kerning info for non-ligated sequences?
+  - I need to look at this
+- [ ] ⚠️ WARN: Are there caret positions declared for every ligature?
+  - I need to look at this
+
+**Ask Dave**
+- [ ] ⚠️ WARN: Checking OS/2 achVendID.
+  - Pablo never signed up, and we can't reach him through email. Should I sign him up? Should I use `GOOG`? https://docs.microsoft.com/en-us/typography/vendors/#g
