@@ -278,10 +278,10 @@ This probably isn't the best option for most Python libraries, as it probably ha
 - [x] ⚠️ WARN: Is font em size (ideally) equal to 1000?
   - Nope, it's 2048. 2048 is fine, as it's so common in TTF fonts.
 
+**Completed**
+- [x] ⚠️ WARN: Are there caret positions declared for every ligature?
 
 **To be completed**
-- [x] ⚠️ WARN: Are there caret positions declared for every ligature?
-  - I need to look at this
 - [ ] ⚠️ WARN: Checking Vertical Metric Linegaps.
   - This warns "WARN hhea lineGap is not equal to 0. [code: hhea]." In GF-docs, the line gap is specified to be `Typo LineGap = 0.25 * UPM`, `Hhea LineGap = Typo LineGap`. Asking in [a FontBakery Issue](https://github.com/googlefonts/fontbakery/issues/2164). Result: not irrelevant. lineGap should be 0, and value should be added to `typo` and `hhea` ascenders to keep line spacing correct. 
 - [ ] ⚠️ WARN: Checking with Microsoft Font Validator.
