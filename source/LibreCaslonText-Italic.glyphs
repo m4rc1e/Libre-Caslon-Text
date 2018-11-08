@@ -259,31 +259,11 @@ code = "	sub zero by zerosuperior;
 name = sups;
 },
 {
-code = " 
-	sub zero by zero.denominator;
-	sub one by one.denominator;
-	sub two by two.denominator;
-	sub three by three.denominator;
-	sub four by four.denominator;
-	sub five by five.denominator;
-	sub six by six.denominator;
-	sub seven by seven.denominator;
-	sub eight by eight.denominator;
-	sub nine by nine.denominator;";
+code = "";
 name = dnom;
 },
 {
-code = " 
-	sub zero by zero.numerator;
-	sub one by one.numerator;
-	sub two by two.numerator;
-	sub three by three.numerator;
-	sub four by four.numerator;
-	sub five by five.numerator;
-	sub six by six.numerator;
-	sub seven by seven.numerator;
-	sub eight by eight.numerator;
-	sub nine by nine.numerator;";
+code = "";
 name = numr;
 },
 {
@@ -3409,11 +3389,11 @@ capHeight = 1355;
 customParameters = (
 {
 name = typoAscender;
-value = 1443;
+value = 1708;
 },
 {
 name = typoDescender;
-value = -440;
+value = -452;
 },
 {
 name = typoLineGap;
@@ -3421,11 +3401,11 @@ value = 0;
 },
 {
 name = hheaAscender;
-value = 1707;
+value = 1708;
 },
 {
 name = hheaDescender;
-value = -458;
+value = -452;
 },
 {
 name = hheaLineGap;
@@ -3467,11 +3447,11 @@ capHeight = 1355;
 customParameters = (
 {
 name = typoAscender;
-value = 1443;
+value = 1708;
 },
 {
 name = typoDescender;
-value = -440;
+value = -452;
 },
 {
 name = typoLineGap;
@@ -3479,11 +3459,11 @@ value = 0;
 },
 {
 name = hheaAscender;
-value = 1707;
+value = 1708;
 },
 {
 name = hheaDescender;
-value = -458;
+value = -452;
 },
 {
 name = hheaLineGap;

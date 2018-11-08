@@ -336,7 +336,18 @@ To check whether this is actually the problem, I've used GlyphsApp's function *C
 
 I am seeing that the glyphs listed with this error message are all glyphs with multiple contours, which would be single contours in a non-variable font. So, I believe this is just another check that doesn't apply to variable fonts.
 
-Adding information to [Microsoft/Font-Validator/issues/65: Skip overlapping contour check for variable fonts](https://github.com/Microsoft/Font-Validator/issues/65), as it seems to be closely related.
+Adding information to [Microsoft/Font-Validator/issues/65: Skip overlapping contour check for variable fonts](https://github.com/Microsoft/Font-Validator/issues/65), as it seems to be closely related. In response, HinTak advised running FontVal without FontBakery. This is more easily said than done, but I eventually found a double-clickable GUI app from [this TypeDrawers thread](http://typedrawers.com/discussion/1314/microsoft-font-validator-runs-native-on-mac-os-x) and [this SourceForge download page](https://sourceforge.net/projects/hp-pxl-jetready/files/Microsoft%20Font%20Validator/) – confusingly titled "HP JetReady - Color Laserjet 3500/3550" but resulting in an actual FontVal GUI when the "FontValGUI-Seifert-2.1.1.zip" link is clicked.
+
+![](assets/2018-11-08-11-19-01.png)
+
+I ran the "Correct Path Direction" on all glyphs in the Roman source file, then fixed the three glyph contours that were made incompatible by the function.
+
+![](assets/2018-11-08-12-01-13.png)
+
+It didn't clear up many of these errors, but it did clear up quite a few. These were oriented
+
+![](assets/parenleft-contour.png)
+![](assets/braceleft-contour.png)
 
 - [x] *** :information_source: **INFO** MS-FonVal: Descender should be greater than or equal to head.yMin DETAILS: Descender = -605, head.yMin = -458**
 
