@@ -275,21 +275,20 @@ This probably isn't the best option for most Python libraries, as it probably ha
 **Irrelevant**
 - [x] ⚠️ WARN: Check if each glyph has the recommended amount of contours.
   - Nope, it's a variable font.
-
-**Probably irrelevant? Double-check**
 - [x] ⚠️ WARN: Is font em size (ideally) equal to 1000?
   - Nope, it's 2048. 2048 is fine, as it's so common in TTF fonts.
-- [x] ⚠️ WARN: Checking Vertical Metric Linegaps.
-  - This warns "WARN hhea lineGap is not equal to 0. [code: hhea]." In GF-docs, the line gap is specified to be `Typo LineGap = 0.25 * UPM`, `Hhea LineGap = Typo LineGap`. Asking in a FontBakery Issue. Result: 
+
 
 **To be completed**
+- [x] ⚠️ WARN: Are there caret positions declared for every ligature?
+  - I need to look at this
+- [ ] ⚠️ WARN: Checking Vertical Metric Linegaps.
+  - This warns "WARN hhea lineGap is not equal to 0. [code: hhea]." In GF-docs, the line gap is specified to be `Typo LineGap = 0.25 * UPM`, `Hhea LineGap = Typo LineGap`. Asking in [a FontBakery Issue](https://github.com/googlefonts/fontbakery/issues/2164). Result: not irrelevant. lineGap should be 0, and value should be added to `typo` and `hhea` ascenders to keep line spacing correct. 
 - [ ] ⚠️ WARN: Checking with Microsoft Font Validator.
   - Have to go through this step-by-step.
 - [ ] ⚠️ WARN: Is there kerning info for non-ligated sequences?
   - I need to look at this
   - Yes, this should be added. It won't take long to make a few of these better.
-- [x] ⚠️ WARN: Are there caret positions declared for every ligature?
-  - I need to look at this
 
 **Ask Dave**
 - [x] ⚠️ WARN: Checking OS/2 achVendID.
@@ -303,11 +302,6 @@ This probably isn't the best option for most Python libraries, as it probably ha
 - [ ] repeat QA steps for Italic
 - [ ] match charset between Regular and Italic
 
-## Microsoft Font Validator checks
-
-### Not sure what `Glyph index 1 Test: ValidateSimpContMisor ` means
-
-Adding issue at Microsoft/Font-Validator/issues.
 
 ## Setting caret position for ligatures
 
@@ -331,3 +325,52 @@ Overall, `k` is probably too-open on the right side.
 ## Style linking
 
 Information on process at https://github.com/googlefonts/gf-glyphs-scripts/issues/37#issuecomment-436176114.
+
+## Microsoft Font Validator checks
+
+- [ ] **`Glyph index 1 Test: ValidateSimpContMisor `**
+
+Digging into [the fontval code](https://github.com/Microsoft/Font-Validator/blob/520aaaed647fa406b637022a1d58fe8ab860850f/Glyph/Glyph.cs#L824), I see that the function for this check contains another variable, `isMisoriented`. So, it sounds like maybe it's about glyph path direction? Several glyphs marked here (e.g. `/A` and `/E`) appear to have counter-clockwise outer paths, which I believe are correct, and match glyphs that aren't in the "ContMisor" list. 
+
+To check whether this is actually the problem, I've used GlyphsApp's function *Correct Path Direction for All Masters* on the `/A` and `/E`, and rebuilt. The issue was still present.
+
+I am seeing that the glyphs listed with this error message are all glyphs with multiple contours, which would be single contours in a non-variable font. So, I believe this is just another check that doesn't apply to variable fonts.
+
+Adding information to [Microsoft/Font-Validator/issues/65: Skip overlapping contour check for variable fonts](https://github.com/Microsoft/Font-Validator/issues/65), as it seems to be closely related.
+
+- [x] *** :information_source: **INFO** MS-FonVal: Descender should be greater than or equal to head.yMin DETAILS: Descender = -605, head.yMin = -458**
+
+I'm not sure where the `605` descender value was derived from in the GF Glyphs font-fix.py script, but I've temporarily set to equal the yMin. 
+
+It's getting me close. The error is now: `MS-FonVal: Descender should be greater than or equal to head.yMin DETAILS: Descender = -462, head.yMin = -458`
+
+I'm a bit confused about why the `head.yMin` is 458 when my vertical metrics script finds a point at `-462` ... but after seeing the glyph name for the lowest value, I see that it's `/rcommaaccent`. The `head` is likely derived from the lowest y point in the basic `/a-/z` alphabet.
+
+For now, I'll just set these values manually. This should be fixed in the `fix-fonts.py` script, so I won't duplicate effort here.
+
+Pass! `MS-FonVal: Descender is greater than or equal to head.yMin`
+
+### Remaining fontVal checks
+
+```
+* :information_source: **INFO** MS-FonVal: Loca references a zero-length entry in the glyf table DETAILS: Number of glyphs that are empty = 5
+* :information_source: **INFO** MS-FonVal: maxSizeOfInstructions via method #1 DETAILS: maxSizeOfInstructions=0, computed from the glyf table
+* :information_source: **INFO** MS-FonVal: No string for Typographic Family name (Name ID 16)
+* :information_source: **INFO** MS-FonVal: No string for Typographic Subfamily name (Name ID 17)
+* :information_source: **INFO** MS-FonVal: The post name does not match the name in the Adobe Glyph List DETAILS: 
+	- glyph = 305, char = U+FB00, name = f_f
+	- glyph = 308, char = U+FB03, name = f_f_i
+	- glyph = 311, char = U+FB04, name = f_f_l
+	- glyph = 314, char = U+FB01, name = f_i
+	- glyph = 317, char = U+FB02, name = f_l
+	- glyph = 442, char = U+02BC, name = apostrophe
+	- glyph = 478, char = U+00B5, name = uni03BC.1
+* :information_source: **INFO** MS-FonVal: The post name isn't in uniXXXX or uXXXXX format and there is no Adobe Glyph List entry DETAILS: 
+	- glyph = 319, char = U+FB06, name = s_t
+	- glyph = 454, char = U+000D, name = CR
+	- glyph = 535, char = U+0000, name = NULL
+* :information_source: **INFO** MS-FonVal: The post name has an unexpected value DETAILS: glyph = 509, char = U+F6C3, name = uni0326
+* :information_source: **INFO** MS-FonVal: Rasterization not selected for validation
+* :information_source: **INFO** MS-FonVal: Total time validating file DETAILS: 0:00:16
+```
+
