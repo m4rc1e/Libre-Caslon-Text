@@ -266,11 +266,6 @@ This probably isn't the best option for most Python libraries, as it probably ha
 
 # Final FontBakery issues
 
-**Waiting on VF hinting**
-- [ ] 🔥 FAIL: Is 'gasp' table set to optimize rendering?
-  - Autohinting is not quite stable for VFs yet. Will need to try WIP version from Marc.
-- [ ] 🔥 FAIL: Font enables smart dropout control in "prep" table instructions?
-  - Autohinting is not quite stable for VFs yet. Will need to try WIP version from Marc.
 
 **Irrelevant**
 - [x] ⚠️ WARN: Check if each glyph has the recommended amount of contours.
@@ -278,30 +273,32 @@ This probably isn't the best option for most Python libraries, as it probably ha
 - [x] ⚠️ WARN: Is font em size (ideally) equal to 1000?
   - Nope, it's 2048. 2048 is fine, as it's so common in TTF fonts.
 
-**Completed**
+**Completed (more information documented further below)**
 - [x] ⚠️ WARN: Are there caret positions declared for every ligature?
-
-**To be completed**
-- [ ] ⚠️ WARN: Checking Vertical Metric Linegaps.
+- [x] ⚠️ WARN: Checking Vertical Metric Linegaps.
   - This warns "WARN hhea lineGap is not equal to 0. [code: hhea]." In GF-docs, the line gap is specified to be `Typo LineGap = 0.25 * UPM`, `Hhea LineGap = Typo LineGap`. Asking in [a FontBakery Issue](https://github.com/googlefonts/fontbakery/issues/2164). Result: not irrelevant. lineGap should be 0, and value should be added to `typo` and `hhea` ascenders to keep line spacing correct. 
-- [ ] ⚠️ WARN: Checking with Microsoft Font Validator.
+- [x] ⚠️ WARN: Checking OS/2 achVendID.
+  - Pablo never signed up, and we can't reach him through email. Should I sign him up? Should I use `GOOG`? https://docs.microsoft.com/en-us/typography/vendors/#g
+  - Dave: "Goog is fine."
+- [x] ⚠️ WARN: Checking with Microsoft Font Validator.
   - Have to go through this step-by-step.
-- [ ] ⚠️ WARN: Is there kerning info for non-ligated sequences?
+- [x] ⚠️ WARN: Is there kerning info for non-ligated sequences?
   - I need to look at this
   - Yes, this should be added. It won't take long to make a few of these better.
 
-**Ask Dave**
-- [x] ⚠️ WARN: Checking OS/2 achVendID.
-  - Pablo never signed up, and we can't reach him through email. Should I sign him up? Should I use `GOOG`? https://docs.microsoft.com/en-us/typography/vendors/#g
-  - "Goog is fine."
+**Waiting on VF hinting**
+- [ ] 🔥 FAIL: Is 'gasp' table set to optimize rendering?
+  - Autohinting is not quite stable for VFs yet. Will need to try WIP version from Marc.
+- [ ] 🔥 FAIL: Font enables smart dropout control in "prep" table instructions?
+  - Autohinting is not quite stable for VFs yet. Will need to try WIP version from Marc.
 
-**Extra items to close out**
-- [ ] Set weight of Regular to better match other fonts
-  - [ ] *but also* check that the Italic isn't too light when you do this.
-- [ ] Make sure there is style linking between upright Regular and Regular Italic
-- [ ] repeat QA steps for Italic
-- [ ] match charset between Regular and Italic
+## ⚠️ WARN: Checking Vertical Metric Linegaps.
 
+This warns "WARN hhea lineGap is not equal to 0. [code: hhea]." In GF-docs, the line gap is specified to be `Typo LineGap = 0.25 * UPM`, `Hhea LineGap = Typo LineGap`. Asking in [a FontBakery Issue](https://github.com/googlefonts/fontbakery/issues/2164). 
+
+Result: LineGap should be 0, and value should be added to `typo` and `hhea` ascenders to keep line spacing correct. 
+
+I updated my vertical metrics script in my [Glyphs Scripts](https://github.com/thundernixon/glyphs_scripts) repo to set these, until the gf fix-fonts.py script is updated.
 
 ## Setting caret position for ligatures
 
@@ -318,9 +315,20 @@ Most are fairly fine, as the `f` overlaps its right boundary. A couple do have k
 - `/k/f`
 - `/k/l`
 
-Overall, `k` is probably too-open on the right side.
+Overall, `k` was too-open on the right side. I reduced its right sidebearing, and kerned it a bit more tightly against glyphs `/a /f /t`. 
 
+Before:
 ![](assets/2018-11-07-14-38-15.png)
+
+After (kerned in different lowercase combinations, mostly based on "nn" and "oo" spacing):
+![](assets/2018-11-08-16-12-11.png)
+![](assets/2018-11-08-16-12-32.png)
+
+I also reduced sidebearings in diagonals: `/y/v/w`, as these were all quite loosely-spaced. 
+
+This font could probably benefit from a more-methodical overall spacing upgrade, but that goes beyond the scope of this "just get it published" project, as it might also call into question the overall widths of some letters.
+
+
 
 ## Style linking
 
@@ -344,7 +352,7 @@ I ran the "Correct Path Direction" on all glyphs in the Roman source file, then 
 
 ![](assets/2018-11-08-12-01-13.png)
 
-It didn't clear up many of these errors, but it did clear up quite a few. These were oriented
+It didn't clear up many of these errors, but it did clear up quite a few. These were oriented clockwise, when outer paths should be counter-clockwise (according to [this GlyphsApp Tutorial](https://glyphsapp.com/tutorials/drawing-good-paths) – I can't find )
 
 ![](assets/parenleft-contour.png)
 ![](assets/braceleft-contour.png)
@@ -363,25 +371,80 @@ Pass! `MS-FonVal: Descender is greater than or equal to head.yMin`
 
 ### Remaining fontVal checks
 
+**Done**
+
+* :information_source: **INFO** MS-FonVal: No string for Typographic Family name (Name ID 16)
+
+From the [MS OpenType Docs](https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids):
+> 	Typographic Family name: The typographic family grouping doesn’t impose any constraints on the number of faces within it, in contrast with the 4-style family grouping (ID 1), which is present both for historical reasons and to express style linking groups. If name ID 16 is absent, then name ID 1 is considered to be the typographic family name. (In earlier versions of the specification, name ID 16 was known as “Preferred Family”.)
+
+This is what I want it to be (for now):
 ```
+<namerecord nameID="1" platformID="3" platEncID="1" langID="0x409">
+      Libre Caslon Text
+    </namerecord>
+```
+
+* :information_source: **INFO** MS-FonVal: The post name does not match the name in the Adobe Glyph List DETAILS: 
+	- glyph = 442, char = U+02BC, name = apostrophe # also has proper 'quoteright' glyph
+	- glyph = 478, char = U+00B5, name = uni03BC.1 # also has proper 'uni03BC' glyph
+
+**To ask about in Pull Request**
 * :information_source: **INFO** MS-FonVal: Loca references a zero-length entry in the glyf table DETAILS: Number of glyphs that are empty = 5
 * :information_source: **INFO** MS-FonVal: maxSizeOfInstructions via method #1 DETAILS: maxSizeOfInstructions=0, computed from the glyf table
-* :information_source: **INFO** MS-FonVal: No string for Typographic Family name (Name ID 16)
+
 * :information_source: **INFO** MS-FonVal: No string for Typographic Subfamily name (Name ID 17)
-* :information_source: **INFO** MS-FonVal: The post name does not match the name in the Adobe Glyph List DETAILS: 
-	- glyph = 305, char = U+FB00, name = f_f
-	- glyph = 308, char = U+FB03, name = f_f_i
-	- glyph = 311, char = U+FB04, name = f_f_l
-	- glyph = 314, char = U+FB01, name = f_i
-	- glyph = 317, char = U+FB02, name = f_l
-	- glyph = 442, char = U+02BC, name = apostrophe
-	- glyph = 478, char = U+00B5, name = uni03BC.1
+
+From the [MS OpenType Docs](https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids):
+> If it is absent, then name ID 2 is considered to be the typographic subfamily name. 
+
+Name ID `2` is "Regular", and I'm not quite sure that *is* the right name. Is there anything better?
+
 * :information_source: **INFO** MS-FonVal: The post name isn't in uniXXXX or uXXXXX format and there is no Adobe Glyph List entry DETAILS: 
 	- glyph = 319, char = U+FB06, name = s_t
 	- glyph = 454, char = U+000D, name = CR
 	- glyph = 535, char = U+0000, name = NULL
-* :information_source: **INFO** MS-FonVal: The post name has an unexpected value DETAILS: glyph = 509, char = U+F6C3, name = uni0326
-* :information_source: **INFO** MS-FonVal: Rasterization not selected for validation
-* :information_source: **INFO** MS-FonVal: Total time validating file DETAILS: 0:00:16
-```
 
+* :information_source: **INFO** MS-FonVal: The post name has an unexpected value DETAILS: glyph = 509, char = U+F6C3, name = uni0326
+
+* :information_source: **INFO** MS-FonVal: Rasterization not selected for validation
+
+# Italic QA
+
+**Italic items to close out**
+- [x] make sure all glyphs are compatible (irrelevant for now – it's only a single weight)
+- [x] check that charset matches between Regular and Italic
+- [ ] repeat QA steps for Italic
+  - [x] match vertical metrics to Roman
+  - [ ] create build script
+- [ ] Make sure there is style linking between upright Regular and Regular Italic
+- [ ] Set weight of Regular to better match other fonts
+  - [ ] *but also* check that the Italic isn't too light when you do this.
+
+## Charset
+
+**Unique to Italic**
+- ampersand.ss01
+- c_p
+- e_t
+- s_p
+
+I may not have to make the charsets entirely compatible because 
+- These are only ligatures and an alternate ampersand
+- I'm not planning to put the Roman and Italic into the same variable font file (in which case everything would have to be compatible)
+
+![](assets/2018-11-08-18-43-40.png)
+
+
+## Create build script for italic
+
+This will take a bit of figuring-out. It's only one weigth, so ... do I try to build it as a variable font? Or will it style-link in a reasonable way if it's just a static font?
+
+...to be continued.
+
+
+# Remaining family to-do items
+
+**In Roman**
+
+- [ ] match updated spacing and kerning from diagonals to their accented variants – probably a script would work well for this (skipping the `i`-based letters)

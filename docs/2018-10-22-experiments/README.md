@@ -79,6 +79,13 @@ To check that that things haven't been distorted too badly, I could make a scrip
     - Points are suddenly missing a key alignment zone such as the baseline, x-height, cap height, ascender height, or hinting blue zone. This is not the case.
     - If a very thin stroke on a diagonal letter such as `K` is suddenly misaligned on either side of an intersection. A spot check shows that this is not the case in the scaled versions. I will have to be more cautious when working in the Libre Caslon Display masters, where thin strokes are thinner, and thus have a smaller margin of acceptable error.
 
+
+### Update: rounding kerning to integer values
+
+When the font was scaled, kerning changed to floating-point values. This isn't useful for the font. It doesn't seem to export, based on the floating-point values not veing present in the TTX output. However, it is useless to keep the floating-point kerns in the GlyphsApp source.
+
+Editing kerns is a bit tricky in GlyphsApp via scripts, but the JAF Freemix scripts include a script that worked great: [`round kerning.py`](https://github.com/justanotherfoundry/freemix-glyphsapp/blob/master/Round%20Kerning.py).
+
 ### Scaling Libre Caslon Display
 
 I've tried the same approach to scaling the Display, scaling it to 1760 UPM, then changing the UPM to 2048. However, due to its original major difference in Cap Height and x-Height from LC Text, it is again way too small:

@@ -1,6 +1,6 @@
 ### WIP macOS build script for Encode Sans VF, based on a build script by Mike LaGuttuta
 ### Run in the terminal by entering this file path
-### requires a python 2 environment, for now
+### requires a python 3 environment, for now
 
 ############################################
 ################# set vars #################
@@ -43,9 +43,7 @@ rm -rf $tempGlyphsSource
 cd variable_ttf
 
 ## fix file metadata with gftools
-gftools fix-nonhinting ${VFname}.ttf ${VFname}.ttf
 gftools fix-dsig --autofix ${VFname}.ttf
-gftools fix-gasp ${VFname}.ttf
 
 
 rm -rf ${VFname}-backup-fonttools-prep-gasp.ttf
