@@ -2422,7 +2422,7 @@ value = -462;
 },
 {
 name = hheaLineGap;
-value = 512;
+value = 0;
 },
 {
 name = winDescent;
@@ -2488,7 +2488,7 @@ value = -462;
 },
 {
 name = hheaLineGap;
-value = 512;
+value = 0;
 },
 {
 name = winDescent;
