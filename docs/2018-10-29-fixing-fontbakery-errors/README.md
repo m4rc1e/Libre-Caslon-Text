@@ -416,7 +416,7 @@ Name ID `2` is "Regular", and I'm not quite sure that *is* the right name. Is th
 - [x] check that charset matches between Regular and Italic
 - [ ] repeat QA steps for Italic
   - [x] match vertical metrics to Roman
-  - [ ] create build script
+  - [ ] create build script tailored to Italic
 - [ ] Make sure there is style linking between upright Regular and Regular Italic
 - [ ] Set weight of Regular to better match other fonts
   - [ ] *but also* check that the Italic isn't too light when you do this.
