@@ -6,7 +6,8 @@ a,
 SO,
 Q,
 C,
-"/c_p/c_t/e_t/f_b/f_f/f_f_b/f_f_h/f_f_i/f_f_j/f_f_k/f_f_l/f_f_t/f_h/f_i/f_j/f_k/f_l/f_t/s_p/s_t"
+"/c_p/c_t/e_t/f_b/f_f/f_f_b/f_f_h/f_f_i/f_f_j/f_f_k/f_f_l/f_f_t/f_h/f_i/f_j/f_k/f_l/f_t/s_p/s_t",
+"lIÍ"
 );
 classes = (
 {
@@ -18,7 +19,7 @@ code = "Euro.tnum bar.tnum cent.tnum colon.tnum comma.tnum degree.tnum divide.tn
 name = tnum2;
 }
 );
-copyright = "Copyright 2012 The Libre Caslon Text Project Authors (https://github.com/thundernixon/Libre-Caslon)";
+copyright = "Copyright 2018 The Libre Caslon Text Project Authors (https://github.com/thundernixon/Libre-Caslon)";
 customParameters = (
 {
 name = macintoshFONDFamilyID;
@@ -123,7 +124,7 @@ value = (
 },
 {
 name = vendorID;
-value = IMPA;
+value = GOOG;
 },
 {
 name = blueFuzz;
@@ -178,7 +179,7 @@ name = "Use Line Breaks";
 value = 1;
 }
 );
-date = "2012-06-20 15:47:59 +0000";
+date = "2018-11-09 21:39:17 +0000";
 designer = "Pablo Impallari, Rodrigo Fuenzalida";
 designerURL = "http://www.impallari.com";
 disablesNiceNames = 1;
@@ -3429,8 +3430,9 @@ value = -132;
 }
 );
 descender = -440;
+iconName = Light_Condensed;
 id = master01;
-italicAngle = 25;
+italicAngle = 22.583;
 weightValue = 400;
 xHeight = 933;
 }

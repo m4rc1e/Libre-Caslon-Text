@@ -16,8 +16,7 @@ BpC,
 w,
 "/wacute",
 "/wcircumflex",
-"k/kcommaaccent",
-"/kgreenlandic"
+"k/kcommaaccent"
 );
 classes = (
 {
@@ -198,7 +197,7 @@ name = "Use Line Breaks";
 value = 1;
 }
 );
-date = "2018-11-06 22:32:43 +0000";
+date = "2018-11-09 21:39:20 +0000";
 designer = "Pablo Impallari, Rodrigo Fuenzalida";
 designerURL = "http://www.impallari.com";
 disablesNiceNames = 1;

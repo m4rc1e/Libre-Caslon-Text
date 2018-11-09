@@ -20,15 +20,16 @@ keepDesignspace=true
 tempGlyphsSource=${glyphsSource/".glyphs"/"-Build.glyphs"}
 
 # get font name from glyphs source
-VFname=`python scripts/helpers/get-font-name.py ${glyphsSource}`
+italicName=`python scripts/helpers/get-italic-name.py ${glyphsSource}`
+
 # checking that the name has been pulled out of the source file
-echo "VF Name: ${VFname}"
+echo "Italic Name: ${italicName}"
 
 ## copy Glyphs file into temp file
 cp $glyphsSource $tempGlyphsSource
 
 ## call fontmake to make a varfont
-fontmake -o variable -g $tempGlyphsSource
+fontmake -o ttf -g $tempGlyphsSource
 
 if [ $keepDesignspace == true ]
 then
@@ -37,39 +38,36 @@ else
     rm -rf master_ufo
 fi
 
-## clean up temp glyphs file
+# ## clean up temp glyphs file
 rm -rf $tempGlyphsSource
 
-cd variable_ttf
+cd master_ttf
 
-## fix file metadata with gftools
-gftools fix-dsig --autofix ${VFname}.ttf
-
-
-rm -rf ${VFname}-backup-fonttools-prep-gasp.ttf
+# ## fix file metadata with gftools
+gftools fix-dsig --autofix ${italicName}.ttf
 
 cd ..
 
-# cd variable_ttf
+
 # open VF in default program; hopefully you have FontView
-open variable_ttf/${VFname}.ttf
+open master_ttf/${italicName}.ttf
 
 ## if you set timestampAndFontbakeInDist variable to true, this creates a new folder in 'dist' to put it into and run fontbake on
 if [ $timestampAndFontbakeInDist == true ]
 then
     ## move font into folder of dist/, with timestamp, then fontbake the font
-    # python3 ../scripts/distdate-and-fontbake.py ${VFname}.ttf
+    # python3 ../scripts/distdate-and-fontbake.py ${italicName}.ttf
 
-    newFontLocation=`python3 scripts/distdate.py variable_ttf/${VFname}.ttf`
+    newFontLocation=`python3 scripts/distdate.py master_ttf/${italicName}.ttf`
 
-    echo "new VF location is " ${newFontLocation}
+    echo "new font location is " ${newFontLocation}
 
     cd ${newFontLocation}
 
-    python3 ../../scripts/fontbake.py ${VFname}.ttf
+    python3 ../../scripts/fontbake.py ${italicName}.ttf
 
-    rm -rf ../../variable_ttf
+    rm -rf ../../master_ttf
 else
-    ttx ${VFname}.ttf
-    echo "font and ttx in variable_ttf folder"
+    ttx ${italicName}.ttf
+    echo "font and ttx in master_ttf folder"
 fi

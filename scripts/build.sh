@@ -50,7 +50,6 @@ rm -rf ${VFname}-backup-fonttools-prep-gasp.ttf
 
 cd ..
 
-# cd variable_ttf
 # open VF in default program; hopefully you have FontView
 open variable_ttf/${VFname}.ttf
 
