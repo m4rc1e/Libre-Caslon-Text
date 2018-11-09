@@ -438,7 +438,7 @@ I may not have to make the charsets entirely compatible because
 
 ## Create build script for italic
 
-This will take a bit of figuring-out. It's only one weigth, so ... do I try to build it as a variable font? Or will it style-link in a reasonable way if it's just a static font?
+This will take a bit of figuring-out. It's only one weight, so ... do I try to build it as a variable font? Or will it style-link in a reasonable way if it's just a static font?
 
 ...to be continued.
 
