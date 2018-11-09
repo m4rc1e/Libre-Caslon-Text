@@ -409,3 +409,8 @@ Name ID `2` is "Regular", and I'm not quite sure that *is* the right name. Is th
 
 * :information_source: **INFO** MS-FonVal: Rasterization not selected for validation
 
+# Remaining family to-do items
+
+**In Roman**
+
+- [ ] match updated spacing and kerning from diagonals to their accented variants – probably a script would work well for this (skipping the `i`-based letters)

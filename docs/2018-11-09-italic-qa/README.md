@@ -32,8 +32,8 @@ This will take a bit of figuring-out. It's only one weight, so ... do I try to b
 ...to be continued.
 
 
-# Remaining family to-do items
+## Style linking
 
-**In Roman**
+Information on process at https://github.com/googlefonts/gf-glyphs-scripts/issues/37#issuecomment-436176114. 
 
-- [ ] match updated spacing and kerning from diagonals to their accented variants – probably a script would work well for this (skipping the `i`-based letters)
+I'll have to do more here.
