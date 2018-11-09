@@ -1,4 +1,4 @@
-# Fixing FontBakery Errors by customizing a build script for Libre Caslon Text
+# Fixing FontBakery Errors w/ updated build script & source QA fixes
 
 I'll be logging my progress in getting through Failures & Errors caught by FontBakery on [this GitHub issue])(https://github.com/thundernixon/Libre-Caslon-Text/issues/2).
 
@@ -98,7 +98,7 @@ This is probably due to GlyphsApp having both Weight and Width information for e
 
 Because of this, I will try two things:
 1. Adding a "Custom Parameter" of `axes` for `wght` to the GlyphsApp Font Into
-1. ~~If the first step doesn't work, I'll also update the `NAMEpatch` and `STATpatch` files to remove the unnecessary~~ The first step seems to have worked!
+2. ~~If the first step doesn't work, I'll also update the `NAMEpatch` and `STATpatch` files to remove the unnecessary~~ The first step seems to have worked!
 
 ![](assets/axis-fixed.png)
 
