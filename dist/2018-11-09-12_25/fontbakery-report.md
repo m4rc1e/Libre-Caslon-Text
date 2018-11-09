@@ -5,7 +5,7 @@ Fontbakery version: 0.5.2.dev136+g7a5a29b6
 <details>
 <summary><b>[23] Family checks</b></summary>
 <details>
-<summary>:fire: <b>FAIL:</b> Check font has a license.</summary>
+<summary><s>:fire: <b>FAIL:</b> Check font has a license.</s></summary>
 
 * [com.google.fonts/check/028](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/028)
 * :fire: **FAIL** No license file was found. Please add an OFL.txt or a LICENSE.txt file. If you are running fontbakery on a Google Fonts upstream repo, which is fine, just make sure there is a temporary license file in the same folder. [code: no-license]
@@ -174,28 +174,37 @@ Fontbakery version: 0.5.2.dev136+g7a5a29b6
 <details>
 <summary><b>[113] LibreCaslonText-VF.ttf</b></summary>
 <details>
-<summary>:fire: <b>FAIL:</b> Is 'gasp' table set to optimize rendering?</summary>
+<summary><s>:fire: <b>FAIL:</b> Is 'gasp' table set to optimize rendering?</s></summary>
 
 * [com.google.fonts/check/062](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/062)
 * :fire: **FAIL** Font is missing the 'gasp' table. Try exporting the font with autohinting enabled.
 
+👉 _Waiting on hinting analysis & decisions from Marc & Micah_
+
 </details>
 <details>
-<summary>:fire: <b>FAIL:</b> Font enables smart dropout control in "prep" table instructions?</summary>
+<summary><s>:fire: <b>FAIL:</b> Font enables smart dropout control in "prep" table instructions?</s></summary>
 
 * [com.google.fonts/check/072](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/072)
 * :fire: **FAIL** 'prep' table does not contain TrueType  instructions enabling smart dropout control. To fix, export the font with autohinting enabled, or run ttfautohint on the font, or run the  `gftools fix-nonhinting` script.
 
+👉 _Waiting on hinting analysis & decisions from Marc & Micah_
+
 </details>
 <details>
-<summary>:warning: <b>WARN:</b> Is font em size (ideally) equal to 1000?</summary>
+<summary><s>:warning: <b>WARN:</b> Is font em size (ideally) equal to 1000?</s></summary>
 
 * [com.google.fonts/check/116](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/116)
 * :warning: **WARN** Font em size (2048) is not equal to 1000.
 
+
+👉 _2048 is acceptable, too. Going to file an issue about this message._
+
 </details>
 <details>
-<summary>:warning: <b>WARN:</b> Check if each glyph has the recommended amount of contours.</summary>
+<summary><s>:warning: <b>WARN:</b> Check if each glyph has the recommended amount of contours.</s></summary>
+
+👉 _It's a variable font._
 
 * [com.google.fonts/check/153](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/153)
 * :warning: **WARN** This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.
@@ -296,7 +305,9 @@ Glyph name: uni1EE5	Contours detected: 3	Expected: 2
 
 </details>
 <details>
-<summary>:warning: <b>WARN:</b> Checking with Microsoft Font Validator.</summary>
+<summary><s>:warning: <b>WARN:</b> Checking with Microsoft Font Validator.</s></summary>
+
+👉 _Complete, aside from a few questions I'll ask when I Pull Request the font into the GF library_
 
 * [com.google.fonts/check/037](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/037)
 * :information_source: **INFO** Microsoft Font Validator returned an error code. Output follows :
@@ -529,14 +540,18 @@ Reports are ready!
 
 </details>
 <details>
-<summary>:warning: <b>WARN:</b> Combined length of family and style must not exceed 20 characters.</summary>
+<summary><s>:warning: <b>WARN:</b> Combined length of family and style must not exceed 20 characters.</s></summary>
+
+👉 _Debatable. I've filed an issue about this check._
 
 * [com.google.fonts/check/163](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/163)
 * :warning: **WARN** The combined length of family and style exceeds 20 chars in the following 'WINDOWS' entries: FONT_FAMILY_NAME = 'Libre Caslon Text' / SUBFAMILY_NAME = 'Regular'
 
 </details>
 <details>
-<summary>:warning: <b>WARN:</b> Is there kerning info for non-ligated sequences?</summary>
+<summary><s>:warning: <b>WARN:</b> Is there kerning info for non-ligated sequences?</s></summary>
+
+👉 _I kerned the sequences that needed kerning._
 
 * [com.google.fonts/check/065](https://github.com/googlefonts/fontbakery/search?q=com.google.fonts/check/065)
 * :warning: **WARN** GPOS table lacks kerning info for the following non-ligated sequences:
