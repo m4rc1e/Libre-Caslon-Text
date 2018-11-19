@@ -310,23 +310,7 @@ Pass!
 
 ## Kerning for non-ligated sequences
 
-Most are fairly fine, as the `f` overlaps its right boundary. A couple do have kerning, such as the positive kerning for `/f/i` and `/f/j` to avoid a crash. Things I will fix:
-- `/f/t`
-- `/k/f`
-- `/k/l`
-
-Overall, `k` was too-open on the right side. I reduced its right sidebearing, and kerned it a bit more tightly against glyphs `/a /f /t`. 
-
-Before:
-![](assets/2018-11-07-14-38-15.png)
-
-After (kerned in different lowercase combinations, mostly based on "nn" and "oo" spacing):
-![](assets/2018-11-08-16-12-11.png)
-![](assets/2018-11-08-16-12-32.png)
-
-I also reduced sidebearings in diagonals: `/y/v/w`, as these were all quite loosely-spaced. 
-
-This font could probably benefit from a more-methodical overall spacing upgrade, but that goes beyond the scope of this "just get it published" project, as it might also call into question the overall widths of some letters.
+(See doc on [Spacing Improvements](../2018-11-19-spacing-improvements))
 
 
 
