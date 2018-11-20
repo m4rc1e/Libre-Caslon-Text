@@ -36,8 +36,8 @@ lines = int(floor(H / fontSize / 2.15))
 
 print(lines)
 
-for num in range(20):
-    
+# for num in range(20):
+for num in range(4):    
     newPage(W,H)
     frameDuration(.25)
     caslonWeight = 400 + num*5
@@ -87,6 +87,6 @@ for num in range(20):
 
 # imgPath = "../assets/weight-test-roman_italic-noblur-big-111918.mp4" # do 50 frames with a wght increase rate of 2 
 imgPath = "../assets/weight-test-roman_italic-noblur-big-111918.gif" # do 20 frames with a wght increase rate of 5
-saveImage(imgPath)
+# saveImage(imgPath)
 # saveImage(imgPath, imageResolution=300)
 # os.system('open %s' % imgPath)
