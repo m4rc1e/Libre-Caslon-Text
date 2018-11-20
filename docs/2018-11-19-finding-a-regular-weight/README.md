@@ -28,5 +28,30 @@ It's taken some experimentation to find the right way to visualize this in Drawb
 
 Because the matching font weight seems to change based on the medium and size tested, I'll do two things:
 
-1. Keep things flexible by making my build script keep the original source, and allow a build-time selection of Roman weight
+~~1. Keep things flexible by making my build script keep the original source, and allow a build-time selection of Roman weight~~
+1. Test making the current Regular master a lighter weight (calculating necessary `weight` value), making a new "Regular" master at 400, and keep instances at 400–700
 2. Start with the assumption that the correct Regular weight is somewhere between the test results – I'll choose the current `435` point as the value to export at, for now. 
+
+### Making old regular the right weight
+
+As a sketch of what needs to happen:
+
+```
+700----------435--400
+700---------------435----(?)
+```
+
+The actual math is...
+```
+(700–435) * x = 300
+or
+265 * x = 300
+or
+x = 300/265
+or
+x = 1.132075472
+```
+
+So, the current designspace must stretch by `1.132075472`. In order to make the new Regular `400`, The new value of Bold to Old Regular should be `339.6226416`, making the old regular `360.3773584`.
+
+For now, I'm doing this manually. I would like to be able to do this with a script to keep things flexible, but it's unclear to me how to add and control values. I've asked in the [GlyphsApp Forum](https://forum.glyphsapp.com/t/how-might-i-trigger-instance-as-master-from-the-api/9976).

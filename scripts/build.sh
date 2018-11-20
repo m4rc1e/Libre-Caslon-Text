@@ -16,16 +16,25 @@ keepDesignspace=true
 ################# set vars #################
 ############################################
 
-## make temp glyphs filename with "-build" suffix
-tempGlyphsSource=${glyphsSource/".glyphs"/"-Build.glyphs"}
+
 
 # get font name from glyphs source
 VFname=`python scripts/helpers/get-font-name.py ${glyphsSource}`
 # checking that the name has been pulled out of the source file
 echo "VF Name: ${VFname}"
 
-## copy Glyphs file into temp file
+## make temp glyphs filename with "-build" suffix
+tempGlyphsSource=${glyphsSource/".glyphs"/"-Build.glyphs"}
+
+## copy Glyphs file with temp filename
 cp $glyphsSource $tempGlyphsSource
+
+## adjust weight of Regular master (to better match Italic)
+# make instance at 435 (arbitrary weight value)
+# add instance as master
+# copy over custom parameters of existing Regular
+# delete existing Regular
+
 
 ## call fontmake to make a varfont
 fontmake -o variable -g $tempGlyphsSource

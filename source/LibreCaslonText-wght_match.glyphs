@@ -18,9 +18,7 @@ w,
 "/wcircumflex",
 "k/kcommaaccent",
 m,
-"lihlnl/lacute \012nnnnllll\012iiiillllnnnn",
-"/lslash",
-"/lcommaaccent"
+ihln
 );
 classes = (
 {
@@ -15226,7 +15224,6 @@ width = 627;
 leftKerningGroup = l;
 rightKerningGroup = l;
 unicode = 013E;
-changeCount = 4;
 },
 {
 glyphname = lcommaaccent;
@@ -18636,7 +18633,6 @@ width = 1208;
 }
 );
 unicode = 01C9;
-changeCount = 1;
 },
 {
 glyphname = uni01CC;

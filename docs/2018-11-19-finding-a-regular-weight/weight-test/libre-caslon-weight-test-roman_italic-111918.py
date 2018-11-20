@@ -10,7 +10,6 @@ from drawBot import *
 shortSample = "anbncndnenfngnhninjnknlnmnnnonpnqnrnsntnunvnwnxnynzanbncndnenfngnhninjnknlnmnnnonpnqnrnsntnunvnwnxnynz"
 
 # size('Letter')
-# size(612, 612)
 # W, H = width(), height()
 
 # W, H= 800,800
@@ -19,11 +18,6 @@ W, H= 1000,1000
 
 print(W, H)
 
-# frameDuration(1)
-
-# background
-# fill(.95,.95,.95)
-# rect(0,0,W, H)
 
 # fontSize = 16
 fontSize = 32
@@ -68,17 +62,8 @@ for num in range(20):
             topMargin = margin * i*2 + margin*2
             placeText("./LibreCaslonText-VF.ttf",topMargin,weight=caslonWeight)
             placeText("./LibreCaslonText-Italic.ttf",topMargin+boxHeight)
-        
-            # fontVariations(wght=caslonWeight)
-            # font("./LibreCaslonText-VF.ttf",fontSize)
-            # textBoxSize = (margin, H-topMargin, W-margin*2, boxHeight)
-            # textBox(shortSample, textBoxSize)
-        
-            # font("./LibreCaslonText-Italic.ttf",fontSize)
-            # textBoxSize = (margin, H-topMargin+boxHeight, W-margin*2, boxHeight)
-            # textBox(shortSample, textBoxSize)
 
-    # apply some filters
+    # apply some filters if desired
     # im.gaussianBlur(0.1)
 
     # get the offset (with a blur this will be negative)
@@ -101,7 +86,7 @@ for num in range(20):
 
 
 # imgPath = "../assets/weight-test-roman_italic-noblur-big-111918.mp4" # do 50 frames with a wght increase rate of 2 
-# imgPath = "../assets/weight-test-roman_italic-noblur-big-111918.gif # do 20 frames with a wght increase rate of 5
+imgPath = "../assets/weight-test-roman_italic-noblur-big-111918.gif" # do 20 frames with a wght increase rate of 5
 saveImage(imgPath)
 # saveImage(imgPath, imageResolution=300)
 # os.system('open %s' % imgPath)
