@@ -29,11 +29,8 @@ tempGlyphsSource=${glyphsSource/".glyphs"/"-Build.glyphs"}
 ## copy Glyphs file with temp filename
 cp $glyphsSource $tempGlyphsSource
 
-## adjust weight of Regular master (to better match Italic)
-# make instance at 435 (arbitrary weight value)
-# add instance as master
-# copy over custom parameters of existing Regular
-# delete existing Regular
+## won't work because glyphsLib doesn't yet support interpolatedFont
+# python scripts/adjust-master-weight.py $tempGlyphsSource 400.0 440.0
 
 
 ## call fontmake to make a varfont
