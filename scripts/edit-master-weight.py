@@ -37,10 +37,16 @@ def main():
         print(instance, instance.interpolationWeight())
 
     # make an interpolated font of the new instance
-    instanceFont = font.instances()[0].interpolatedFont()
+    instanceFont = Glyphs.objectWithClassName_("GSFont")
+    instanceFont = newInstance.interpolatedFont
+    # instanceFont = font.instances()[-1].Instance_FontObject()
 
+    # prints:
+    # <native-selector interpolatedFont of GSInstance <0x600000ed55f0>: Regular (650, 100, 0)>
     print(instanceFont)
-    # I expect this to only print 1 master, but it prints the main font's 2 masters
+
+    # I expect this to only print 1 master, but it prints:
+    # AttributeError: 'objc.native_selector' object has no attribute 'fontMasters'
     print(instanceFont.fontMasters())
 
     # add the master of the interpolated font to the masters
