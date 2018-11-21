@@ -26,32 +26,42 @@ It's taken some experimentation to find the right way to visualize this in Drawb
 
 ![](assets/libre-caslon-finding_reg_wght.gif)
 
+Because these tests were giving me conflicting results, I also made a printable PDF to test a range of weights, across a range of sizes. This test makes me fairly certain that `wght = 440` is the best weight to move forward with. I also asked a couple of friends in type design (without first expressing my opinion), and they too concluded that `440` was the best match. `440` it is!
+
+![](assets/weight-test-one_page-printed-112018.jpg)
+
+
 Because the matching font weight seems to change based on the medium and size tested, I'll do two things:
 
 ~~1. Keep things flexible by making my build script keep the original source, and allow a build-time selection of Roman weight~~
 1. Test making the current Regular master a lighter weight (calculating necessary `weight` value), making a new "Regular" master at 400, and keep instances at 400–700
-2. Start with the assumption that the correct Regular weight is somewhere between the test results – I'll choose the current `435` point as the value to export at, for now. 
+2. Start with the assumption that the correct Regular weight is somewhere between the test results – I'll choose the current `440` point as the value to export at, for now. 
 
 ### Making old regular the right weight
 
 As a sketch of what needs to happen:
 
 ```
-700----------435--400
-700---------------435----(?)
+700----------440--400
+700---------------440----(?)
 ```
 
 The actual math is...
 ```
-(700–435) * x = 300
-or
-265 * x = 300
-or
-x = 300/265
-or
-x = 1.132075472
+(700–440) * x = 300
+...which is...
+260 * x = 300
+...which is...
+x = 300/260
+...which is...
+x = 1.153846154
 ```
 
-So, the current designspace must stretch by `1.132075472`. In order to make the new Regular `400`, The new value of Bold to Old Regular should be `339.6226416`, making the old regular `360.3773584`.
+So, the current designspace must stretch by `1.153846154`. In order to make the new Regular `400`, The new value of Bold to Old Regular should be `346.1538462`, making the old regular `354`.
 
-For now, I'm doing this manually. I would like to be able to do this with a script to keep things flexible, but it's unclear to me how to add and control values. I've asked in the [GlyphsApp Forum](https://forum.glyphsapp.com/t/how-might-i-trigger-instance-as-master-from-the-api/9976).
+For now, I'm doing this manually. I would like to be able to do this with a script to keep things flexible, but it's unclear to me how to add and control values. I've asked in the [GlyphsApp Forum](https://forum.glyphsapp.com/t/how-might-i-trigger-instance-as-master-from-the-api/9976). 
+
+It's subtle, but this weight shift helps the default Regular to better match the italic. 
+![](assets/2018-11-20-22-50-46.png)
+
+For now, I'm keeping the previous, too-light Glyphs source, in case I loop back and make a script to do this process in a more automated way.

@@ -5,7 +5,7 @@
 ############################################
 ################# set vars #################
 
-glyphsSource="source/LibreCaslonText.glyphs"
+glyphsSource="source/LibreCaslonText-wght_adjust.glyphs"
 
 ## move VF into new folder of dist/ with timestamp and fontbake
 timestampAndFontbakeInDist=true
