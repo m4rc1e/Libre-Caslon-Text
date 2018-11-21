@@ -64,4 +64,17 @@ For now, I'm doing this manually. I would like to be able to do this with a scri
 It's subtle, but this weight shift helps the default Regular to better match the italic. 
 ![](assets/2018-11-20-22-50-46.png)
 
-For now, I'm keeping the previous, too-light Glyphs source, in case I loop back and make a script to do this process in a more automated way.
+It was important to not *overdo*. As a comparison of the total change, here's an overlapped version of the letter `/i`:
+
+![](assets/2018-11-21-11-40-42.png)
+
+### Using a script to shift the weights
+
+I've learned how to [make a GlyphsApp script to automatically shift the weight of a specified master](https://github.com/thundernixon/glyphs_scripts/blob/10a7f17fe88c250c8c5871493990a03b55e5329a/add-new-master-at-interp-weight.py). However, it doesn't work in glyphsLib because it relies on `instance.interpolatedFont`, which is not currently supported by glyphsLib. As a result, I can't use it in my build process, so I'll *still* keep the prior master for now, in case I circle back to change the weight in a slightly different way. Later, I'll delete the old source, and rely on Git to dig up old versions.
+
+For now, I'm calling the edited version `LibreCaslonText-wght_adjust.glyphs`, and the old source `LibreCaslonText-deprecated.glyphs`.
+
+
+
+
+
