@@ -7,8 +7,8 @@
   - [x] match vertical metrics to Roman
   - [ ] create build script tailored to Italic
 - [x] Make sure there is style linking between upright Regular and Regular Italic
-- [ ] Set weight of Regular to better match other fonts
-  - [ ] *but also* check that the Italic isn't too light when you do this.
+- [x] Set weight of Regular to better match other fonts
+  - [x] *but also* check that the Italic isn't too light when you do this.
 - [x] Fix spacing/kerning of `/g/f` – it's massive
 
 ## Charset
