@@ -312,11 +312,24 @@ Pass!
 
 (See doc on [Spacing Improvements](../2018-11-19-spacing-improvements))
 
-
-
 ## Style linking
 
 Information on process at https://github.com/googlefonts/gf-glyphs-scripts/issues/37#issuecomment-436176114.
+
+## Does the font have a DSIG table?
+> * FAIL: This font lacks a digital signature (DSIG table). Some applications may require one (even if only a dummy placeholder) in order to work properly.
+
+This *was* working, and has started failing. This may be because I moved gftools files around in my virtual environment folder when I had realized that several packages were located inside `lib/python3.6`.
+
+The `gftools fix-dsig --autofix` command is once again working, now that I have moved the gftools python scripts back from the virtualenv `lib/` to `bin/` directory. I tested removing them from the `bin/` entirely to see if they simply needed to *not* be in the `lib/`, but it started failing again. Clearly, these need to be in the `bin/`, and I need to do some more reading on the workings of virtual environments.
+
+According to [this article](https://realpython.com/python-virtual-environments-a-primer/), a virtual environment is set up with the following:
+
+> bin: files that interact with the virtual environment
+> include: C headers that compile the Python packages
+> lib: a copy of the Python version along with a site-packages folder where each dependency is installed
+
+This doesn't seem to tell me that much, and most other tutorials (and even official docs) on virtualenv also seem to be relatively unspecific about my current set of questions about virtual environments. Other tools work with `exec` files in the `bin`, and their project directories in `lib/python3.6/site-packages` (which were sometimes downloaded from git and installed directly with `pip install -e .`), but gftools does not. Clearly, this is something I can understand more fully as I move forward, but which I won't try to know inside and out right now, because are back to working how I need them to. (If anyone reading this feels like educating me on this, though, I'd be happy to learn more!)
 
 ## Microsoft Font Validator checks
 
