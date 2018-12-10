@@ -1,2 +1,8 @@
-master_ufo/*.ufo
-.DS_store
+.DS_Store
+*(Autosaved)*
+.vscode
+master_ufo/*.*
+instance_ufo/*.*
+instance_ttf/*.*
+instance_otf/*.*
+autohinted/*.*
