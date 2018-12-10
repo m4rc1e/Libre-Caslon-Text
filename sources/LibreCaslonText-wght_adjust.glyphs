@@ -199,7 +199,7 @@ name = "Use Line Breaks";
 value = 1;
 }
 );
-date = "2018-11-09 21:39:20 +0000";
+date = "2018-12-10 18:45:53 +0000";
 designer = "Pablo Impallari, Rodrigo Fuenzalida";
 designerURL = "http://www.impallari.com";
 disablesNiceNames = 1;
@@ -65976,7 +65976,7 @@ three.oldstyle = -22.46094;
 };
 };
 manufacturer = "Pablo Impallari, Rodrigo Fuenzalida";
-manufacturerURL = "http://www.impallari.com";
+manufacturerURL = "https://fonts.google.com/";
 unitsPerEm = 2000;
 userData = {
 UFO.lib = {
@@ -66077,6 +66077,6 @@ y = 540;
 };
 UFOFormat = 2;
 };
-versionMajor = 1;
-versionMinor = 2;
+versionMajor = 2;
+versionMinor = 0;
 }

@@ -26,4 +26,6 @@
 
 - [ ] Make sample image with Drawbot
 
+- [ ] Add new fonts to google/fonts/ofl repo directory 
+
 - [ ] open PR, add known remaining issues
