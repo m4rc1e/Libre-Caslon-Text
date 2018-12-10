@@ -3,7 +3,7 @@
 - [x] Make UPM 2000 to align with Dave's stated preference for VFs ([FontBakery Issue 2185](https://github.com/googlefonts/fontbakery/issues/2185))
     - [x] round kerns again with JAF freemix script
     - [x] check that font fits similarly to Times New Roman, as it was earlier
-    - [ ] repeat for italic
+    - [x] repeat for italic
 
 *It's not a perfect match, but they **are** different fonts, and they're quite close:*
 
