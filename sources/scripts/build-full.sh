@@ -2,8 +2,8 @@
 ### Run in the terminal by entering this file path
 ### requires a python 3 environment, for now
 
-############################################
-################# set vars #################
+##################################################
+################# set vars below #################
 
 glyphsSource="sources/LibreCaslonText.glyphs"
 
@@ -14,8 +14,10 @@ timestampAndFontbakeInDist=false
 ## keep designspace file if you want to check values later
 keepDesignspace=false
 
-################# set vars #################
-############################################
+################# set vars above #################
+##################################################
+
+
 
 # ===========================================================================
 # Set up names ==============================================================
@@ -48,7 +50,7 @@ fi
 rm -rf $tempGlyphsSource
 
 # ===========================================================================
-# OpenType table patches ====================================================
+# OpenType table fixes ======================================================
 
 # cd variable_ttf
 
@@ -57,37 +59,10 @@ echo "fix DSIG in " ${VFname}
 gftools fix-dsig --autofix variable_ttf/${VFname}.ttf
 rm -rf ${VFname}-backup-fonttools-prep-gasp.ttf
 
-# ## TODO: sets up temp ttx file to insert correct values into tables
-# ttx ${VFname}.ttf
-# rm -rf ${VFname}.ttf
-
-# cd ..
-
-# ttxPath="variable_ttf/${VFname}.ttx"
-
-# patchPath="variable_ttf/${VFname}-patch.ttx"
-
-# ## inserts patch files into temporary ttx to fix export errors
-# ## BE SURE to update these patches for the real values in a given typeface
-# cp $ttxPath $patchPath
-# cat $patchPath | tr '\n' '\r' | sed -e "s~<name>.*<\/name>~$(cat sources/scripts/helpers/NAMEpatch.xml | tr '\n' '\r')~" | tr '\r' '\n' > $ttxPath
-# rm -rf $patchPath
-
-# cp $ttxPath $patchPath
-# cat $patchPath | tr '\n' '\r' | sed -e "s,<STAT>.*<\/STAT>,$(cat sources/scripts/helpers/STATpatch.xml | tr '\n' '\r')," | tr '\r' '\n' > $ttxPath
-# rm -rf $patchPath
-
-# # copies temp ttx file back into a new ttf file
-# ttx $ttxPath
-
-# # removes temp ttx file
-# rm -rf $ttxPath
 
 # ===========================================================================
 # Autohinting ===============================================================
 
-# ttfPath=${ttxPath/".ttx"/".ttf"}
-# hintedPath=${ttxPath/".ttx"/"-hinted.ttf"}
 ttfPath=variable_ttf/${VFname}.ttf
 hintedPath=${ttfPath/".ttf"/"-hinted.ttf"}
 
