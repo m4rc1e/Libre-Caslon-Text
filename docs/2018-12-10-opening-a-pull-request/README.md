@@ -9,20 +9,20 @@
 
 ![](assets/2018-12-10-12-41-54.png)
 
-- [ ] Clean repo structure
+- [x] Clean repo structure
     - [x] Use `git mv` to move relevant files; delete others
     - [x] add more-comprehensive `.gitignore`
     - [x] ~~? maybe make a `wip` branch? Probably not necessary...~~ Just clean up master. `google/fonts` is already a "prod" repo, and this project doesn't really benefit from a `dist/` folder of time-stamped builds
 
-- [ ] Update build scripts to use new workflows from Encode Sans, in order to place fonts in appropriate `fonts/` folder
-    - [ ] ? Upgrade NAMEpatch & STATpatch *or* delete files if not needed (probably not, in a one-axis font?)
+- [x] Update build scripts to use new workflows from Encode Sans, in order to place fonts in appropriate `fonts/` folder
+    - [x] =~~Upgrade NAMEpatch & STATpatch~~ *or* delete files if not needed (as far as I know, not needed in a one-axis font)
 
-- [ ] Add metadata files
-  - [ ] `METADATA.pb` for statics
-  - [ ] `METADATA.pb` for VF
-  - [ ] `FONTLOG.txt`
-  - [ ] Update `CONTRIBUTORS.txt` and `AUTHORS.txt`
-  - [ ] Add build info to `README.md`
+- [x] Add metadata files
+  - [x] `METADATA.pb` for statics – This took some figuring out, but my current hack is [documented on issue #89 of gftools](https://github.com/googlefonts/gftools/issues/89#issuecomment-446033132)
+  - [x] `METADATA.pb` for VF – I've copied and edited the static metadata file in a way that seems logical
+  - [x] `FONTLOG.txt` – I've cleaned up some typos in the original, and added a concise statement of my latest updates
+  - [x] Update `CONTRIBUTORS.txt` and `AUTHORS.txt`
+  - [x] Add build info to `README.md`
 
 - [ ] Make sample image with Drawbot
 
