@@ -1,7 +1,7 @@
 Libre Caslon Text Fonts
 ======================
 
-![](sample.png)
+![](sample.jpg)
 
 > The Libre Caslon fonts are unique Caslons. They are different to all other Caslons out there.
 > 
