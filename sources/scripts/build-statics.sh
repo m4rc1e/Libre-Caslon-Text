@@ -34,7 +34,7 @@ sortAndFontbakeFile()
     FILEPATH=$1
 
     fileName=$(basename $FILEPATH)
-    newPath=${outputDir}/static/${fileName}
+    newPath=fonts/librecaslontext/${fileName}
     cp ${FILEPATH} ${newPath}
 
     fontbakery check-googlefonts ${newPath} --ghmarkdown ${newPath/".ttf"/"-fontbakery-report.md"}
@@ -43,22 +43,22 @@ sortAndFontbakeFile()
 # ===========================================================================
 # Roman Instances ===========================================================
 
-# fontmake -g ${glyphsSourceRoman} --output ttf --interpolate --overlaps-backend booleanOperations
+fontmake -g ${glyphsSourceRoman} --output ttf --interpolate --overlaps-backend booleanOperations
 
-# for file in instance_ttf/*; do 
-# if [ -f "$file" ]; then 
-#     fixDsig ${file}
-#     AutohintFont ${file}
-#     sortAndFontbakeFile ${file}
-# fi 
-# done
+for file in instance_ttf/*; do 
+if [ -f "$file" ]; then 
+    fixDsig ${file}
+    AutohintFont ${file}
+    sortAndFontbakeFile ${file}
+fi 
+done
 
-# rm -rf instance_ttf
+rm -rf instance_ttf
 
 # ===========================================================================
 # Italic Instances ==========================================================
 
-# fontmake -g ${glyphsSourceItalic} --output ttf --overlaps-backend booleanOperations
+fontmake -g ${glyphsSourceItalic} --output ttf --overlaps-backend booleanOperations
 
 for file in master_ttf/*; do 
 if [ -f "$file" ]; then
@@ -73,7 +73,7 @@ done
 # ===========================================================================
 # clean up build files ======================================================
 
-# rm -rf instance_ttf
-# rm -rf instance_ufo
-# rm -rf master_ttf
-# rm -rf master_ufo
+rm -rf instance_ttf
+rm -rf instance_ufo
+rm -rf master_ttf
+rm -rf master_ufo

@@ -1,6 +1,8 @@
 Libre Caslon Text Fonts
 ======================
 
+![](sample.png)
+
 > The Libre Caslon fonts are unique Caslons. They are different to all other Caslons out there.
 > 
 > When we were faced with the challenge of making a new Caslon, we asked ourselves: How can we make them different, to bring something new to the table?
