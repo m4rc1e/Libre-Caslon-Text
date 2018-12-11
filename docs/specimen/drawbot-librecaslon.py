@@ -26,7 +26,7 @@ def drawName(yShift, colorShift):
     fontSizing = 270
 
     # fontName.fill(0,0,0,0.25)
-    fontName.fill(1,0+(colorShift*0.00075),0.25)
+    fontName.fill(1,0+(colorShift*0.00075),0.25,0.75)
     fontName.fontSize(fontSizing)
     fontName.tracking(0)
 
