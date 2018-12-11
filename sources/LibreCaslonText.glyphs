@@ -58,10 +58,6 @@ name = openTypeNameUniqueID;
 value = "PabloImpallari,RodrigoFuenzalida: Libre Caslon Text: 2012";
 },
 {
-name = openTypeNameVersion;
-value = "Version 1.002";
-},
-{
 name = openTypeOS2FamilyClass;
 value = (
 0,

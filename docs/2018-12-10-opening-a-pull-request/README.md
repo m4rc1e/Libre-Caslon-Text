@@ -9,14 +9,13 @@
 
 ![](assets/2018-12-10-12-41-54.png)
 
-- [ ] Do Red Arrows / FontAudit check of outlines
+- [ ] Clean repo structure
+    - [x] Use `git mv` to move relevant files; delete others
+    - [x] add more-comprehensive `.gitignore`
+    - [x] ~~? maybe make a `wip` branch? Probably not necessary...~~ Just clean up master. `google/fonts` is already a "prod" repo, and this project doesn't really benefit from a `dist/` folder of time-stamped builds
 
 - [ ] Update build scripts to use new workflows from Encode Sans, in order to place fonts in appropriate `fonts/` folder
-
-- [ ] Clean repo structure
-    - [ ] Use `git mv` to move relevant files, delete others
-    - [x] add more-comprehensive `.gitignore`
-    - [ ] ? maybe make a `wip` branch? Probably not necessary...
+    - [ ] ? Upgrade NAMEpatch & STATpatch *or* delete files if not needed (probably not, in a one-axis font?)
 
 - [ ] Add metadata files
   - [ ] `METADATA.pb` for statics
@@ -30,3 +29,5 @@
 - [ ] Add new fonts to google/fonts/ofl repo directory 
 
 - [ ] open PR, add known remaining issues
+
+- [ ] Do Red Arrows / FontAudit check of outlines
