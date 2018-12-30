@@ -24,10 +24,10 @@
   - [x] Update `CONTRIBUTORS.txt` and `AUTHORS.txt`
   - [x] Add build info to `README.md`
 
-- [ ] Make sample image with Drawbot
+- [x] Make sample image with Drawbot
 
-- [ ] Add new fonts to google/fonts/ofl repo directory 
+- [x] Add new fonts to google/fonts/ofl repo directory 
 
-- [ ] open PR, add known remaining issues
+- [x] open PR, add known remaining issues
 
 - [ ] Do Red Arrows / FontAudit check of outlines

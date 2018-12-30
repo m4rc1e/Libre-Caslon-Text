@@ -6,6 +6,7 @@ Libre Caslon Text Fonts
 > The Libre Caslon fonts are unique Caslons. They are different to all other Caslons out there.
 > 
 > When we were faced with the challenge of making a new Caslon, we asked ourselves: How can we make them different, to bring something new to the table?
+> >
 > We realized that most Caslon revivals were based on 18-Century specimens and that there was a whole genre of Caslons that has been so far ignored: The alluring hand-lettered American Caslons of 1960s.
 > 
 > This was a captivating subject to investigate. Caslon was the very first alphabet that lettering artists learned to draw, so they all were very familiar with it. Our wonder led us to find countless examples of beautifully crafted and elegant vintage ads and hand lettering books. Among those many books, there were two that outshine the rest: One is "Lettering for Advertising" by Mortimer Leach, and the other one is "How to Render Roman Letter Forms" by Tommy Thompson. Both of these books are excellent, highly recommended for all those who want to learn lettering.
