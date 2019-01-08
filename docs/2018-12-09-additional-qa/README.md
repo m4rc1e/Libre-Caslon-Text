@@ -106,7 +106,9 @@ Better:
 
 ![](assets/2019-01-07-18-19-42.png)
 
+Some inflections, I'll leave, checking that they don't cause trouble in the TTF VF, such as these "s" shapes:
 
+![](assets/s-shapes.gif)
 
 
 ### Fractional transformation
@@ -205,6 +207,38 @@ I still think there may be room for improvement, here ... this whole glyph is co
 
 ![](assets/2019-01-08-11-13-49.png)
 ![](assets/2019-01-08-11-13-36.png)
+
+This `/at` is a bit wobbly, in large part from several unnecessary points.
+
+![](assets/2019-01-08-16-13-38.png)
+
+It's cleaner with a few points removed:
+
+![](assets/2019-01-08-16-15-31.png)
+
+It goes outside my scope to fiddle with every glyph in this font, buuuut there are a few I want to touch up. 
+
+This ampersand has curves that are a bit lumpy, and its contrast is uneven:
+
+![](assets/2019-01-08-16-39-00.png)
+
+It's still not perfect, but it's a little more graceful:
+
+![](assets/2019-01-08-16-40-17.png)
+
+A big thing that has bothered me in the Italic is the `/f`. An `/f` in this tall italic form should lean slightly back in the middle section, because without that lean-back, it will appear to lean _forward_ due to the long swashes.
+
+Here's the original:
+
+![](assets/2019-01-08-16-50-05.png)
+
+And here's my revision:
+
+![](assets/2019-01-08-16-50-35.png)
+
+Of course, I'll also have to bring this change into the Italic ligatures:
+
+![](assets/2019-01-08-16-51-47.png)
 
 ## Rounding Kerning
 
