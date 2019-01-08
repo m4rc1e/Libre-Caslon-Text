@@ -196,10 +196,111 @@ The `/sterling` is lumpy and doesn't connect at the curly bit:
 ![](assets/2019-01-07-18-40-01.png)
 
 
-Luckily, this will benefit a lot from a non-overlapped drawing ...to be continued.
+Luckily, this will benefit a lot from a non-overlapped drawing.
 
----
+![](assets/2019-01-08-11-04-57.png)
+![](assets/2019-01-08-11-05-08.png)
 
-### Rounding Kerning
+I still think there may be room for improvement, here ... this whole glyph is completely oblique, rather than upright. While other Caslons on my system also have this feature, it doesn't seem like a great one to emulate, as it gives a completely imbalanced appearance.
+
+![](assets/2019-01-08-11-13-49.png)
+![](assets/2019-01-08-11-13-36.png)
+
+## Rounding Kerning
 
 Because I interpolated the "Regular" master, I've rounded kerns to integers with GlyphsApp Freemix tools.
+
+
+## Fixing tabular symbols
+
+In the process of finding non-tabular `.tnum` glyphs in the Italic, I made a script which helped me realize that there are also several non-tabular `.tnum` glyphs in the Romans. These are the prior values, and have been updated:
+
+| Glyph | Width |
+|---|--:|
+| slash.tnum | 516.0 |
+| colon.tnum | 516.0 |
+| period.tnum | 516.0 |
+| comma.tnum | 516.0 |
+| percent.tnum | 1805.0 |
+| periodcentered.tnum | 516.0 |
+| quotesingle.tnum | 516.0 |
+| quotedbl.tnum | 516.0 |
+| bar.tnum | 516.0 |
+| semicolon.tnum | 516.0 |
+| degree.tnum | 536.0 |
+
+I will now adjust them.
+
+![](assets/2019-01-08-14-56-06.png)
+
+![](assets/2019-01-08-15-03-30.png)
+
+![](assets/2019-01-08-15-11-18.png)
+
+![](assets/2019-01-08-15-13-52.png)
+
+I slightly prefer the broken-bar version, but it seems like a less-classical solution. I'll go with the latter, stacking the zeros more.
+
+
+# Italic QA
+
+Because I halfway-redrew the `/sterling`, I'm touching it up in the Italic before I move on. It's less messy, but still a bit drafty:
+
+![](assets/2019-01-08-11-25-06.png)
+
+I've used SuperTool to smooth curve connections, then adjust visually:
+
+![](assets/2019-01-08-11-29-47.png)
+
+![](assets/2019-01-08-11-30-04.png)
+
+...not quite perfect, but let me match thickness with the regular by using a background layer:
+
+![](assets/2019-01-08-11-33-48.png)
+
+I've also backslanted it slightly, to visually match the overall lean of the surrounding glyphs:
+
+![](assets/2019-01-08-11-42-18.png)
+
+## Fixing `tnum` symbols
+
+I've noticed that quite a few glyphs in the italic are given a `.tnum` suffix, but haven't yet been modified to actually be tabular. Using some quick Python, I can find the problem glyphs:
+
+| Glyph | Width |
+|---|--:|
+| slash.tnum | 516.0 |
+| colon.tnum | 516.0 |
+| period.tnum | 516.0 |
+| comma.tnum | 516.0 |
+| degree.tnum | 536.0 |
+| percent.tnum | 1461.0 |
+| periodcentered.tnum | 516.0 |
+| yen.tnum | 1222.0 |
+| equal.tnum | 891.0 |
+| quotesingle.tnum | 516.0 |
+| quotedbl.tnum | 516.0 |
+| bar.tnum | 584.0 |
+| semicolon.tnum | 516.0 |
+| cent.tnum | 853.0 |
+| dollar.tnum | 1007.0 |
+
+I've updated the Python (at `sources/scripts/helpers/check-tnum-widths.py`) to also set the widths and put shapes into the middle. This is just to have a helpful starting point for making tabular glyphs.
+
+Like the Roman `percentage.tnum`, I'll stack this one:
+
+![](assets/2019-01-08-15-29-43.png)
+
+I've copied in the `/yen.tnum` from roman regular, and skewed it to 22.5 degrees, made some optical adjustments, and positioned it to sit equally between tabular numerals (which is not as obvious as it might sound, because the entire italic is offset in its bounds):
+
+![](assets/2019-01-08-15-36-38.png)
+
+![](assets/tabular.gif)
+
+...*actually*, this points out that the tabular numbers seem to be off. I'll have to fix those, first. With those fixed, it's more useful to take this approach.
+
+![](assets/tabular2.gif)
+
+Here, I am:
+1. Setting up placeholder glyphs with `shift + option + cmmd + P`
+1. using `t` to enter text mode to navigate between glyphs
+1. pressing `esc` to re-enter edit mode, and then `cmmd + a` to select all paths to move them
