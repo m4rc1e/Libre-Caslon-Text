@@ -234,11 +234,23 @@ Here's the original:
 
 And here's my revision:
 
-![](assets/2019-01-08-16-50-35.png)
+![](assets/2019-01-09-10-03-37.png)
+
+It's not a huge change, but I've made an effort to make the overall "mass" of the lette have the same overall lean of the surrounding letters. Here are the new outlines (black) over the previous outlines (in gray):
+
+![](assets/2019-01-09-10-08-34.png)
 
 Of course, I'll also have to bring this change into the Italic ligatures:
 
 ![](assets/2019-01-08-16-51-47.png)
+
+To do so, I'll make non-exporting components of the `/f` and other letters needed for ligatures. This way, if further tweaks are needed later, it won't require _every_ ligature to be re-edited.
+
+![](assets/2019-01-09-10-41-45.png)
+
+Caslon now has an updated set of `f` ligatures. Most idiosyncrasies are retained in shapes, but the `f` form is updated, and spacing has been slightly refined.
+
+![](assets/2019-01-09-11-51-08.png)
 
 ## Rounding Kerning
 
@@ -277,24 +289,6 @@ I slightly prefer the broken-bar version, but it seems like a less-classical sol
 
 
 # Italic QA
-
-Because I halfway-redrew the `/sterling`, I'm touching it up in the Italic before I move on. It's less messy, but still a bit drafty:
-
-![](assets/2019-01-08-11-25-06.png)
-
-I've used SuperTool to smooth curve connections, then adjust visually:
-
-![](assets/2019-01-08-11-29-47.png)
-
-![](assets/2019-01-08-11-30-04.png)
-
-...not quite perfect, but let me match thickness with the regular by using a background layer:
-
-![](assets/2019-01-08-11-33-48.png)
-
-I've also backslanted it slightly, to visually match the overall lean of the surrounding glyphs:
-
-![](assets/2019-01-08-11-42-18.png)
 
 ## Fixing `tnum` symbols
 
@@ -338,3 +332,23 @@ Here, I am:
 1. Setting up placeholder glyphs with `shift + option + cmmd + P`
 1. using `t` to enter text mode to navigate between glyphs
 1. pressing `esc` to re-enter edit mode, and then `cmmd + a` to select all paths to move them
+
+## Letter shape refinements
+
+Because I halfway-redrew the `/sterling`, I'm touching it up in the Italic before I move on. It's less messy, but still a bit drafty:
+
+![](assets/2019-01-08-11-25-06.png)
+
+I've used SuperTool to smooth curve connections, then adjust visually:
+
+![](assets/2019-01-08-11-29-47.png)
+
+![](assets/2019-01-08-11-30-04.png)
+
+...not quite perfect, but let me match thickness with the regular by using a background layer:
+
+![](assets/2019-01-08-11-33-48.png)
+
+I've also backslanted it slightly, to visually match the overall lean of the surrounding glyphs:
+
+![](assets/2019-01-08-11-42-18.png)
