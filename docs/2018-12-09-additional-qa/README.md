@@ -234,7 +234,7 @@ Here's the original:
 
 And here's my revision:
 
-![](assets/2019-01-09-10-03-37.png)
+![](assets/2019-01-09-13-21-08.png)
 
 It's not a huge change, but I've made an effort to make the overall "mass" of the lette have the same overall lean of the surrounding letters. Here are the new outlines (black) over the previous outlines (in gray):
 
@@ -345,10 +345,97 @@ I've used SuperTool to smooth curve connections, then adjust visually:
 
 ![](assets/2019-01-08-11-30-04.png)
 
-...not quite perfect, but let me match thickness with the regular by using a background layer:
+...not quitte perfect, but let me match thickness with the regular by using a background layer:
 
 ![](assets/2019-01-08-11-33-48.png)
 
 I've also backslanted it slightly, to visually match the overall lean of the surrounding glyphs:
 
 ![](assets/2019-01-08-11-42-18.png)
+
+...and I've adjusted the contrast to better match the sharpness of the rest of the font:
+
+![](assets/2019-01-10-09-43-49.png)
+
+### Diagonal stem widths
+
+Currently, diagonal stems appear thinner than horizontals. 
+
+![](assets/2019-01-09-13-14-25.png)
+
+Checking the actual thicknesses, it becomes clear that diagonals are actually thinner than horizontals – which is backwards, and a common problem introduced by slanting Roman letters without corrections.
+
+![](assets/2019-01-09-13-13-10.png)
+
+![](assets/2019-01-09-13-13-50.png)
+
+Process:
+1. In the Roman regular weight, the ratio of horizontal to NE diagonals is 73:78, or 1.068493151.
+1. The horizontal of the `/A` should match the `/H`, as they do in the Roman. So, the A bar should be 68.
+1. 68*1.068493151 = 72.657534268. I'll make the NE diagonals about 73 units in thickness, adjusting this optically as I go.
+
+![](assets/2019-01-09-13-56-21.png)
+
+### Outline quality tweaks
+
+The Enj doesn't quite meet up, and this would show up as a little "spur" in some context. I'll move it to the corner.
+
+![](assets/2019-01-09-13-44-41.png)
+
+![](assets/2019-01-09-13-43-21.png)
+
+`/S` has an inflection ... on just one side of the spine.
+
+![](assets/2019-01-09-13-45-59.png)
+
+There are smooth bracket made less-smooth by having unnecessary extreme points:
+
+![](assets/2019-01-09-13-48-27.png)
+
+Serifs have inconsistent heights, such as in this `/W`.
+
+![](assets/2019-01-09-13-50-10.png)
+
+The `/g` really looks like it's falling forward, so I'll move the ear.
+
+![](assets/2019-01-09-13-59-21.png)
+
+![](assets/2019-01-09-14-01-33.png)
+
+The `/t` is lumpy/pointy on the bottom, and has a bit of an inflection in the stem.
+
+![](assets/2019-01-09-14-04-13.png)
+
+![](assets/2019-01-09-14-04-49.png)
+
+There are lots of little "incorrect smooth curve" points, so I'm just wiggling these anchors back and forth to make them smooth again.
+
+![](assets/2019-01-09-14-06-05.png)
+
+The curls on the `/z` are very imbalanced.
+
+![](assets/2019-01-09-14-11-17.png)
+
+I've copied the top, and made some optical corrections. This should appear a bit more balanced:
+
+![](assets/2019-01-09-14-43-35.png)
+
+Things don't line up in the `/eight.denominator` or `/eight.numerator`:
+
+![](assets/2019-01-09-14-52-32.png)
+
+So I fixed it:
+
+![](assets/2019-01-09-14-55-49.png)
+
+This bottom stroke isn't quite smooth:
+
+![](assets/2019-01-10-09-49-37.png)
+
+...so I've reconnected some nodes to help it out (yes, I'm leaving a few inflections, as there are in some of these tear-drop terminals):
+
+![](assets/2019-01-10-09-51-08.png)
+
+---
+
+Libre Caslon could probably be refined even further, but for now, the outlines are a lot better off than they were! Onto the next stage of publishing this.
