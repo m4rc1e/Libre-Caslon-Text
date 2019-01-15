@@ -1,10 +1,5 @@
 {
-.appVersion = "1199";
-DisplayStrings = (
-"H@MABCDÐ/Dcroat GJKL/Eng PÞQRS/Schwa/Tbar UVWXYZ\012aæce/schwa f g/gcommaaccent  j/dotlessj/lacute tmnrnusßtu¸/uni015F w x yZz/c_t/f_f/f_f_b/f_f_h/f_f_i \012/f_f_j j/f_f_k/f_f_l/f_f_t/f_h/f_i/f_j/f_t \012s/s_t ª/uni03BC 357/three.denominator/five.denominator/seven.denominator/three.numerator/five.numerator/three.oldstyle/five.oldstyle/seven.oldstyle/three.tnum/five.tnum/threeinferior/fiveinferior/seveninferior ³/fivesuperior/sevensuperior ,;!¡?¿*/comma.tnum/semicolon.tnum {}/quotesinglbase/quotedblbase/quotedblleft/quotedblright/quoteleft/quoteright/quoteright \"'/quotedbl.tnum/quotesingle.tnum/Euro ¢$/florin  \012$45 £78 /Euro 93 \012 /two.tnum/six.tnum/eight.tnum/one.tnum/nine.tnum/three.tnum  \012 /yen.tnum/five.tnum/dollar.tnum/two.tnum H/sterling.tnum H/eight.tnum  \012\012/Placeholder ¥c/cent.tnum  /dollar.tnum/sterling.tnum  /yen.tnum ~µ@&§/dagger/daggerdbl/servicemark/section.tnum/commaaccent ´/caron/circumflex `/hungarumlaut/tilde/caron.alt/caron.cap/circumflex.cap/tilde.cap",
-"tAÆBCDÐ/Dcroat EL/Eng ÞQRS/Schwa UVWXYZaæefg/gcommaaccent h/lacute mn/eng qrsßtuvwxy/c_t/f_b/f_f/f_f_b/f_f_h/f_f_i/f_f_j/f_f_k/f_f_l/f_f_t/f_h/f_i/f_j/f_k/f_l/f_t/s_t ª/uni03BC 357/three.denominator/five.denominator/three.numerator/five.numerator/seven.numerator/nine.numerator/three.oldstyle/five.oldstyle/three.tnum/five.tnum/threeinferior/fiveinferior/nineinferior ³/fivesuperior/ninesuperior ,;¡?¿*/comma.tnum/semicolon.tnum {}/quotesinglbase/quotedblbase/quotedblleft/quotedblright/quoteleft/quoteright/quoteright \"'/quotedbl.tnum/quotesingle.tnum/Euro ¢$/florin £¥/cent.tnum/dollar.tnum/Euro.tnum/sterling.tnum/yen.tnum ~µ@&§©/dagger/daggerdbl/servicemark/section.tnum/commaaccent/caron/circumflex `/tilde/caron.alt/caron.cap/circumflex.cap/tilde.cap",
-"/one.tnum/zero.tnum/zero.tnum/percent.tnum \012\012/zero.tnum/one.tnum/two.tnum/three.tnum/four.tnum/five.tnum/six.tnum/seven.tnum/eight.tnum/nine.tnum/period.tnum/comma.tnum/colon.tnum/semicolon.tnum/periodcentered.tnum/numbersign.tnum/slash.tnum/underscore.tnum/quotedbl.tnum/quotesingle.tnum/cent.tnum/dollar.tnum/Euro.tnum/sterling.tnum/yen.tnum/plus.tnum/minus.tnum/multiply.tnum/divide.tnum/equal.tnum/greater.tnum/less.tnum/plusminus.tnum %/percent.tnum H/paragraph.tnum/section.tnum/degree.tnum/bar.tnum"
-);
+.appVersion = "1192";
 classes = (
 {
 code = "Euro bar cent colon comma degree divide dollar eight equal five four greater less minus multiply nine numbersign one paragraph percent period periodcentered plus plusminus quotedbl quotesingle section semicolon seven six slash sterling three two underscore yen zero";
@@ -63982,16 +63977,6 @@ width = 266;
 );
 instances = (
 {
-exports = 0;
-interpolationWeight = 250;
-interpolationWidth = 16;
-instanceInterpolations = {
-"7C8D72FA-6E62-4564-8BB2-D9F9BC4EB15A" = 1.5;
-"FA6D65B5-4623-4FAC-A199-3F662257AC29" = -0.5;
-};
-name = Thin;
-},
-{
 interpolationWeight = 400;
 interpolationWidth = 16;
 instanceInterpolations = {
@@ -64027,16 +64012,6 @@ instanceInterpolations = {
 isBold = 1;
 name = Bold;
 weightClass = Bold;
-},
-{
-exports = 0;
-interpolationWeight = 1100;
-interpolationWidth = 16;
-instanceInterpolations = {
-"7C8D72FA-6E62-4564-8BB2-D9F9BC4EB15A" = -1.33333;
-"FA6D65B5-4623-4FAC-A199-3F662257AC29" = 2.33333;
-};
-name = Black;
 }
 );
 kerning = {
